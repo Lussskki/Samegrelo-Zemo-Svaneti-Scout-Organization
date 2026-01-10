@@ -190,7 +190,7 @@ nav a:hover { color: var(--scout-green); }
     font-family: inherit;
 }
 
-/* 9. MODAL & FOOTER */
+/* 9. MODAL & FOOTER (გასწორებული) */
 .modal {
     position: fixed;
     z-index: 2000;
@@ -207,20 +207,21 @@ nav a:hover { color: var(--scout-green); }
 
 footer { 
     background: var(--dark); 
-    color: #888; 
+    color: #ffffff; 
     text-align: center; 
-    padding: 40px; 
+    padding: 40px 20px; 
     width: 100%;
+    box-sizing: border-box; /* კრიტიკული შესწორება */
 }
 
 /* 10. IMAGES */
 .img-samegrelo, .img-svaneti {
     width: 100%;
-    height: 300px; /* აუცილებელია სიმაღლის მითითება! */
-    background-size: cover; /* ფოტო სრულად შეავსებს ადგილს */
+    height: 300px;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 12px; /* სილამაზისთვის */
+    border-radius: 12px;
 }
 
 .img-samegrelo { 
@@ -233,7 +234,6 @@ footer {
 
 /* --- მობილურის სტილები --- */
 
-/* მენიუს დამალვა კომპიუტერზე */
 .menu-icon {
     display: none;
     font-size: 2rem;
@@ -242,7 +242,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    /* ნავიგაცია ტელეფონზე */
     .menu-icon { display: block; }
 
     .nav-links {
@@ -261,11 +260,9 @@ footer {
 
     .nav-links.active { left: 0; }
 
-    /* Hero სექცია */
     .hero-text h1 { font-size: 2.2rem; }
     .hero-text p { font-size: 1rem; padding: 0 10px; }
 
-    /* გრიდები (Grid) ტელეფონზე - გადადის 1 სვეტზე */
     .region-grid, .gallery-grid {
         grid-template-columns: 1fr;
         padding: 0 10px;
@@ -278,11 +275,16 @@ footer {
 
     .section-title h2 { font-size: 1.8rem; }
 
-    /* სურათების სიმაღლის კორექტირება */
     .gallery-item { height: 250px; }
     
     .modal-content {
         width: 95%;
         max-height: 70vh;
+    }
+
+    /* ფუტერის მობილური შესწორება */
+    footer {
+        padding: 30px 10px;
+        font-size: 0.9rem;
     }
 }
