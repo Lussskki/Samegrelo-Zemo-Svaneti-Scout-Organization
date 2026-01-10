@@ -2,14 +2,11 @@ import { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 
-// 1. სრული გალერეის გვერდი
 function FullGallery({ images }) {
   const [localSelectedImg, setLocalSelectedImg] = useState(null);
-
   return (
-    <div className="container gallery-page">
+    <div className="gallery-container gallery-page">
       <div className="section-title">
-        {/* აქედან ამოვიღე <img> თეგი */}
         <h2>სრული გალერეა</h2>
         <Link to="/" className="cta-btn back-btn">← მთავარზე დაბრუნება</Link>
       </div>
@@ -33,7 +30,6 @@ function FullGallery({ images }) {
   );
 }
 
-// 2. მთავარი გვერდი
 function HomePage({ images, setSelectedImg }) {
   const dadianiPhoto = '/assets/photos/dadianebis-sasakhle-palace-of-dadiani.jpg';
   const ushguliPhoto = '/assets/photos/ushguli.jpg';
@@ -51,18 +47,8 @@ function HomePage({ images, setSelectedImg }) {
       <main className="container" id="region-section">
         <div className="section-title"><h2>ჩვენი რეგიონი</h2></div>
         <div className="region-grid">
-          <RegionCard 
-            title="სამეგრელო" 
-            text="ზუგდიდი და დადიანების სასახლე." 
-            imgClass="img-samegrelo" 
-            onClick={() => setSelectedImg(dadianiPhoto)} 
-          />
-          <RegionCard 
-            title="ზემო სვანეთი" 
-            text="მესტია და უშგული." 
-            imgClass="img-svaneti" 
-            onClick={() => setSelectedImg(ushguliPhoto)} 
-          />
+          <RegionCard title="სამეგრელო" text="ზუგდიდი და დადიანების სასახლე." imgClass="img-samegrelo" onClick={() => setSelectedImg(dadianiPhoto)} />
+          <RegionCard title="ზემო სვანეთი" text="მესტია და უშგული." imgClass="img-svaneti" onClick={() => setSelectedImg(ushguliPhoto)} />
         </div>
       </main>
 
@@ -80,12 +66,7 @@ function HomePage({ images, setSelectedImg }) {
         <div className="section-title"><h2>ჩვენი ფოტოები</h2></div>
         <div className="gallery-grid">
           {images.slice(0, 6).map((img, index) => (
-            <div 
-              key={index} 
-              className="gallery-item" 
-              style={{ backgroundImage: `url(${img})` }} 
-              onClick={() => setSelectedImg(img)}
-            ></div>
+            <div key={index} className="gallery-item" style={{ backgroundImage: `url(${img})` }} onClick={() => setSelectedImg(img)}></div>
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
@@ -106,7 +87,6 @@ function HomePage({ images, setSelectedImg }) {
   );
 }
 
-// 3. მთავარი App
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -122,13 +102,8 @@ function App() {
   return (
     <div className="app-container">
       <nav>
-        {/* აქედანაც ამოვიღე <img>, დარჩა მხოლოდ ტექსტი */}
-        <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>
-          სამეგრელოს სკაუტები
-        </Link>
-        <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? '✕' : '☰'}
-        </div>
+        <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>სამეგრელოს სკაუტები</Link>
+        <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>{isMenuOpen ? '✕' : '☰'}</div>
         <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
           <li><Link to="/" onClick={() => setIsMenuOpen(false)}>მთავარი</Link></li>
           <li><Link to="/gallery" onClick={() => setIsMenuOpen(false)}>ფოტოები</Link></li>
@@ -149,7 +124,15 @@ function App() {
         </div>
       )}
 
-      <footer className="footer"><p>&copy; 2026 Scout Of Samegrelo</p></footer>
+      <footer>
+        <div className="footer-content">
+            <p>© 2026 Scout Of Samegrelo</p>
+            <div className="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100064482258846" target="_blank" rel="noreferrer"><i className="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/scoutsofsamegrelo/" target="_blank" rel="noreferrer"><i className="fab fa-instagram"></i></a>
+            </div>
+        </div>
+      </footer>
     </div>
   )
 }
@@ -158,10 +141,7 @@ function RegionCard({ title, text, imgClass, onClick }) {
   return (
     <div className="region-card" onClick={onClick}>
       <div className={`region-img ${imgClass}`}></div>
-      <div className="region-info">
-        <h3>{title}</h3>
-        <p>{text}</p>
-      </div>
+      <div className="region-info"><h3>{title}</h3><p>{text}</p></div>
     </div>
   )
 }
