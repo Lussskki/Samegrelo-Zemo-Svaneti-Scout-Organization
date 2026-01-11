@@ -28,7 +28,9 @@ const translations = {
     main: "მთავარი",
     gallery: "ფოტოები",
     fullGallery: "სრული გალერეა",
-    back: "← მთავარზე დაბრუნება"
+    back: "← მთავარზე დაბრუნება",
+    day: "☀️ დღე",
+    night: "🌙 ღამე"
   },
   en: {
     dev: "Site is under development",
@@ -55,7 +57,9 @@ const translations = {
     main: "Home",
     gallery: "Gallery",
     fullGallery: "Full Gallery",
-    back: "← Back to Main"
+    back: "← Back to Main",
+    day: "☀️ Day",
+    night: "🌙 Night"
   }
 };
 
@@ -152,6 +156,7 @@ function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [lang, setLang] = useState('ka');
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const t = translations[lang];
 
@@ -164,20 +169,19 @@ function App() {
   ];
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav>
         <Link to="/" className="logo" onClick={() => setIsMenuOpen(false)}>სამეგრელოს სკაუტები</Link>
         
         <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>{isMenuOpen ? '✕' : '☰'}</div>
 
         <ul className={isMenuOpen ? "nav-links active" : "nav-links"}>
-          {/* ენის გადამრთველი მენიუს შიგნით */}
-          <li className="lang-item">
-            <button 
-              className="lang-btn" 
-              onClick={() => setLang(lang === 'ka' ? 'en' : 'ka')}
-            >
+          <li className="nav-controls">
+            <button className="lang-btn" onClick={() => setLang(lang === 'ka' ? 'en' : 'ka')}>
               {lang === 'ka' ? 'ENGLISH' : 'ქართული'}
+            </button>
+            <button className="theme-btn" onClick={() => setIsDarkMode(!isDarkMode)}>
+              {isDarkMode ? t.day : t.night}
             </button>
           </li>
           <li><Link to="/" onClick={() => setIsMenuOpen(false)}>{t.main}</Link></li>

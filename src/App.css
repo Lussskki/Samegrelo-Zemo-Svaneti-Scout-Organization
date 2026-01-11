@@ -308,3 +308,36 @@ footer {
     .hero-text h1 { font-size: 2rem; }
     .region-grid { grid-template-columns: 1fr; }
 }
+
+.app-container {
+    background-color: white;
+    color: #162e21;
+    transition: all 0.4s ease;
+}
+
+.app-container.dark-mode {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+/* მართვის ღილაკების სტილი მენიუში */
+.nav-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.theme-btn, .lang-btn {
+    cursor: pointer;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #ffc107;
+    background: transparent;
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.dark-mode .theme-btn {
+    background: #ffc107;
+    color: #1a1a1a;
+}
