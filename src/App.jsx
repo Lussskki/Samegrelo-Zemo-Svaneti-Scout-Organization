@@ -33,6 +33,7 @@ const translations = {
   },
   en: {
     dev: "Site is under development",
+    subtitle: "Registration form of the members of the Samegrelo organization of the Scout Movement of Georgia",
     join: "Join Us",
     region: "Our Region",
     samegrelo: "Samegrelo",
