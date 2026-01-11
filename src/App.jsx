@@ -5,8 +5,8 @@ import './App.css'
 const translations = {
   ka: {
     dev: "საიტი დეველოპმეტის პროცესშია",
-    title: "სამეგრელო-ზემო სვანეთი",
-    subtitle: "აღმოაჩინე კოლხეთი და სვანეთის მწვერვალები",
+    // title: "საქართველოს სკაუტური მოძრაობის სამეგრელოს სარეგისტრაციო ფორმა",
+    subtitle: "საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაციის სარეგისტრაციო ფორმა",
     join: "შემოგვიერთდი",
     region: "ჩვენი რეგიონი",
     samegrelo: "სამეგრელო",
@@ -34,8 +34,8 @@ const translations = {
   },
   en: {
     dev: "Site is under development",
-    title: "Samegrelo-Zemo Svaneti",
-    subtitle: "Discover Kolkheti and Svaneti Peaks",
+    // title: "Samegrelo-Zemo Svaneti",
+    // subtitle: "Discover Kolkheti and Svaneti Peaks",
     join: "Join Us",
     region: "Our Region",
     samegrelo: "Samegrelo",
