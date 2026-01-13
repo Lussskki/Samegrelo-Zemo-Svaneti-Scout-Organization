@@ -36,12 +36,13 @@ const translations = {
     whatWeDo: "რას ვაკეთებთ",
     mission: "მიზანი მისია და ხედვა",
     aboutText: "ჩვენ ვართ მოხალისეობრივი, არაპოლიტიკური ორგანიზაცია ახალგაზრდებისთვის.",
-    missionText: "ჩვენი მისიაა წვლილი შევიტანოთ ახალგაზრდების აღზრდაში ღირებულებათა სისტემის მეშვეობით."
+    missionText: "ჩვენი მისიაა წვლილი შევიტანოთ ახალგაზრდების აღზრდაში ღირებულებათა სისტემის მეშვეობით.",
+    logoTitle: "სამეგრელოს სკაუტები"
   },
   en: {
     title: "Samegrelo Organization of the Scout Movement of Georgia",
     dev: "Site is under development",
-    subtitle: "Registration form of the members of the Samegrelo organization of the Scout Movement of Georgia",
+    subtitle: "Registration form for members of the Samegrelo organization of the Scout Movement of Georgia",
     join: "Join Us",
     region: "Our Region",
     samegrelo: "Samegrelo",
@@ -70,9 +71,52 @@ const translations = {
     whatWeDo: "What We Do",
     mission: "Mission & Vision",
     aboutText: "We are a voluntary, non-political educational movement for young people.",
-    missionText: "Our mission is to contribute to the education of young people through a value system."
+    missionText: "Our mission is to contribute to the education of young people through a value system.",
+    logoTitle: "Samegrelo Scouts"
   }
 };
+
+function AdminUpload({ lang }) {
+  const [file, setFile] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [url, setUrl] = useState("");
+
+  const handleUpload = async () => {
+    if (!file) return alert(lang === 'ka' ? "აირჩიეთ ფაილი!" : "Select a file!");
+    setLoading(true);
+    const formData = new FormData();
+    formData.append('image', file);
+
+    try {
+      const response = await fetch('http://localhost:5000/upload', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+      if (data.url) setUrl(data.url);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="container" style={{ padding: '100px 20px', textAlign: 'center' }}>
+      <h2>Upload New Photo</h2>
+      <input type="file" onChange={(e) => setFile(e.target.files[0])} style={{ margin: '20px 0' }} />
+      <br />
+      <button className="cta-btn" onClick={handleUpload} disabled={loading}>
+        {loading ? (lang === 'ka' ? "მუშავდება..." : "Processing...") : (lang === 'ka' ? "ატვირთვა" : "Upload to Cloudinary")}
+      </button>
+      {url && (
+        <div style={{ marginTop: '20px' }}>
+          <p>Link: <a href={url} target="_blank" rel="noreferrer">{url}</a></p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 function FullGallery({ images, lang }) {
   const [localSelectedImg, setLocalSelectedImg] = useState(null);
@@ -94,11 +138,15 @@ function FullGallery({ images, lang }) {
           <div 
             key={index} 
             className="gallery-item" 
-            role="img"
-            aria-label="Scout activity photo"
-            style={{ backgroundImage: `url(${img})` }}
+            style={{ overflow: 'hidden', display: 'flex' }}
             onClick={() => setLocalSelectedImg(img)}
-          ></div>
+          >
+            <img 
+              src={img} 
+              alt="Scout activity" 
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+            />
+          </div>
         ))}
       </div>
       {localSelectedImg && (
@@ -148,11 +196,10 @@ function HomePage({ images, setSelectedImg, lang }) {
         </div>
       </header>
 
-      {/* სექცია: ვინ ვართ ჩვენ */}
       <section className="container" id="about" style={{ padding: '80px 20px' }}>
         <div className="section-title"><h2>{t.whoWeAre}</h2></div>
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-           <p>{t.aboutText}</p>
+            <p>{t.aboutText}</p>
         </div>
       </section>
 
@@ -164,7 +211,6 @@ function HomePage({ images, setSelectedImg, lang }) {
         </div>
       </main>
 
-      {/* სექცია: რას ვაკეთებთ (Activities) */}
       <section className="activities-container" id="activities">
         <div className="section-title"><h2>{t.whatWeDo}</h2></div>
         <div className="activities-list">
@@ -175,11 +221,10 @@ function HomePage({ images, setSelectedImg, lang }) {
         </div>
       </section>
 
-      {/* სექცია: მიზანი მისია და ხედვა */}
       <section className="container" id="mission" style={{ padding: '80px 20px' }}>
         <div className="section-title"><h2>{t.mission}</h2></div>
         <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-           <p>{t.missionText}</p>
+            <p>{t.missionText}</p>
         </div>
       </section>
 
@@ -190,11 +235,15 @@ function HomePage({ images, setSelectedImg, lang }) {
             <div 
               key={index} 
               className="gallery-item" 
-              role="img"
-              aria-label="Gallery preview"
-              style={{ backgroundImage: `url(${img})` }} 
+              style={{ overflow: 'hidden', display: 'flex' }}
               onClick={() => setSelectedImg(img)}
-            ></div>
+            >
+              <img 
+                src={img} 
+                alt="Gallery preview" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+              />
+            </div>
           ))}
         </div>
         <div style={{ textAlign: 'center', marginTop: '40px' }}>
@@ -225,11 +274,16 @@ function App() {
   const t = translations[lang];
 
   const galleryImages = [
-    '/assets/photos/chveni-fotoebi/1.jpg', '/assets/photos/chveni-fotoebi/2.jpg',
-    '/assets/photos/chveni-fotoebi/3.jpg', '/assets/photos/chveni-fotoebi/4.jpg',
-    '/assets/photos/chveni-fotoebi/5.jpg', '/assets/photos/chveni-fotoebi/6.jpg',
-    '/assets/photos/chveni-fotoebi/7.jpg', '/assets/photos/chveni-fotoebi/8.jpg',
-    '/assets/photos/chveni-fotoebi/9.jpg', '/assets/photos/chveni-fotoebi/10.jpg'
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345768/scouts_gallery/xihnsdvz89yaim6uy0mq.jpg', 
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345779/scouts_gallery/bdmgyvbc4u2v84euxevu.jpg',
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345785/scouts_gallery/hq7xlxa83oqeue2v7n5f.jpg', 
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768344314/scouts_gallery/lwlaa6otqrviplveleic.jpg',
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345790/scouts_gallery/suwowi2cp8gsjzulots8.jpg', 
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345795/scouts_gallery/qi1gguz0ixsjy8plnhwf.jpg',
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345799/scouts_gallery/lgdufaxatpl96ya3o7mc.jpg', 
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345804/scouts_gallery/idnuvxc76dalu7mxuwso.jpg',
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345810/scouts_gallery/ne49f5mvrmqeqdoekqiw.jpg', 
+    'https://res.cloudinary.com/dmgtsbro4/image/upload/v1768345815/scouts_gallery/sainsemc72f3ul9teb3l.jpg'
   ];
 
   const logoPhoto = '/assets/icon.ico';
@@ -253,7 +307,7 @@ function App() {
           style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}
         >
           <img src="/assets/icon.ico" alt="Logo" style={{ height: '35px', borderRadius: '5px' }} />
-          <span>სამეგრელოს სკაუტები</span>
+          <span>{t.logoTitle}</span>
         </div>
         
         <div 
@@ -284,6 +338,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage images={galleryImages} setSelectedImg={setSelectedImg} lang={lang} />} />
         <Route path="/gallery" element={<FullGallery images={galleryImages} lang={lang} />} />
+        <Route path="/admin-upload" element={<AdminUpload lang={lang} />} />
       </Routes>
 
       {selectedImg && (

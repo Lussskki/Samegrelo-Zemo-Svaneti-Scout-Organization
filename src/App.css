@@ -1,4 +1,4 @@
-/* 1. ძირითადი პარამეტრები */
+/* 1. Base Parameters */
 * {
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ body {
     --white: #ffffff;
 }
 
-/* 2. ნავიგაცია */
+/* 2. Navigation */
 nav {
     background-color: var(--dark-green);
     display: flex;
@@ -45,7 +45,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: auto; /* ეს აიძულებს ყველაფერს მის შემდეგ, რომ გადავიდეს მარჯვნივ */
+    margin-right: auto; /* Pushes everything after the logo to the right side */
 }
 
 .nav-links {
@@ -63,19 +63,19 @@ nav {
     text-transform: uppercase;
 }
 
-/* ენის და თემის ღილაკების დაშორება მენიუსგან */
+/* Spacing between language/theme controls and the menu links */
 .nav-controls {
     display: flex;
     gap: 10px;
-    margin-right: 20px; /* მცირე დაშორება ღილაკებსა და მენიუს ბმულებს შორის */
+    margin-right: 20px; /* Small gap between buttons and menu links */
 }
 
-/* 3. მთავარი სურათი (Hero) */
+/* 3. Hero Section */
 .hero {
     width: 100%;
-    height: 85vh; /* ოდნავ გავზარდოთ სიმაღლე უკეთესი სივრცისთვის */
+    height: 85vh; /* Increased height for better spacing */
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('/assets/photos/first.jpg') center/cover no-repeat;
+                url('https://res.cloudinary.com/dmgtsbro4/image/upload/v1768346114/scouts_gallery/iuvvymypcibqqxwcdbq5.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,35 +87,35 @@ nav {
     max-width: 900px;
 }
 
-/* "საიტი დეველოპმეტის პროცესშია" */
+/* "Site is under development" text */
 .hero-text p:first-child { 
     color: var(--gold);
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 25px; /* დაშორება სათაურამდე */
+    margin-bottom: 25px; /* Spacing above the main title */
     opacity: 0.9;
 }
 
-/* მთავარი სათაური */
+/* Main Hero Title */
 .hero-text h1 { 
     color: var(--white); 
     font-size: 3.2rem; 
     line-height: 1.1;
-    margin-bottom: 25px; /* დაშორება ქვედა ტექსტამდე */
+    margin-bottom: 25px; /* Spacing below the title */
 }
 
-/* ქვესათაური (სარეგისტრაციო ფორმის ტექსტი) */
+/* Subtitle (Registration form text) */
 .hero-text p:last-of-type { 
     color: rgba(255, 255, 255, 0.85); 
     font-size: 1.2rem;
     line-height: 1.5;
-    margin-bottom: 40px; /* დაშორება ღილაკამდე */
+    margin-bottom: 40px; /* Spacing above the button */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* "შემოგვიერთდი" ღილაკი */
+/* "Join Us" Call to Action Button */
 .hero .cta-btn {
     padding: 15px 40px;
     font-size: 1.1rem;
@@ -127,14 +127,14 @@ nav {
     background-color: #266b2a;
 }
 
-/* მობილურის ადაპტაცია */
+/* Mobile Responsiveness for Hero */
 @media (max-width: 768px) {
     .hero-text h1 { font-size: 2.2rem; }
     .hero-text p:last-of-type { font-size: 1rem; }
     .hero-text { padding: 0 15px; }
 }
 
-/* 4. კონტეინერების გაფართოება */
+/* 4. Container Extensions */
 .container, .activities-container, .gallery-container, .contact-container {
     width: 100%;
     max-width: 100%;
@@ -148,7 +148,7 @@ nav {
     padding: 20px 0;
 }
 
-/* 5. რეგიონის ბარათები */
+/* 5. Region Cards */
 .region-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -170,14 +170,14 @@ nav {
     width: 100%;
 }
 
-.img-samegrelo { background-image: url('/assets/photos/dadianebis-sasakhle-palace-of-dadiani.jpg'); }
-.img-svaneti { background-image: url('/assets/photos/ushguli.jpg'); }
+.img-samegrelo { background-image: url('https://res.cloudinary.com/dmgtsbro4/image/upload/v1768346120/scouts_gallery/xqwmlaqvo8f0h0h0gkso.jpg'); }
+.img-svaneti { background-image: url('https://res.cloudinary.com/dmgtsbro4/image/upload/v1768346126/scouts_gallery/gnyaerdl04zrr4oziafa.jpg'); }
 
 .region-info { padding: 20px; border-left: 5px solid var(--bright-green); }
 .region-info h3 { color: var(--dark-green); margin-bottom: 5px; }
 .region-info p { color: #444; }
 
-/* 6. აქტივობები */
+/* 6. Activities */
 .activities-list {
     display: flex;
     flex-wrap: wrap;
@@ -195,7 +195,7 @@ nav {
     text-align: center;
 }
 
-/* 7. გალერეა */
+/* 7. Gallery */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -211,7 +211,7 @@ nav {
     cursor: pointer;
 }
 
-/* 8. ფუტერი */
+/* 8. Footer */
 footer {
     background-color: var(--dark-green);
     color: var(--white);
@@ -229,12 +229,12 @@ footer {
     text-decoration: none;
 }
 
-/* 9. მობილურის ვერსია */
+/* 9. Mobile Version */
 @media (max-width: 768px) {
-    /* ეს აჩენს ჰამბურგერს */
+    /* Reveals the Hamburger Menu Icon */
     .menu-icon { 
         display: block !important; 
-        color: var(--gold); /* ოქროსფერი */
+        color: var(--gold);
         font-size: 2rem; 
         cursor: pointer;
         font-weight: bold;
@@ -266,7 +266,7 @@ footer {
     }
 }
 
-/* 10. მოდალური ფანჯრის ფიქსი */
+/* 10. Modal Window Fixes */
 .modal {
     position: fixed;
     top: 0;
@@ -299,7 +299,7 @@ footer {
     cursor: pointer;
 }
 
-/* კონტაქტი და ღილაკი */
+/* Contact Form and Buttons */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -326,7 +326,7 @@ footer {
     cursor: pointer;
 }
 
-/* ენის და თემის ღილაკები */
+/* Language and Theme Buttons */
 .nav-controls {
     display: flex;
     gap: 10px;
@@ -349,14 +349,14 @@ footer {
     color: white;
 }
 
-/* გალერეის გვერდის სათაურის ზომის დაკლება */
+/* Gallery page title size adjustment */
 .gallery-page .section-title h1 {
-    font-size: 2rem !important; /* აქ შეგიძლია ციფრი შეცვალო (მაგ: 1.5 უფრო პატარა იქნება) */
+    font-size: 2rem !important; /* You can adjust this (e.g., 1.5 would be smaller) */
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* მობილურზე კიდევ უფრო დაპატარავება, რომ არ აიჭრას */
+/* Make gallery title even smaller on mobile to prevent overflow */
 @media (max-width: 768px) {
     .gallery-page .section-title h1 {
         font-size: 1.5rem !important;
