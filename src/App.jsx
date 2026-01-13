@@ -34,7 +34,9 @@ const translations = {
     night: "🌙 ღამე",
     whoWeAre: "ვინ ვართ ჩვენ",
     whatWeDo: "რას ვაკეთებთ",
-    mission: "მიზანი მისია და ხედვა"
+    mission: "მიზანი მისია და ხედვა",
+    aboutText: "ჩვენ ვართ მოხალისეობრივი, არაპოლიტიკური ორგანიზაცია ახალგაზრდებისთვის.",
+    missionText: "ჩვენი მისიაა წვლილი შევიტანოთ ახალგაზრდების აღზრდაში ღირებულებათა სისტემის მეშვეობით."
   },
   en: {
     title: "Samegrelo Organization of the Scout Movement of Georgia",
@@ -66,7 +68,9 @@ const translations = {
     night: "🌙 Night",
     whoWeAre: "Who We Are",
     whatWeDo: "What We Do",
-    mission: "Mission & Vision"
+    mission: "Mission & Vision",
+    aboutText: "We are a voluntary, non-political educational movement for young people.",
+    missionText: "Our mission is to contribute to the education of young people through a value system."
   }
 };
 
@@ -144,6 +148,14 @@ function HomePage({ images, setSelectedImg, lang }) {
         </div>
       </header>
 
+      {/* სექცია: ვინ ვართ ჩვენ */}
+      <section className="container" id="about" style={{ padding: '80px 20px' }}>
+        <div className="section-title"><h2>{t.whoWeAre}</h2></div>
+        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+           <p>{t.aboutText}</p>
+        </div>
+      </section>
+
       <main className="container" id="region-section">
         <div className="section-title"><h2>{t.region}</h2></div>
         <div className="region-grid">
@@ -152,13 +164,22 @@ function HomePage({ images, setSelectedImg, lang }) {
         </div>
       </main>
 
+      {/* სექცია: რას ვაკეთებთ (Activities) */}
       <section className="activities-container" id="activities">
-        <div className="section-title"><h2>{t.activities}</h2></div>
+        <div className="section-title"><h2>{t.whatWeDo}</h2></div>
         <div className="activities-list">
           <div className="activity-item">{t.camp}</div>
           <div className="activity-item">{t.hike}</div>
           <div className="activity-item">{t.projects}</div>
           <div className="activity-item">{t.help}</div>
+        </div>
+      </section>
+
+      {/* სექცია: მიზანი მისია და ხედვა */}
+      <section className="container" id="mission" style={{ padding: '80px 20px' }}>
+        <div className="section-title"><h2>{t.mission}</h2></div>
+        <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+           <p>{t.missionText}</p>
         </div>
       </section>
 
@@ -211,12 +232,13 @@ function App() {
     '/assets/photos/chveni-fotoebi/9.jpg', '/assets/photos/chveni-fotoebi/10.jpg'
   ];
 
-  // ლოგოს ფოტო, რომლის გამოჩენაც გსურთ დაკლიკებისას
   const logoPhoto = '/assets/icon.ico';
 
   useEffect(() => {
     setIsMenuOpen(false);
-    window.scrollTo(0, 0);
+    if (!location.hash) {
+        window.scrollTo(0, 0);
+    }
   }, [location]);
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -224,7 +246,6 @@ function App() {
   return (
     <div className={`app-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav>
-        {/* ლოგოზე დაკლიკების ფუნქციონალი */}
         <div className="logo" onClick={() => {
             closeMenu();
             setSelectedImg(logoPhoto);
@@ -265,7 +286,6 @@ function App() {
         <Route path="/gallery" element={<FullGallery images={galleryImages} lang={lang} />} />
       </Routes>
 
-      {/* მოდალური ფანჯარა რომელიც ხსნის ფოტოს */}
       {selectedImg && (
         <div className="modal" onClick={() => setSelectedImg(null)}>
           <span className="close">&times;</span>
