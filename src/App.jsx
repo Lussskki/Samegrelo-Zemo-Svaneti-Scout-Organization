@@ -211,21 +211,29 @@ function App() {
     '/assets/photos/chveni-fotoebi/9.jpg', '/assets/photos/chveni-fotoebi/10.jpg'
   ];
 
+  // ლოგოს ფოტო, რომლის გამოჩენაც გსურთ დაკლიკებისას
+  const logoPhoto = '/assets/icon.ico';
+
   useEffect(() => {
     setIsMenuOpen(false);
     window.scrollTo(0, 0);
   }, [location]);
 
-  // ფუნქცია მენიუს დასახურად ბმულზე დაჭერისას
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <div className={`app-container ${isDarkMode ? 'dark-mode' : ''}`}>
       <nav>
-        <Link to="/" className="logo" onClick={closeMenu}>
+        {/* ლოგოზე დაკლიკების ფუნქციონალი */}
+        <div className="logo" onClick={() => {
+            closeMenu();
+            setSelectedImg(logoPhoto);
+          }}
+          style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '10px' }}
+        >
           <img src="/assets/icon.ico" alt="Logo" style={{ height: '35px', borderRadius: '5px' }} />
           <span>სამეგრელოს სკაუტები</span>
-        </Link>
+        </div>
         
         <div 
           className="menu-icon" 
@@ -257,6 +265,7 @@ function App() {
         <Route path="/gallery" element={<FullGallery images={galleryImages} lang={lang} />} />
       </Routes>
 
+      {/* მოდალური ფანჯარა რომელიც ხსნის ფოტოს */}
       {selectedImg && (
         <div className="modal" onClick={() => setSelectedImg(null)}>
           <span className="close">&times;</span>
