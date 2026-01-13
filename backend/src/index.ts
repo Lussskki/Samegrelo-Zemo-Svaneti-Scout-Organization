@@ -15,7 +15,7 @@ app.use(express.json()); // Allows the server to understand JSON
 // The "Hello World" Route
 app.get('/', (req: Request, res: Response) => {
   res.send('Hello World! The Samegrelo Scouts backend is running. 🌲');
-});
+}); 
 
 // Start the server
 app.listen(PORT, () => {
