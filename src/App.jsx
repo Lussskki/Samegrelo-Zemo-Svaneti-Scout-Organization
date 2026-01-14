@@ -10,6 +10,8 @@ const translations = {
         subtitle: "საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაციის წევრთა სარეგისტრაციო ფორმა",
         join: "შემოგვიერთდი",
         region: "ჩვენი რეგიონი",
+        location: "მდებარეობა", // New
+        locationText: "ჩვენი ოფისი მდებარეობს ზუგდიდში, თავისუფლების ქუჩა #1", // New
         donation: "დონაცია",
         donationTitle: "მხარი დაგვიჭირეთ",
         donationText: "თქვენი წვლილი გვეხმარება უფრო მეტი საინტერესო პროექტი და ბანაკი შევთავაზოთ ახალგაზრდებს.",
@@ -50,6 +52,8 @@ const translations = {
         subtitle: "Registration form for members of the Samegrelo organization of the Scout Movement of Georgia",
         join: "Join Us",
         region: "Our Region",
+        location: "Location", // New
+        locationText: "Our office is located in Zugdidi, Freedom Street #1", // New
         donation: "Donation",
         donationTitle: "Support Us",
         donationText: "Your contribution helps us offer more interesting projects and camps for young people.",
@@ -238,6 +242,15 @@ function HomePage({ images, lang }) {
                 <div className="centered-text"><p>{t.missionText}</p></div>
             </section>
 
+            {/* --- NEW LOCATION SECTION --- */}
+            <section className="container" id="location">
+                <div className="section-title"><h2>{t.location}</h2></div>
+                <div className="centered-text">
+                    <p>{t.locationText}</p>
+                    {/* You can add an iframe for a Google Map here later */}
+                </div>
+            </section>
+
             {/* --- NEW DONATION SECTION --- */}
             <section className="container donation-section" id="donation">
                 <div className="section-title"><h2>{t.donationTitle}</h2></div>
@@ -348,9 +361,9 @@ function App() {
                     <li><a href="#activities" onClick={(e) => scrollToSection(e, 'activities')}>{t.whatWeDo}</a></li>
                     <li><a href="#mission" onClick={(e) => scrollToSection(e, 'mission')}>{t.mission}</a></li>
                     <li><a href="#region" onClick={(e) => scrollToSection(e, 'region-section')}>{t.region}</a></li>
-                    {/* Navigation now correctly targets #donation */}
+                    {/* New Location Link */}
+                    <li><a href="#location" onClick={(e) => scrollToSection(e, 'location')}>{t.location}</a></li>
                     <li><a href="#donation" onClick={(e) => scrollToSection(e, 'donation')}>{t.donation}</a></li>
-                    
                     <li><a href="#gallery" onClick={(e) => scrollToSection(e, 'gallery-section')}>{t.gallery}</a></li>
                     <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>{t.contact}</a></li>
                     
