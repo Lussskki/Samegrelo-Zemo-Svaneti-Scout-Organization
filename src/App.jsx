@@ -10,8 +10,8 @@ const translations = {
         subtitle: "საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაციის წევრთა სარეგისტრაციო ფორმა",
         join: "შემოგვიერთდი",
         region: "ჩვენი რეგიონი",
-        location: "მდებარეობა", // New
-        locationText: "ჩვენი ოფისი მდებარეობს ზუგდიდში, თავისუფლების ქუჩა #1", // New
+        location: "მდებარეობა", 
+        locationText: "ჩვენი ოფისი მდებარეობს ინგირში, თავისუფლების ქუჩაზე ", 
         donation: "დონაცია",
         donationTitle: "მხარი დაგვიჭირეთ",
         donationText: "თქვენი წვლილი გვეხმარება უფრო მეტი საინტერესო პროექტი და ბანაკი შევთავაზოთ ახალგაზრდებს.",
@@ -52,8 +52,8 @@ const translations = {
         subtitle: "Registration form for members of the Samegrelo organization of the Scout Movement of Georgia",
         join: "Join Us",
         region: "Our Region",
-        location: "Location", // New
-        locationText: "Our office is located in Zugdidi, Freedom Street #1", // New
+        location: "Location", 
+        locationText: "Our office is located in Ingiri, on Tavisupleba Street.",
         donation: "Donation",
         donationTitle: "Support Us",
         donationText: "Your contribution helps us offer more interesting projects and camps for young people.",
@@ -242,12 +242,31 @@ function HomePage({ images, lang }) {
                 <div className="centered-text"><p>{t.missionText}</p></div>
             </section>
 
-            {/* --- NEW LOCATION SECTION --- */}
+            {/* --- VETERINARY LOCATION SECTION --- */}
             <section className="container" id="location">
-                <div className="section-title"><h2>{t.location}</h2></div>
+                <div className="section-title">
+                    <h2>{t.location}</h2>
+                </div>
+
                 <div className="centered-text">
                     <p>{t.locationText}</p>
-                    {/* You can add an iframe for a Google Map here later */}
+
+                    <div className="map-container" style={{ marginTop: '20px' }}>
+                        <iframe
+                            title="Veterinary Clinic Ingiri"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.140492091809!2d41.8297427!3d42.4977788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c2506c0f5b005%3A0xe6ae831db81149c0!2z4YOV4YOU4YOi4YOU4YO_4YOY4YOc4YOQ4YO_4YOYIC8gVmV0ZXJpbmFyaWFu!5e0!3m2!1sen!2sge!4v1705312345678"
+                            width="100%"
+                            height="450"
+                            style={{
+                                border: 0,
+                                borderRadius: '12px',
+                                boxShadow: '0 4px 15px rgba(0,0,0,0.1)'
+                            }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
                 </div>
             </section>
 
