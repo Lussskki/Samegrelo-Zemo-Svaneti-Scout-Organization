@@ -2,8 +2,11 @@ import { useState, useEffect, useRef } from 'react';
 import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import './App.css';
+
 import { ALL_PHOTOS } from './photos';
 import { translations } from './translations';
+import { FullGallery } from './MasonryGridGallery';
+import { AdminUpload } from './AdminUpload';
 
 
 
@@ -25,88 +28,6 @@ function RegionCard({ title, text, imgClass }) {
     );
 }
 
-function AdminUpload({ lang }) {
-    const [file, setFile] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [url, setUrl] = useState("");
-
-    const handleUpload = async () => {
-        if (!file) return alert(lang === 'ka' ? "აირჩიეთ ფაილი!" : "Select a file!");
-        setLoading(true);
-        const formData = new FormData();
-        formData.append('image', file);
-        try {
-            const response = await fetch('http://localhost:5000/upload', {
-                method: 'POST',
-                body: formData,
-            });
-            const data = await response.json();
-            if (data.url) setUrl(data.url);
-        } catch (err) {
-            console.error(err);
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    return (
-        <div className="container" style={{ padding: '100px 20px', textAlign: 'center' }}>
-            <h2>Upload New Photo</h2>
-            <input type="file" onChange={(e) => setFile(e.target.files[0])} style={{ margin: '20px 0' }} />
-            <br />
-            <button className="cta-btn" onClick={handleUpload} disabled={loading}>
-                {loading ? (lang === 'ka' ? "მუშავდება..." : "Processing...") : (lang === 'ka' ? "ატვირთვა" : "Upload to Cloudinary")}
-            </button>
-            {url && <div style={{ marginTop: '20px' }}><p>Link: <a href={url} target="_blank" rel="noreferrer">{url}</a></p></div>}
-        </div>
-    );
-}
-
-function FullGallery({ lang }) {
-    const [selectedYear, setSelectedYear] = useState('All');
-    const [currentIndex, setCurrentIndex] = useState(null);
-    const t = translations[lang];
-    const years = ['All', '2026', '2025', '2024', '2023', '2022', '2021', '2020', '2019', '2018', '2017', '2016', '2015', '2014'];
-    const filteredPhotos = selectedYear === 'All' ? ALL_PHOTOS : ALL_PHOTOS.filter(photo => photo.year === selectedYear);
-    const showNext = (e) => { e?.stopPropagation(); setCurrentIndex((prev) => (prev + 1) % filteredPhotos.length); };
-    const showPrev = (e) => { e?.stopPropagation(); setCurrentIndex((prev) => (prev - 1 + filteredPhotos.length) % filteredPhotos.length); };
-    const selectedImg = currentIndex !== null ? filteredPhotos[currentIndex] : null;
-
-    return (
-        <div className="portfolio-app gallery-page-wrapper">
-            <header className="archive-header">
-                <h1>{t.fullGallery} {selectedYear !== 'All' ? `(${selectedYear})` : ''}</h1>
-                <div className="filter-bar">
-                    {years.map(year => (
-                        <button key={year} className={selectedYear === year ? 'active' : ''} onClick={() => { setSelectedYear(year); setCurrentIndex(null); }}>{year}</button>
-                    ))}
-                </div>
-                <Link to="/" className="cta-btn" style={{marginTop: '30px'}}>{t.back}</Link>
-            </header>
-            <div className="masonry-grid">
-                {filteredPhotos.map((img, index) => (
-                    <div key={img.id} className="masonry-item" onClick={() => setCurrentIndex(index)}>
-                        <img src={img.url} alt={img.title} loading="lazy" />
-                        <div className="item-hover-overlay">
-                            <div className="overlay-content"><h2 className="overlay-type">{img.type}</h2><p className="overlay-year">{img.year}</p></div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            {selectedImg && (
-                <div className="lightbox" onClick={() => setCurrentIndex(null)}>
-                    <button className="close-btn" onClick={() => setCurrentIndex(null)}>×</button>
-                    <button className="nav-arrow left" onClick={showPrev}>❮</button>
-                    <div className="lightbox-center" onClick={(e) => e.stopPropagation()}>
-                        <img src={selectedImg.url} alt={selectedImg.title} className="lightbox-img" />
-                        <div className="lightbox-caption"><h3>{selectedImg.title}</h3><p>{selectedImg.year} - {selectedImg.type}</p></div>
-                    </div>
-                    <button className="nav-arrow right" onClick={showNext}>❯</button>
-                </div>
-            )}
-        </div>
-    );
-}
 
 function HomePage({ lang }) {
     const form = useRef();
@@ -315,7 +236,7 @@ function App() {
                     <li><a href="#mission" onClick={(e) => scrollToSection(e, 'mission')}>{t.mission}</a></li>
                     <li><a href="#location" onClick={(e) => scrollToSection(e, 'location')}>{t.location}</a></li>
                     <li><a href="#donation" onClick={(e) => scrollToSection(e, 'donation')}>{t.donation}</a></li>
-                    <li><a href="#gallery" onClick={(e) => scrollToSection(e, 'gallery-section')}>{t.gallery}</a></li>
+                   <li><Link to="/gallery">{t.gallery}</Link></li>
                     <li><a href="#contact" onClick={(e) => scrollToSection(e, 'contact')}>{t.contact}</a></li>
                     <li className="nav-controls-wrapper">
                         <div className="nav-controls">
