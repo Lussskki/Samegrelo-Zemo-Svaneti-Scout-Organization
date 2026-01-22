@@ -59,7 +59,9 @@ export default function App() {
       {/* HEADER */}
       <header className="header">
         <div className="logo-group">
+          <a href="#hero" onClick={() => setMenuOpen(false)}>
           <img src="/assets/icon.ico" alt="Logo" className="logo-img" />
+          </a>
         </div>
 
         {/* HAMBURGER (mobile only) */}
