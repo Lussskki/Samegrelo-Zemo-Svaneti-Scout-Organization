@@ -43,6 +43,63 @@ body {
   align-items: center;
   gap: 10px;
 }
+.logo-group a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 40px; /* Adjust based on your current logo size */
+  width: auto;
+}
+
+.logo-img-secondary {
+  height: 35px; /* Slightly smaller or same size as the main logo */
+  width: auto;
+  object-fit: contain;
+}
+.logo-sec-img {
+  height: 40px; /* Adjust based on your current logo size */
+  width: auto;
+}
+
+/* On mobile, you might want to hide one or make them smaller */
+@media (max-width: 768px) {
+  .logo-img-secondary {
+    height: 30px;
+  }
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.transparent-logo {
+  /* This helps remove dark backgrounds if the image isn't a true PNG */
+  mix-blend-mode: lighten; 
+  height: 45px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.logo-img-secondary {
+  height: 38px; /* Slightly smaller to balance the round logo */
+}
+
+.header-title {
+  margin-left: 10px;
+  font-size: 1.1rem;
+  color: white; /* Ensures text is visible on dark header */
+}
+
+/* Hover effect */
+.logo-link:hover .transparent-logo {
+  transform: scale(1.05);
+}
 
 .nav a {
   color: white;
@@ -481,6 +538,11 @@ body.night .mobile-controls button {
 @media (max-width: 768px) {
   .header {
     position: fixed;
+    /* Reduce vertical and horizontal padding */
+    padding: 10px 5%; 
+    flex-direction: row; /* Keeps logo and hamburger on the same line */
+    justify-content: space-between;
+    height: 70px; /* Forces a smaller height */
   }
 }
 
@@ -495,3 +557,45 @@ body.night .mobile-controls button {
   }
 }
 
+/* ========================= */
+/* 🔧 LOGO TRANSPARENCY FIX */
+/* ========================= */
+
+/* Force true transparency everywhere */
+.logo-img,
+.logo-img-secondary,
+.transparent-logo {
+  background-color: transparent !important;
+}
+
+/* Disable blend-mode that causes white background */
+.transparent-logo {
+  mix-blend-mode: normal !important;
+}
+
+/* Prevent parent elements from adding background */
+.logo-group,
+.logo-group a {
+  background: transparent !important;
+}
+
+/* ========================= */
+/* ✅ REAL LOGO TRANSPARENCY FIX */
+/* ========================= */
+
+.transparent-logo {
+  display: block;
+  background: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Kill blend-mode completely */
+.transparent-logo {
+  mix-blend-mode: normal !important;
+}
+
+/* Make sure IMG itself isn't painted */
+.logo-group img {
+  background: transparent !important;
+}

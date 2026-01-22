@@ -19,8 +19,9 @@ export default function App() {
   // Language content
   const content = {
     KA: {
+      title: 'სამეგრელოს ორგანიზაციის სკაუტები',
       home: 'მთავარი',
-      about: 'ცენტრის შესახებ',
+      about: 'ჩვენი ცენტრი ინგირში',
       activities: 'აქტივობები',
       join: 'შემოუერთდი',
       sponsors: 'სპონსორები',
@@ -32,9 +33,16 @@ export default function App() {
       parents: 'მშობლებისთვის',
       becomeScout: 'გახდი სკაუტი',
       membership: 'წევრობის შესახებ',
-      latestActivities: 'ბოლო აქტივობები'
+      latestActivities: 'ბოლო აქტივობები',
+      campZone: 'საბანაკე ზონა',
+      adventurePark: 'სათავგადასავლო პარკი',
+      eduSpace: 'საგანმანათლებლო სივრცე',
+      socialMedia: 'სოციალური მედია',
+      location: 'ადგილმდებარეობა',
+      partner: 'პარტნიორი'
     },
     EN: {
+      title: 'Samegrelo Organization Scouts',
       home: 'Home',
       about: 'About',
       activities: 'Activities',
@@ -43,12 +51,18 @@ export default function App() {
       heroTitle: 'Adventure, Nature, and Leadership in the Heart of Samegrelo.',
       heroText: 'Welcome to Ingiri International Scout Center!',
       joinBtn: 'Join the Scouts',
-      learnBtn: 'Learn More About Center',
+      learnBtn: 'Learn More About Center In Ingiri',
       youth: 'For Youth',
       parents: 'For Parents',
       becomeScout: 'Become a Scout',
       membership: 'Membership Info',
-      latestActivities: 'Latest Activities'
+      latestActivities: 'Latest Activities',
+      campZone: 'Camping Zone',
+      adventurePark: 'Adventure Park',
+      eduSpace: 'Educational Space',
+      socialMedia: 'Social Media',
+      location: 'Location',
+      partner: 'Partners'
     }
   };
 
@@ -60,7 +74,11 @@ export default function App() {
       <header className="header">
         <div className="logo-group">
           <a href="#hero" onClick={() => setMenuOpen(false)}>
-          <img src="/assets/icon.ico" alt="Logo" className="logo-img" />
+            <img src="/assets/icon.ico" alt="Logo" className="logo-img" />
+            <img
+              src="assets/mountain-logo.png" className='logo-sec-img'
+            />
+
           </a>
         </div>
 
@@ -77,7 +95,6 @@ export default function App() {
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{langContent.join}</a>
           <a href="#sponsors" onClick={() => setMenuOpen(false)}>{langContent.sponsors}</a>
 
-          {/* MOVED: Language and Theme buttons are now inside the menu */}
           <div className="menu-controls">
             <button className="control-btn" onClick={() => setLang(lang === 'KA' ? 'EN' : 'KA')}>
               {lang}
@@ -108,21 +125,23 @@ export default function App() {
           <div className="card">
             <div className="card-top purple">
               <span className="icon">⛺</span>
-              <p>საბანაკე ზონა</p>
+              <p>{langContent.campZone}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/13/400/300)' }} />
           </div>
+
           <div className="card">
             <div className="card-top green">
               <span className="icon">🧗</span>
-              <p>სათავგადასავლო პარკი</p>
+              <p>{langContent.adventurePark}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1036/400/300)' }} />
           </div>
+
           <div className="card">
             <div className="card-top orange">
               <span className="icon">💼</span>
-              <p>საგანმანათლებლო სივრცე</p>
+              <p>{langContent.eduSpace}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1/400/300)' }} />
           </div>
@@ -172,7 +191,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="footer">
         <div className="footer-col">
-          <h4>სოციალური მედია</h4>
+          <h4>{langContent.socialMedia}</h4>
           <div className="social-icons">
             <span>f</span><span>t</span><span>i</span><span>vk</span>
           </div>
@@ -184,12 +203,12 @@ export default function App() {
         </div>
 
         <div className="footer-col">
-          <h4>ადგილმდებარეობა</h4>
+          <h4>{langContent.location}</h4>
           <img src="https://via.placeholder.com/200x100?text=MAP" alt="Map" />
         </div>
 
         <div className="footer-col">
-          <h4>პარტნიორი</h4>
+          <h4>{langContent.partner}</h4>
           <div className="partner-logos">
             <img src="https://via.placeholder.com/50?text=Scout" alt="Scout" />
             <img src="https://via.placeholder.com/80x40?text=USAID" alt="USAID" />
