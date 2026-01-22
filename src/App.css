@@ -443,3 +443,21 @@ body.night .overlay-btn { opacity: 0.9; }
 body.night .mobile-controls button {
   background-color: #555;
 }
+
+/* ===== HEADER RIGHT CONTROLS FIX ===== */
+
+.header {
+  position: relative;
+}
+
+.nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.menu-controls {
+  display: flex;
+  gap: 12px;
+  margin-left: 30px;
+}
