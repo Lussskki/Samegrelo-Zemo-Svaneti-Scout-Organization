@@ -198,15 +198,41 @@ export default function App() {
       <footer className="footer">
         <div className="footer-col">
           <h4>{langContent.socialMedia}</h4>
+          
           <div className="social-icons">
-            <span>f</span><span>t</span><span>i</span><span>vk</span>
+            {/* Facebook Icon */}
+            <a href="https://www.facebook.com/profile.php?id=100064482258846" target="_blank" rel="noopener noreferrer">
+              <img src="assets/facebook.png" alt="Facebook" className="logo-third-img-camp" />
+            </a>
+
+            {/* Instagram Icon */}
+            <a href="https://www.instagram.com/scoutsofsamegrelo/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/instagram.png" alt="Instagram" className="logo-third-img-camp" />
+            </a>
           </div>
+
           <div className="contact-details">
-            <p>📞 533 455 7890</p>
-            <p>✉️ info@samegrelo.com</p>
-            <p>🌐 samegreloscouts.ka</p>
+            <p>
+              <a href="tel:+9955334557890">
+                <img src="assets/phone.png" alt="Phone" className="contact-icon-small" />
+                533 455 7890
+              </a>
+            </p>
+            <p>
+              <a href="mailto:ScoutsOfsamegrelo@gmail.com">
+                <img src="assets/mail.png" alt="Email" className="contact-icon-small" />
+                ScoutsOfsamegrelo@gmail.com
+              </a>
+            </p>
+            <p>
+              <a href="https://scoutsofsamegrelo.com" target="_blank" rel="noreferrer">
+                <img src="assets/web.png" alt="Web" className="contact-icon-small" />
+                scoutsofsamegrelo.com
+              </a>
+            </p>
           </div>
         </div>
+      
 
         <div className="footer-col">
           <h4>{langContent.location}</h4>

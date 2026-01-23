@@ -622,3 +622,153 @@ body.night .mobile-controls button {
 .logo-group img {
   background: transparent !important;
 }
+
+/* Container for the rows of text */
+.contact-details p {
+  margin: 12px 0;
+}
+
+/* Make the link behave like a flex container */
+.contact-details a {
+  display: flex;
+  align-items: center; /* Centers icon vertically with text */
+  text-decoration: none;
+  color: white; /* Or your preferred footer text color */
+  font-size: 16px;
+}
+
+/* Small icons for Phone/Email/Web */
+.contact-icon-small {
+  width: 20px;  /* Small, fixed size */
+  height: 20px;
+  margin-right: 10px; /* Space between icon and text */
+  object-fit: contain;
+}
+
+/* Social Media Icons (The ones in the top row) */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-img {
+  width: 30px; /* Slightly larger than contact icons */
+  height: 30px;
+}
+/* Default styles for larger screens */
+.social-links-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.header-social-icon {
+  width: 50px; /* Matching the larger size in your second image */
+  height: 50px;
+}
+
+/* MOBILE VERSION (Screens under 768px) */
+@media (max-width: 768px) {
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This centers everything in the column */
+    text-align: center;
+  }
+
+  .social-links-container {
+    justify-content: center; /* Centers the FB and Insta icons */
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps the text left-aligned to the icon */
+    margin-top: 20px;
+  }
+  
+  .contact-icon-small {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}
+
+/* --- Desktop Styles (STAYS LEFT) --- */
+.header {
+  display: flex;
+  justify-content: space-between; /* Logos Left, Menu/Nav Right */
+  align-items: center;
+  padding: 10px 120px;
+  background-color: #1a0933; 
+  border-bottom: 4px solid #00adef; /* The blue bar from your image */
+}
+
+.logo-group a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.logo-sec-img {
+  height: 40px;
+  width: auto;
+}
+
+/* --- Mobile Styles (ONLY CENTER ON SMALL SCREENS) --- */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center; /* Centers the logo-group */
+    position: relative;     /* Allows hamburger to sit on top */
+    padding: 15px 0;
+  }
+
+  .logo-group {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Keep logos side-by-side */
+  .logo-group a {
+    gap: 10px;
+  }
+
+  .logo-img {
+    height: 45px;
+  }
+
+  .logo-sec-img {
+    height: 35px;
+  }
+
+  /* Push Hamburger to the far right without moving the logos */
+  .hamburger {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: var(--dark-purple) !important;
+  }
+
+  .hero {
+    margin-top: 0 !important;
+    padding-top: 70px; /* header height */
+  }
+}
+
+
