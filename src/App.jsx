@@ -124,7 +124,9 @@ export default function App() {
         <div className="activities-grid">
           <div className="card">
             <div className="card-top purple">
-              <span className="icon">⛺</span>
+            <a href="https://www.flaticon.com/free-icons/camping" title="camping icons">
+              <img src="assets/camp-zone.png" className="logo-third-img-camp" />
+            </a>
               <p>{langContent.campZone}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/13/400/300)' }} />
@@ -132,7 +134,9 @@ export default function App() {
 
           <div className="card">
             <div className="card-top green">
-              <span className="icon">🧗</span>
+            <a href="https://www.flaticon.com/free-icons/camping" title="camping icons">
+              <img src="assets/adventure-park.png" className="logo-third-img-camp" />
+            </a>
               <p>{langContent.adventurePark}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1036/400/300)' }} />
@@ -140,7 +144,9 @@ export default function App() {
 
           <div className="card">
             <div className="card-top orange">
-              <span className="icon">💼</span>
+            <a href="https://www.flaticon.com/free-icons/camping" title="camping icons">
+              <img src="assets/educational-space.png" className="logo-third-img-camp" />
+            </a>
               <p>{langContent.eduSpace}</p>
             </div>
             <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1/400/300)' }} />
