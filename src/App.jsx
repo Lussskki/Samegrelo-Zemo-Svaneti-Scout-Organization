@@ -143,8 +143,29 @@ export default function App() {
           <h1>{langContent.heroTitle}</h1>
           <p>{langContent.heroText}</p>
           <div className="hero-buttons">
-            <button className="btn purple">{langContent.joinBtn}</button>
-            <button className="btn green">{langContent.learnBtn}</button>
+            <button
+              className="btn purple"
+              onClick={() => {
+                document.getElementById("target")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+                setMenuOpen(false);
+              }}
+            >
+              {langContent.joinBtn}
+            </button>
+            <button
+              className="btn green"
+              onClick={() => {
+                document.getElementById("activities")?.scrollIntoView({
+                  behavior: "smooth",
+                });
+                setMenuOpen(false);
+              }}
+            >
+              {langContent.learnBtn}
+            </button>
+
           </div>
         </div>
       </section>
