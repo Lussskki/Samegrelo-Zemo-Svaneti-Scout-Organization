@@ -900,3 +900,52 @@ body.night .services-section .section-title {
   color: #eaeaea; /* or whatever you already use */
 }
 
+/* DEVELOPER */
+
+.developer-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.developer-card {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.developer-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.developer-text {
+  max-width: 500px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* DAY MODE → white text */
+body.day .developer-section .section-title  {
+  color: #ffffff;
+}
+
+body.day .developer-section .developer-text {
+  color: #ffffff;
+}
+
+body.day .developer-section .al
+/* NIGHT MODE → keep dark or custom */
+body.night .developer-section .section-title {
+  color: #eaeaea; 
+}
+
+body.night .developer-section .developer-text {
+  color: #eaeaea; 
+}

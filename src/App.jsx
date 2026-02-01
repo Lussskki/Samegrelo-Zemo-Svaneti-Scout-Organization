@@ -46,10 +46,9 @@ export default function App() {
       rent: 'ცენტრის გაქირავება',
       servicesDesc1: 'სკაუტური ლიდერობა, ბუნებაში გადარჩენა და გუნდური მუშაობა.',
       servicesDesc2: 'ბანაკები, ფესტივალები და საგანმანათლებლო ღონისძიებები.',
-      servicesDesc3: 'ცენტრის სივრცის გამოყენება ბანაკებისა და ღონისძიებებისთვის.'
-
-
-
+      servicesDesc3: 'ცენტრის სივრცის გამოყენება ბანაკებისა და ღონისძიებებისთვის.',
+      developerTitle: 'დეველოპერის შესახებ',
+      developerText: 'ვებ-საიტი შექმნილია Luka Guledani-ის მიერ React და Vite ტექნოლოგიების გამოყენებით, თანამედროვე UI/UX მიდგომებით.'
     },
     EN: {
       title: 'Samegrelo Organization Scouts',
@@ -79,7 +78,9 @@ export default function App() {
       rent: 'Center Rental',
       servicesDesc1: 'Scout leadership, survival skills in nature, and teamwork.',
       servicesDesc2: 'Camps, festivals, and educational events.',
-      servicesDesc3: 'Use of the scout center space for camps and events.'
+      servicesDesc3: 'Use of the scout center space for camps and events.',
+      developerTitle: 'About the Developer',
+      developerText: 'This website was developed by Luka Guledani using React and Vite technologies, with modern UI/UX approaches.'
     }
   };
 
@@ -274,6 +275,23 @@ export default function App() {
           <img src="https://via.placeholder.com/150x80?text=Sponsor4" alt="Sponsor 4" />
         </div>
       </section>
+
+      {/* DEVELOPER */}
+      <section className="developer-section">
+        <h2 className="section-title">{langContent.developerTitle}</h2>
+
+        <div className="developer-card">
+          <img
+            src="/assets/developer.jpg"
+            className="developer-photo"
+          />
+
+          <div className="developer-text">
+            <p>{langContent.developerText}</p>
+          </div>
+        </div>
+      </section>
+
 
       {/* FOOTER */}
       <footer className="footer">
