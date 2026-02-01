@@ -24,7 +24,7 @@ export default function App() {
       about: 'ჩვენი ცენტრი ინგირში',
       // activities: 'აქტივობები',
       join: 'ადგილმდებარეობა',
-      // sponsors: 'სპონსორები',
+      sponsors: 'სპონსორები',
       heroTitle: 'თავგადასავალი, ბუნება და ლიდერობა სამეგრელოს გულში.',
       heroText: 'სამეგრელოს  სკაუტური ცენტრი გელით!',
       joinBtn: 'შემოუერთდი სკაუტებს',
@@ -57,7 +57,7 @@ export default function App() {
       about: 'About',
       activities: 'Activities',
       join: 'Location',
-      // sponsors: 'Sponsors',
+      sponsors: 'Sponsors',
       heroTitle: 'Adventure, Nature, and Leadership in the Heart of Samegrelo.',
       heroText: 'Welcome to Samegrelo Scout Center!',
       joinBtn: 'Join the Scouts',
@@ -135,9 +135,9 @@ export default function App() {
           {langContent.services}
         </a>
 
-        {/* <a href="#sponsors" onClick={() => setMenuOpen(false)}>
+        <a href="#sponsors" onClick={() => setMenuOpen(false)}>
           {langContent.sponsors}
-        </a> */}
+        </a> 
 
         <div className="menu-controls">
           <button
@@ -265,15 +265,15 @@ export default function App() {
       </section>
 
       {/* SPONSORS */}
-      {/* <section id="sponsors" className="sponsors-section"> */}
-        {/* <h2 className="section-title">{langContent.sponsors}</h2> */}
-        {/* <div className="sponsors-grid"> */}
-          {/* <img src="https://via.placeholder.com/150x80?text=Sponsor1" alt="Sponsor 1" />
+      <section id="sponsors" className="sponsors-section">
+        <h2 className="section-title">{langContent.sponsors}</h2>
+        <div className="sponsors-grid">
+          <img src="https://via.placeholder.com/150x80?text=Sponsor1" alt="Sponsor 1" />
           <img src="https://via.placeholder.com/150x80?text=Sponsor2" alt="Sponsor 2" />
           <img src="https://via.placeholder.com/150x80?text=Sponsor3" alt="Sponsor 3" />
-          <img src="https://via.placeholder.com/150x80?text=Sponsor4" alt="Sponsor 4" /> */}
-        {/* </div> */}
-      {/* </section> */}
+          <img src="https://via.placeholder.com/150x80?text=Sponsor4" alt="Sponsor 4" />
+        </div>
+      </section>
 
       {/* FOOTER */}
       <footer className="footer">
