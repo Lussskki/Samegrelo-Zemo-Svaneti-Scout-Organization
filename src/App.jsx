@@ -39,7 +39,17 @@ export default function App() {
       eduSpace: 'საგანმანათლებლო სივრცე',
       socialMedia: 'სოციალური მედია',
       location: 'ადგილმდებარეობა',
-      partner: 'პარტნიორი'
+      partner: 'პარტნიორი',
+      services: 'სერვისები',
+      training: 'ტრენინგები',
+      events: 'ღონისძიებები',
+      rent: 'ცენტრის გაქირავება',
+      servicesDesc1: 'სკაუტური ლიდერობა, ბუნებაში გადარჩენა და გუნდური მუშაობა.',
+      servicesDesc2: 'ბანაკები, ფესტივალები და საგანმანათლებლო ღონისძიებები.',
+      servicesDesc3: 'ცენტრის სივრცის გამოყენება ბანაკებისა და ღონისძიებებისთვის.'
+
+
+
     },
     EN: {
       title: 'Samegrelo Organization Scouts',
@@ -62,7 +72,14 @@ export default function App() {
       eduSpace: 'Educational Space',
       socialMedia: 'Social Media',
       location: 'Location',
-      partner: 'Partners'
+      partner: 'Partners',
+      services: 'Services',
+      training: 'Trainings',
+      events: 'Events',
+      rent: 'Center Rental',
+      servicesDesc1: 'Scout leadership, survival skills in nature, and teamwork.',
+      servicesDesc2: 'Camps, festivals, and educational events.',
+      servicesDesc3: 'Use of the scout center space for camps and events.'
     }
   };
 
@@ -112,6 +129,10 @@ export default function App() {
 
         <a href="#gallery" onClick={() => setMenuOpen(false)}>
           {langContent.latestActivities}
+        </a>
+
+        <a href="#services" onClick={() => setMenuOpen(false)}>
+          {langContent.services}
         </a>
 
         {/* <a href="#sponsors" onClick={() => setMenuOpen(false)}>
@@ -199,6 +220,37 @@ export default function App() {
           </div>
         </div>
       </section>
+      {/* SERVICES */}
+      <section id="services" className="services-section">
+        <h2 className="section-title">{langContent.services}</h2>
+
+        <div className="services-grid">
+          <div className="service-card">
+            <img src="assets/training.png" alt="Training" />
+            <h3>{langContent.training}</h3>
+            <p>
+              {langContent.servicesDesc1}
+            </p>
+          </div>
+
+          <div className="service-card">
+            <img src="assets/events.png" alt="Events" />
+            <h3>{langContent.events}</h3>
+            <p>
+              {langContent.servicesDesc2}
+            </p>
+          </div>
+
+          <div className="service-card">
+            <img src="assets/rent.png" alt="Rent" />
+            <h3>{langContent.rent}</h3>
+            <p>
+              {langContent.servicesDesc3}
+            </p>
+          </div>
+        </div>
+      </section>
+
 
       {/* TARGET */}
       <section id="target" className="target-section">
