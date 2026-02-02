@@ -11,7 +11,7 @@ export default function App() {
     document.body.style.overflow = menuOpen ? 'hidden' : 'auto';
   }, [menuOpen]);
 
-  // Set body class for day/night
+  // day/night
   useEffect(() => {
     document.body.className = theme === 'day' ? 'day' : 'night';
   }, [theme]);
@@ -146,7 +146,7 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* HEADER */}
+      {/* HEADER - ჰედერი*/}
       <header className="header">
         <div className="logo-group">
           <a href="#hero" onClick={() => setMenuOpen(false)}>
@@ -163,8 +163,7 @@ export default function App() {
           <a href="#hero" onClick={() => setMenuOpen(false)}>
             {langContent.home}
           </a>
-
-          {/* ABOUT US DROPDOWN */}
+          {/* ABOUT US DROPDOWN - ჩვენს შესახებ სქროლი */}
           <div className={`nav-dropdown ${aboutOpen ? 'open' : ''}`}>
             <button className="nav-link" onClick={() => setAboutOpen(!aboutOpen)}>
               {langContent.join}
@@ -180,10 +179,7 @@ export default function App() {
             )}
           </div>
 
-          <a href="#services" onClick={() => setMenuOpen(false)}>{langContent.eduTitle}</a>
-          <a href="#target" onClick={() => setMenuOpen(false)}>{langContent.youthTitle}</a>
-
-          {/* SERVICES DROPDOWN */}
+          {/* SERVICES DROPDOWN - სერვისების სქროლი*/}
           <div className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}>
             <button type="button" className="nav-link" onClick={(e) => { e.stopPropagation(); setServicesOpen(prev => !prev); }}>
               {langContent.services}
@@ -202,9 +198,16 @@ export default function App() {
             )}
           </div>
 
+
+          {/* ახალგაზრდული პროექტები - საგანმანათლებლო პროექტები */}
+          <a href="#target" onClick={() => setMenuOpen(false)}>{langContent.youthTitle}</a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>{langContent.eduTitle}</a>  
+
+            {/* გალერეა - დონაცია - კონტაქტი */}
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{langContent.sponsors}</a>
           <a href="#donation" onClick={() => setMenuOpen(false)}>{langContent.donation}</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>{langContent.contact}</a>
+
 
           <div className="menu-controls">
             <button className="control-btn" onClick={() => setLang(lang === 'ქარ' ? 'ENG' : 'ქარ')}>
@@ -226,7 +229,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* EDUCATIONAL PROJECTS */}
+      {/* EDUCATIONAL PROJECTS - საგანმანათლებლო პროექტები*/}
       <section id="services" className="edu-projects-section">
         <h2 className="section-title">{langContent.eduTitle}</h2>
         <p className="section-subtitle">{langContent.eduSubtitle}</p>
@@ -250,7 +253,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES SECTION */}
+      {/* SERVICES SECTION -სერვისების სექცია */}
       <section id="services" className="services-section">
         <h2 className="section-title">{langContent.services}</h2>
         <div className="services-grid">
@@ -285,7 +288,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* ABOUT */}
+      {/* ABOUT US - ჩვენს შესახებ*/}
       <section id="about" className="about-section">
         <h2 className="section-title">{langContent.aboutTitle}</h2>
         <p className="section-subtitle">{langContent.aboutSubtitle}</p>
@@ -309,7 +312,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* YOUTH PROJECTS */}
+      {/* YOUTH PROJECTS - ახალგაზრდული პროექტები */}
       <section id="target" className="youth-projects-section">
         <h2 className="section-title">{langContent.youthTitle}</h2>
         <p className="section-subtitle">{langContent.youthSubtitle}</p>
@@ -333,9 +336,9 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER - ფუტერი */}
       <footer className="footer">
-        <div className="footer-col">
+        <div className="footer-col" id="contact">
           <h4>{langContent.socialMedia}</h4>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=100064482258846" target="_blank" rel="noopener noreferrer">
