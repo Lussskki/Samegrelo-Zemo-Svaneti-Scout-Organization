@@ -2133,3 +2133,27 @@ body.night .target-card {
 .hero-content {
   text-align: center; 
 }
+
+/* Mobile adjustments for Georgian text */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem; /* Reduces title size so it fits on one or two lines */
+    line-height: 1.2;
+    padding: 0 10px;   /* Prevents text from touching the screen edges */
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    padding: 0 15px;
+    margin-bottom: 20px;
+  }
+
+  /* Adjusts the hero title specifically */
+  .hero-content h1 {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
