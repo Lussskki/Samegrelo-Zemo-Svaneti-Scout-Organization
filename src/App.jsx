@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+import './App.css'
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,22 +23,22 @@ export default function App() {
       home: 'მთავარი',
       about: 'ჩვენი ცენტრი ინგირში',
       // activities: 'აქტივობები',
-      join: 'ადგილმდებარეობა',
-      sponsors: 'სპონსორები',
+      join: 'ჩვენს შესახებ',
+      sponsors: 'გალერეა',
       heroTitle: 'თავგადასავალი, ბუნება და ლიდერობა სამეგრელოს გულში.',
       heroText: 'სამეგრელოს  სკაუტური ცენტრი გელით!',
-      joinBtn: 'შემოუერთდი სკაუტებს',
+      joinBtn: 'განხორციელებული პროექტები',
       learnBtn: 'გაიგე მეტი ცენტრზე',
       youth: 'ახალგაზრდებისთვის',
       parents: 'მშობლებისთვის',
       becomeScout: 'გახდი სკაუტი',
       membership: 'წევრობის შესახებ',
-      latestActivities: 'ბოლო აქტივობები',
+      latestActivities: 'მიმდინარე პროექტები',
       campZone: 'საბანაკე ზონა',
       adventurePark: 'სათავგადასავლო პარკი',
       eduSpace: 'საგანმანათლებლო სივრცე',
       socialMedia: 'სოციალური მედია',
-      location: 'ადგილმდებარეობა',
+      location: 'ჩვენს შესახებ',
       partner: 'პარტნიორი',
       services: 'სერვისები',
       training: 'ტრენინგები',
@@ -48,7 +48,9 @@ export default function App() {
       servicesDesc2: 'ბანაკები, ფესტივალები და საგანმანათლებლო ღონისძიებები.',
       servicesDesc3: 'ცენტრის სივრცის გამოყენება ბანაკებისა და ღონისძიებებისთვის.',
       developerTitle: 'დეველოპერის შესახებ',
-      developerText: 'ვებ-საიტი შექმნილია Luka Guledani-ის მიერ React და Vite ტექნოლოგიების გამოყენებით, თანამედროვე UI/UX მიდგომებით.'
+      developerText: 'ვებ-საიტი შექმნილია Luka Guledani-ის მიერ React და Vite ტექნოლოგიების გამოყენებით, თანამედროვე UI/UX მიდგომებით.',
+      contact: 'კონტაქტი',
+      donation: 'დონაცია'
     },
     EN: {
       title: 'Samegrelo Organization Scouts',
@@ -85,6 +87,9 @@ export default function App() {
   };
 
   const langContent = content[lang];
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+
 
   return (
     <div className="container">
@@ -106,62 +111,127 @@ export default function App() {
         </div>
 
         {/* FULLSCREEN NAV */}
-      <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-        <a href="#hero" onClick={() => setMenuOpen(false)}>
-          {langContent.home}
-        </a>
+        <nav className={`nav ${menuOpen ? 'open' : ''}`}>
 
-        {/* <a href="#activities" onClick={() => setMenuOpen(false)}>
-          {langContent.about}
-        </a> */}
+          <a href="#hero" onClick={() => setMenuOpen(false)}>
+            მთავარი
+          </a>
 
-        {/* LOCATION → FOOTER */}
-        <a href="#location" onClick={() => setMenuOpen(false)}>
-          {langContent.location}
-        </a>
+          <div className={`nav-dropdown ${aboutOpen ? 'open' : ''}`}>
 
-        <a href="#target" onClick={() => setMenuOpen(false)}>
-          {langContent.joinBtn}
-        </a>
-        
-        <a href="#target" onClick={() => setMenuOpen(false)}>
-          {langContent.activities}
-        </a>
 
-        <a href="#gallery" onClick={() => setMenuOpen(false)}>
-          {langContent.latestActivities}
-        </a>
+            <button
+              className="nav-link"
+              onClick={() => setAboutOpen(!aboutOpen)}
+            >
+              ჩვენს შესახებ
+            </button>
 
-        <a href="#services" onClick={() => setMenuOpen(false)}>
-          {langContent.services}
-        </a>
+            {aboutOpen && (
+              <div className="dropdown-panel">
+                <a href="#who" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>
+                  ვინ ვართ ჩვენ
+                </a>
 
-        <a href="#sponsors" onClick={() => setMenuOpen(false)}>
-          {langContent.sponsors}
-        </a> 
+                <a href="#history" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>
+                  სკაუტინგის ისტორია
+                </a>
 
-        <div className="menu-controls">
-          <button
-            className="control-btn"
-            onClick={() => setLang(lang === 'KA' ? 'EN' : 'KA')}
-          >
-            {lang}
-          </button>
+                <a href="#mission" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>
+                  მიზანი / მისია / ხედვა
+                </a>
 
-          <button
-            className="control-btn"
-            onClick={() => setTheme(theme === 'day' ? 'night' : 'day')}
-          >
-            {theme === 'day' ? '🌞' : '🌙'}
-          </button>
-        </div>
-      </nav>
+                <a href="#become" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>
+                  როგორ გავხდე სკაუტი
+                </a>
+              </div>
+            )}
 
+          </div>
+
+
+          <a href="#services" onClick={() => setMenuOpen(false)}>
+            საგანმანათლებლო პროექტები
+          </a>
+
+          <a href="#target" onClick={() => setMenuOpen(false)}>
+            ახალგაზრდული პროექტები
+          </a>
+
+          <div className="nav-dropdown">
+
+            <button
+              type="button"
+              className="nav-link"
+              onClick={(e) => {
+                e.stopPropagation();
+                setServicesOpen(prev => !prev);
+              }}
+            >
+              {langContent.services}
+            </button>
+
+            {servicesOpen && (
+              <div className="dropdown-panel">
+                <a href="#service-school" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  სკაუტური სკოლა
+                </a>
+                <a href="#service-camps" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  ახალგაზრდული ბანაკები
+                </a>
+                <a href="#service-schools" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  შეთავაზება სკოლებს
+                </a>
+                <a href="#service-eco" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  ეკოტურები / ლაშქრობები
+                </a>
+                <a href="#service-venue" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  ადგილი შენი ღონისძიებისთვის
+                </a>
+                <a href="#service-event" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  ივენთ მენეჯმენტი
+                </a>
+                <a href="#service-international" onClick={() => { setMenuOpen(false); setServicesOpen(false); }}>
+                  საერთაშორისო აქტივობები
+                </a>
+              </div>
+            )}
+
+          </div>
+
+
+          <a href="#gallery" onClick={() => setMenuOpen(false)}>
+            გალერეა
+          </a>
+
+          <a href="#donation" onClick={() => setMenuOpen(false)}>
+            დონაცია
+          </a>
+
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            კონტაქტი
+          </a>
+
+          <div className="menu-controls">
+            <button
+              className="control-btn"
+              onClick={() => setLang(lang === 'KA' ? 'EN' : 'KA')}
+            >
+              {lang}
+            </button>
+
+            <button
+              className="control-btn"
+              onClick={() => setTheme(theme === 'day' ? 'night' : 'day')}
+            >
+              {theme === 'day' ? '🌞' : '🌙'}
+            </button>
+          </div>
+        </nav>
       </header>
 
       {/* HERO */}
       <section id="hero" className="hero">
-        {/* FIX: Move the image here from CSS */}
         <img 
           src="https://picsum.photos/id/386/1600/900" 
           alt="Scouts adventure and leadership in the nature of Samegrelo" 
@@ -171,130 +241,192 @@ export default function App() {
         <div className="hero-content">
           <h1>{langContent.heroTitle}</h1>
           <p>{langContent.heroText}</p>
-          {/* ... rest of your buttons ... */}
         </div>
       </section>
 
-      {/* ACTIVITIES */}
-      <section id="activities" className="activities-section">
-        <h2 className="section-title">{langContent.about}</h2>
-        <div className="activities-grid">
-          <div className="card">
-            <div className="card-top purple">
-              <img src="assets/camp-zone.png" className="logo-third-img-camp" />
-              <p>{langContent.campZone}</p>
-            </div>
-            <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/13/400/300)' }} />
+      {/* EDUCATIONAL PROJECTS */}
+      <section id="services" className="edu-projects-section">
+        <h2 className="section-title">საგანმანათლებლო პროექტები</h2>
+
+        <p className="section-subtitle">
+          სკაუტური საგანმანათლებლო პროგრამები, რომლებიც ხელს უწყობს
+          ახალგაზრდების განვითარებას პრაქტიკული გამოცდილების გზით.
+        </p>
+
+        <div className="edu-projects-grid">
+
+          <div className="edu-card">
+            <h3>ლიდერობის პროგრამა</h3>
+            <p>
+              ახალგაზრდებში ლიდერული უნარების განვითარება
+              გუნდური მუშაობისა და პრაქტიკული აქტივობების მეშვეობით.
+            </p>
           </div>
 
-          <div className="card">
-            <div className="card-top green">
-              <img src="assets/adventure-park.png" className="logo-third-img-camp" />
-              <p>{langContent.adventurePark}</p>
-            </div>
-            <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1036/400/300)' }} />
+          <div className="edu-card">
+            <h3>გარემოსდაცვითი განათლება</h3>
+            <p>
+              ბუნების დაცვა, ეკოლოგიური ცნობიერება და
+              პასუხისმგებლობის აღზრდა.
+            </p>
           </div>
 
-          <div className="card">
-            <div className="card-top orange">
-              <img src="assets/educational-space.png" className="logo-third-img-camp" />
-              <p>{langContent.eduSpace}</p>
-            </div>
-            <div className="card-img" style={{ backgroundImage: 'url(https://picsum.photos/id/1/400/300)' }} />
+          <div className="edu-card">
+            <h3>ცხოვრების უნარები</h3>
+            <p>
+              თვითკმარობა, პრობლემების გადაჭრა და
+              რეალურ ცხოვრებაში გამოსაყენებელი ცოდნა.
+            </p>
           </div>
+
+          <div className="edu-card">
+            <h3>არაფორმალური განათლება</h3>
+            <p>
+              სწავლა გამოცდილებით, თამაშით და
+              პრაქტიკული ჩართულობით.
+            </p>
+          </div>
+
         </div>
       </section>
+
+
       {/* SERVICES */}
       <section id="services" className="services-section">
-        <h2 className="section-title">{langContent.services}</h2>
+        <h2 className="section-title">სერვისები</h2>
 
         <div className="services-grid">
-          <div className="service-card">
-            <img src="assets/training.png" alt="Training" />
-            <h3>{langContent.training}</h3>
-            <p>
-              {langContent.servicesDesc1}
-            </p>
+
+          <div id="service-school" className="service-card">
+            <h3>სკაუტური სკოლა</h3>
+            <p>ლიდერობის, გუნდურობისა და სკაუტური უნარების განვითარება.</p>
           </div>
 
-          <div className="service-card">
-            <img src="assets/events.png" alt="Events" />
-            <h3>{langContent.events}</h3>
-            <p>
-              {langContent.servicesDesc2}
-            </p>
+          <div id="service-camps" className="service-card">
+            <h3>ახალგაზრდული ბანაკები</h3>
+            <p>საბანაკე პროგრამები და პრაქტიკული სწავლება ბუნებაში.</p>
           </div>
 
-          <div className="service-card">
-            <img src="assets/rent.png" alt="Rent" />
-            <h3>{langContent.rent}</h3>
-            <p>
-              {langContent.servicesDesc3}
-            </p>
+          <div id="service-schools" className="service-card">
+            <h3>შეთავაზება სკოლებს</h3>
+            <p>საგანმანათლებლო სკაუტური პროგრამები სკოლებისთვის.</p>
           </div>
+
+          <div id="service-eco" className="service-card">
+            <h3>ეკოტურები და ლაშქრობები</h3>
+            <p>აქტიური დასვენება და ეკოლოგიური ცნობიერების ამაღლება.</p>
+          </div>
+
+          <div id="service-venue" className="service-card">
+            <h3>ადგილი ღონისძიებისთვის</h3>
+            <p>სივრცის გაქირავება ბანაკებისა და ღონისძიებებისთვის.</p>
+          </div>
+
+          <div id="service-event" className="service-card">
+            <h3>ივენთ მენეჯმენტი</h3>
+            <p>ღონისძიებების სრული დაგეგმვა და ორგანიზება.</p>
+          </div>
+
+          <div id="service-international" className="service-card">
+            <h3>საერთაშორისო აქტივობები</h3>
+            <p>საერთაშორისო ბანაკები და სკაუტური პარტნიორობები.</p>
+          </div>
+
         </div>
       </section>
 
+      {/* ABOUT – ჩვენს შესახებ */}
+    <section id="about" className="about-section">
+      <h2 className="section-title">ჩვენს შესახებ</h2>
+      <p className="section-subtitle">
+        სამეგრელოს სკაუტური ცენტრი არის ახალგაზრდული სივრცე,
+        რომელიც აერთიანებს განათლებას, ბუნებასა და ლიდერობას.
+      </p>
 
-      {/* TARGET */}
-      <section id="target" className="target-section">
-        <div className="target-card green-bg">
-          <h3>{langContent.youth}</h3>
-          <div className="target-img-container">
-            <img src="https://picsum.photos/id/660/600/400" alt="Youth" />
-            <button className="overlay-btn">{langContent.becomeScout}</button>
-          </div>
+      <div className="about-content">
+
+        <section id="who" className="about-block">
+          <h3>ვინ ვართ ჩვენ</h3>
+          <p>
+            ჩვენ ვართ სკაუტური ორგანიზაცია, რომელიც ხელს უწყობს
+            ახალგაზრდების პიროვნულ განვითარებას, გუნდურ მუშაობასა
+            და აქტიურ მოქალაქეობას.
+          </p>
+        </section>
+
+        <section id="history" className="about-block">
+          <h3>სკაუტინგის ისტორია</h3>
+          <p>
+            სკაუტური მოძრაობა დაარსდა 1907 წელს და დღეს მსოფლიოს
+            მილიონობით ახალგაზრდას აერთიანებს საერთო ღირებულებებით.
+          </p>
+        </section>
+
+        <section id="mission" className="about-block">
+          <h3>მიზანი • მისია • ხედვა</h3>
+          <p>
+            ჩვენი მიზანია ლიდერული, პასუხისმგებელი და ბუნებაზე
+            მზრუნველი თაობის აღზრდა.
+          </p>
+        </section>
+
+        <section id="become" className="about-block">
+          <h3>როგორ გავხდე სკაუტი</h3>
+          <p>
+            სკაუტად გახდომა შესაძლებელია რეგისტრაციისა და
+            აქტიურ პროგრამებში ჩართვის გზით.
+          </p>
+        </section>
+      </div>
+    </section>
+
+    {/* YOUTH PROJECTS */}
+    <section id="target" className="youth-projects-section">
+      <h2 className="section-title">ახალგაზრდული პროექტები</h2>
+
+      <p className="section-subtitle">
+        პროექტები, რომლებიც აძლიერებს ახალგაზრდების ჩართულობას,
+        ლიდერობასა და სოციალურ პასუხისმგებლობას.
+      </p>
+
+      <div className="youth-projects-grid">
+
+        <div className="youth-card">
+          <h3>ახალგაზრდული ლიდერობა</h3>
+          <p>
+            ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით
+            და გუნდურ გარემოში.
+          </p>
         </div>
 
-        <div className="target-card orange-bg">
-          <h3>{langContent.parents}</h3>
-          <div className="target-img-container">
-            <img src="https://picsum.photos/id/64/600/400" alt="Parents" />
-            <button className="overlay-btn">{langContent.membership}</button>
-          </div>
+        <div className="youth-card">
+          <h3>სოციალური ინიციატივები</h3>
+          <p>
+            მოხალისეობა, საზოგადოებრივი პროექტები და
+            აქტიური მოქალაქეობის მხარდაჭერა.
+          </p>
         </div>
-      </section>
 
-      {/* GALLERY */}
-      <section id="gallery" className="gallery">
-        <h2 className="gallery-title">{langContent.latestActivities}</h2>
-        <div className="gallery-grid">
-          <div className="photo-card" style={{ backgroundImage: 'url(https://res.cloudinary.com/dmgtsbro4/image/upload/v1768749124/Screen_Shot_2020-05-28_at_23.36.32_weubjp.png)' }} />
-          <div className="photo-card" style={{ backgroundImage: 'url(https://res.cloudinary.com/dmgtsbro4/image/upload/v1768656454/605634855_1262452119247518_1681845932750345038_n_rb0daq.jpg)' }} />
-          <div className="photo-card" style={{ backgroundImage: 'url(https://res.cloudinary.com/dmgtsbro4/image/upload/v1768744683/116911356_3679924978688520_1237785573083213375_n_tbu95g.jpg)' }} />
+        <div className="youth-card">
+          <h3>კულტურული და სპორტული აქტივობები</h3>
+          <p>
+            სპორტი, ლაშქრობები და კულტურული ღონისძიებები
+            ჯანსაღი ცხოვრების სტილისთვის.
+          </p>
         </div>
-      </section>
 
-      {/* SPONSORS */}
-      <section id="sponsors" className="sponsors-section">
-        <h2 className="section-title">{langContent.sponsors}</h2>
-        <div className="sponsors-grid">
-          <img src="https://via.placeholder.com/150x80?text=Sponsor1" alt="Sponsor 1" />
-          <img src="https://via.placeholder.com/150x80?text=Sponsor2" alt="Sponsor 2" />
-          <img src="https://via.placeholder.com/150x80?text=Sponsor3" alt="Sponsor 3" />
-          <img src="https://via.placeholder.com/150x80?text=Sponsor4" alt="Sponsor 4" />
+        <div className="youth-card">
+          <h3>საერთაშორისო ჩართულობა</h3>
+          <p>
+            გაცვლითი პროგრამები, საერთაშორისო ბანაკები
+            და მეგობრობა საზღვრებს გარეთ.
+          </p>
         </div>
-      </section>
 
-      {/* DEVELOPER */}
-      <section className="developer-section">
-        <h2 className="section-title">{langContent.developerTitle}</h2>
+      </div>
+    </section>
 
-        <div className="developer-card">
-          <img
-            src="/assets/developer.jpg"
-            className="developer-photo"
-          />
-
-          <div className="developer-text">
-            <p>{langContent.developerText}</p>
-          </div>
-        </div>
-      </section>
-
-
-      {/* FOOTER */}
-      <footer className="footer">
+            <footer className="footer">
         <div className="footer-col">
           <h4>{langContent.socialMedia}</h4>
           

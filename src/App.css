@@ -4,9 +4,14 @@ html, body, #root {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  background-color: #1a0933; /* Set default to your dark purple */
-  overflow-x: hidden; /* Prevents side-scrolling white gaps */
+  background-color: #1a0933; 
+  overflow-x: hidden; 
 }
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 
 body {
   font-family: 'Noto Sans Georgian', sans-serif;
@@ -871,11 +876,11 @@ body.night .mobile-controls button {
 .service-card h3 {
   margin-bottom: 10px;
 }
-.service-card {
+/* .service-card {
   background: #ffffff;
   color: #2b2b2b;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+} */
 
 .service-card h3 {
   color: #3e1b5d; /* purple */
@@ -948,4 +953,1125 @@ body.night .developer-section .section-title {
 
 body.night .developer-section .developer-text {
   color: #eaeaea; 
+}
+
+/* Wrapper */
+.nav-dropdown {
+  position: relative;
+}
+
+/* Button = normal nav link */
+.nav-link {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Dropdown menu */
+.dropdown-panel {
+  position: absolute;
+  top: 110%;
+  left: 0;
+
+  min-width: 220px;
+  max-height: 160px;
+
+  background: rgba(43, 15, 63, 0.96);
+  backdrop-filter: blur(6px);
+
+  border-radius: 10px;
+  padding: 10px 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  z-index: 1000;
+}
+
+/* Hide ugly scrollbar (Chrome) */
+.dropdown-panel::-webkit-scrollbar {
+  width: 4px;
+}
+
+.dropdown-panel::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
+
+/* Items */
+.dropdown-panel a {
+  color: #e8e8e8;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.dropdown-panel a:hover {
+  color: #ffffff;
+}
+
+.dropdown-panel {
+  animation: fadeSlide 0.2s ease-out;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dropdown menu */
+.dropdown-panel {
+  position: absolute;
+  top: 110%;
+  left: 0;
+
+  min-width: 220px;
+  
+  /* 1. Remove or increase max-height */
+  max-height: none; 
+
+  background: rgba(43, 15, 63, 0.96);
+  backdrop-filter: blur(6px);
+
+  border-radius: 10px;
+  padding: 10px 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  /* 2. Change overflow to visible or unset */
+  overflow-y: visible; 
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  z-index: 1000;
+}
+
+/* =========================
+   REACT STRUCTURE FIXES
+========================= */
+
+/* Offset scroll for fixed header */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* =========================
+   NAV DROPDOWN (REACT)
+========================= */
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Dropdown panel (single source of truth) */
+.dropdown-panel {
+  position: absolute;
+  top: 120%;
+  left: 0;
+
+  min-width: 220px;
+  background: rgba(42, 18, 64, 0.96);
+  backdrop-filter: blur(6px);
+
+  border-radius: 12px;
+  padding: 12px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  z-index: 2000;
+
+  animation: dropdownFade 0.25s ease;
+}
+
+@keyframes dropdownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-panel a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown-panel a:hover {
+  color: var(--orange);
+}
+
+/* =========================
+   ABOUT SECTION – CLEAN REDESIGN
+========================= */
+
+.about-section {
+  padding: 120px 10%;
+  background: transparent;
+  color: white;
+}
+
+/* Title */
+.about-section .section-title {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Layout */
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left intro text */
+.about-intro {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+/* Right blocks */
+.about-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Individual block (NO white cards) */
+.about-block {
+  padding: 24px 28px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.about-block:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.about-block h3 {
+  color: var(--orange);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.about-block p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =========================
+   NIGHT MODE
+========================= */
+
+body.night .about-block {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.night .about-block:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .about-section {
+    padding: 90px 6%;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-section .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .about-intro {
+    text-align: center;
+  }
+}
+
+
+/* =========================
+   SERVICES SECTION (REACT)
+========================= */
+
+.services-section {
+  padding: 90px 10%;
+  text-align: center;
+}
+
+.services-grid {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.service-card {
+  background: white;
+  color: #2b2b2b;
+
+  border-radius: 18px;
+  padding: 26px;
+
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.2);
+}
+
+.service-card h3 {
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #444;
+  line-height: 1.5;
+}
+
+/* =========================
+   HERO FIX
+========================= */
+
+.hero {
+  margin-top: 70px;
+}
+
+/* =========================
+   MOBILE MENU FIX
+========================= */
+
+@media (max-width: 768px) {
+  .nav a,
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .dropdown-panel {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .dropdown-panel a {
+    font-size: 1.2rem;
+  }
+}
+
+/* =========================
+   DAY / NIGHT SERVICES TITLE
+========================= */
+
+body.day .services-section .section-title {
+  color: white;
+}
+
+body.night .services-section .section-title {
+  color: #eaeaea;
+}
+
+
+/* =========================
+   ABOUT SECTION – SIMPLE
+========================= */
+
+.about-section {
+  padding: 80px 10%;
+  background-color: var(--dark-purple);
+  color: white;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Cards */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.about-card {
+  background: white;
+  color: #2b2b2b;
+  padding: 26px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.about-card h3 {
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+
+.about-card p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* =========================
+   NIGHT MODE
+========================= */
+
+body.night .about-section {
+  background-color: #1c1c1c;
+}
+
+body.night .about-card {
+  background-color: #2a2a32;
+  color: #eaeaea;
+}
+
+body.night .about-card h3 {
+  color: #caa7ff;
+}
+
+body.night .about-card p {
+  color: #d0d0d0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 60px 6%;
+  }
+}
+
+
+
+
+
+/* =========================
+   SERVICES – DAY / NIGHT FIX
+========================= */
+
+/* DAY MODE */
+body.day .services-section {
+  background-color: var(--green);
+}
+
+body.day .service-card {
+  background-color: #ffffff;
+  color: #2b2b2b;
+}
+
+body.day .service-card h3 {
+  color: var(--purple);
+}
+
+body.day .service-card p {
+  color: #444;
+}
+
+/* NIGHT MODE */
+body.night .services-section {
+  background-color: #1c1c1c;
+}
+
+body.night .service-card {
+  background-color: #2a2a32;
+  color: #eaeaea;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+body.night .service-card h3 {
+  color: #caa7ff;
+}
+
+body.night .service-card p {
+  color: #d0d0d0;
+}
+
+
+/* =========================
+   SERVICES – CLEAN & SMOOTH
+========================= */
+
+.services-section {
+  padding: 100px 10% 120px;
+  background-color: var(--green);
+  text-align: center;
+  scroll-margin-top: 90px; /* smooth anchor scroll */
+}
+
+.services-section .section-title {
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* CARD */
+.service-card {
+  background: #ffffff;
+  color: #2b2b2b;
+
+  padding: 28px;
+  border-radius: 18px;
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 38px rgba(0,0,0,0.25);
+}
+
+.service-card h3 {
+  margin-bottom: 12px;
+  color: var(--purple);
+}
+
+.service-card p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* =========================
+   NIGHT MODE
+========================= */
+
+body.night .services-section {
+  background-color: #1c1c1c;
+}
+
+body.night .service-card {
+  background-color: #2a2a32;
+  color: #eaeaea;
+}
+
+body.night .service-card h3 {
+  color: #caa7ff;
+}
+
+body.night .service-card p {
+  color: #d0d0d0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 80px 6% 100px;
+  }
+
+  .services-section .section-title {
+    font-size: 2rem;
+  }
+}
+
+/* =========================
+   SERVICES SECTION – MATCH ABOUT
+========================= */
+
+.services-section {
+  padding: 120px 10%;
+  background-color: var(--dark-purple);
+  color: white;
+  text-align: center;
+}
+
+/* Title */
+.services-section .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+
+/* Card – glass style like About */
+.service-card {
+  padding: 28px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.service-card img {
+  width: 60px;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  color: var(--orange);
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.service-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =========================
+   NIGHT MODE
+========================= */
+
+body.night .services-section {
+  background-color: #1c1c1c;
+}
+
+body.night .service-card {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+body.night .service-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .services-section {
+    padding: 90px 6%;
+  }
+
+  .services-section .section-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* FIX anchor scroll under fixed header */
+[id] {
+  scroll-margin-top: 200px;
+}
+
+.edu-projects-section {
+  padding: 80px 20px;
+  background: var(--section-bg, #f7f7f7);
+  text-align: center;
+}
+
+.edu-projects-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.edu-card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.edu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.edu-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Scout Style */
+
+.edu-projects-section {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #f3f6f1, #e7efe5);
+  text-align: center;
+}
+
+.edu-projects-section .section-title {
+  color: #1f4d2b; /* forest green */
+}
+
+.edu-projects-section .section-subtitle {
+  color: #3e5f4a;
+}
+
+/* GRID */
+.edu-projects-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.edu-card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border-radius: 16px;
+  border-left: 6px solid #2f6b3f; /* scout stripe */
+  box-shadow: 0 10px 28px rgba(31, 77, 43, 0.15);
+  transition: all 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(31, 77, 43, 0.25);
+}
+
+/* TEXT */
+.edu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #2f6b3f;
+}
+
+.edu-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5f52;
+}
+/* Dark mode education */
+
+/* NIGHT MODE */
+.night .edu-projects-section {
+  background: linear-gradient(180deg, #0f1c15, #14261c);
+}
+
+.night .section-title {
+  color: #cfe8d6;
+}
+
+.night .section-subtitle {
+  color: #a7cbb5;
+}
+
+.night .edu-card {
+  background: #162c22;
+  border-left: 6px solid #4caf73; /* scout green accent */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.night .edu-card h3 {
+  color: #8ee6b1;
+}
+
+.night .edu-card p {
+  color: #c1e3d0;
+}
+
+
+.edu-projects-section {
+  background: var(--dark-purple) !important; 
+}
+
+/* =========================
+   YOUTH PROJECTS – MATCH ABOUT
+========================= */
+
+.youth-projects-section {
+  padding: 120px 10%;
+  background-color: var(--dark-purple);
+  color: white;
+}
+
+/* Title */
+.youth-projects-section .section-title {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* Subtitle */
+.youth-projects-section .section-subtitle {
+  max-width: 700px;
+  margin-bottom: 60px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* Grid */
+.youth-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+/* Blocks – SAME as about-block */
+.youth-card {
+  padding: 24px 28px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.youth-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.youth-card h3 {
+  color: var(--orange);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.youth-card p {
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .youth-projects-section {
+    padding: 90px 6%;
+  }
+
+  .youth-projects-section .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .youth-projects-section .section-subtitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* =========================
+   GLOBAL SECTION COLOR – ONE COLOR
+   FINAL OVERRIDE
+========================= */
+
+section {
+  background-color: var(--dark-purple) !important;
+  color: white;
+}
+
+/* Force section title & text to white */
+.section-title,
+.section-subtitle,
+.section-description,
+.youth-projects-section h2,
+.youth-projects-section p {
+  color: #ffffff !important;
+}
+
+/* ABOUT section boxes */
+.about-section .about-block {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Boxes */
+/* ===== SECTION BASE ===== */
+section {
+  padding: 80px 20px;
+}
+
+/* Titles */
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #2c2c2c;
+}
+
+/* Subtitles / descriptions */
+.section-subtitle {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #5a5a5a;
+}
+
+/* === ABOUT SECTION BOX – FORCE VISIBLE === */
+
+.about-section .about-box {
+  background-color: #ffffff;   /* visible box */
+  padding: 32px;
+  margin: 0 auto;
+  max-width: 900px;
+
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* text inside */
+.about-section .about-box h3 {
+  color: #2c2c2c;
+  margin-bottom: 12px;
+}
+
+.about-section .about-box p {
+  color: #444;
+  line-height: 1.7;
+}
+
+/* NIGHT MODE */
+body.night .about-section .about-box {
+  background-color: #2a2a2a;
+}
+
+body.night .about-section .about-box h3 {
+  color: #ffffff;
+}
+
+body.night .about-section .about-box p {
+  color: #dddddd;
+}
+
+/* ===== GLOBAL BOX STYLE (LIKE ABOUT SECTION) ===== */
+
+/* Apply to all cards */
+.edu-card,
+.service-card,
+.youth-card,
+.card,
+.target-card,
+.activities-grid .card,
+.services-grid .service-card,
+.youth-projects-grid .youth-card {
+  padding: 24px 28px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+/* Hover effect */
+.edu-card:hover,
+.service-card:hover,
+.youth-card:hover,
+.card:hover,
+.target-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Titles */
+.edu-card h3,
+.service-card h3,
+.youth-card h3,
+.card h3 {
+  color: var(--orange) !important;
+}
+
+/* Text */
+.edu-card p,
+.service-card p,
+.youth-card p,
+.card p {
+  color: white !important;
+  line-height: 1.6;
+}
+
+/* NIGHT MODE */
+body.night .edu-card,
+body.night .service-card,
+body.night .youth-card,
+body.night .card,
+body.night .target-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.night .edu-card:hover,
+body.night .service-card:hover,
+body.night .youth-card:hover,
+body.night .card:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ===== ABOUT (ჩვენს შესახებ) BOXES – MAKE SAME AS OTHERS ===== */
+
+.about-block,
+.about-card,
+.about-box {
+  padding: 24px 28px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.about-block:hover,
+.about-card:hover,
+.about-box:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.14) !important;
+}
+
+/* Titles */
+.about-block h3,
+.about-card h3,
+.about-box h3 {
+  color: var(--orange) !important;
+}
+
+/* Text */
+.about-block p,
+.about-card p,
+.about-box p {
+  color: white !important;
+  line-height: 1.6;
+}
+
+/* NIGHT MODE */
+body.night .about-block,
+body.night .about-card,
+body.night .about-box {
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+body.night .about-block:hover,
+body.night .about-card:hover,
+body.night .about-box:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ===== REMOVE WHITE BORDER FROM ABOUT (ჩვენს შესახებ) ===== */
+
+.about-block,
+.about-card,
+.about-box {
+  border: none !important;
+}
+
+/* ===== REMOVE GREEN BORDER FROM EDUCATION PROJECTS ===== */
+
+.edu-card {
+  border-left: none !important;
+  border: none !important;
+}
+
+/* ===== UNIFY ALL BOXES (ONE BORDER STYLE) ===== */
+
+.edu-card,
+.service-card,
+.youth-card,
+.about-block,
+.about-card,
+.about-box,
+.card,
+.target-card {
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 16px;
+}
+
+/* NIGHT MODE */
+body.night .edu-card,
+body.night .service-card,
+body.night .youth-card,
+body.night .about-block,
+body.night .about-card,
+body.night .about-box,
+body.night .card,
+body.night .target-card {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
