@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 import './App.css'
+
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -126,7 +127,7 @@ export default function App() {
             >
               ჩვენს შესახებ
             </button>
-            
+
 
             {aboutOpen && (
               <div className="dropdown-panel">
@@ -233,9 +234,9 @@ export default function App() {
 
       {/* HERO */}
       <section id="hero" className="hero">
-        <img 
-          src="https://picsum.photos/id/386/1600/900" 
-          alt="Scouts adventure and leadership in the nature of Samegrelo" 
+        <img
+          src="/assets/photos/first.jpg"
+          alt="Scouts adventure"
           className="hero-img-tag"
         />
 
@@ -244,6 +245,9 @@ export default function App() {
           <p>{langContent.heroText}</p>
         </div>
       </section>
+
+
+
 
       {/* EDUCATIONAL PROJECTS */}
       <section id="services" className="edu-projects-section">
