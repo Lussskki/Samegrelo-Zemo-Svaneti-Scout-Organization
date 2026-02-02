@@ -126,6 +126,7 @@ export default function App() {
             >
               ჩვენს შესახებ
             </button>
+            
 
             {aboutOpen && (
               <div className="dropdown-panel">

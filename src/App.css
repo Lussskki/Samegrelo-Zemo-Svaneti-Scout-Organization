@@ -2075,3 +2075,21 @@ body.night .card,
 body.night .target-card {
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
+/* =========================
+   ABOUT SECTION – CLEAN REDESIGN
+========================= */
+
+.about-section {
+  padding: 120px 10%;
+  background: transparent;
+  color: white;
+}
+
+/* Title - UPDATE THIS BLOCK */
+.about-section .section-title {
+  text-align: center; /* Changed from left to center */
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  width: 100%; /* Ensures it takes full width to center correctly */
+}
