@@ -39,7 +39,7 @@ export default function App() {
       adventurePark: 'სათავგადასავლო პარკი',
       eduSpace: 'საგანმანათლებლო სივრცე',
       socialMedia: 'სოციალური მედია',
-      location: 'ჩვენს შესახებ',
+      location: 'ადგილმდებარეობა',
       partner: 'პარტნიორი',
       services: 'სერვისები',
       training: 'ტრენინგები',
