@@ -127,10 +127,11 @@ animation: campAlive 1.2s ease-in-out;
 .nav a {
   color: white;
   text-decoration: none;
-  margin: 0 15px;
+  margin: 0; /* ❌ remove spacing from links */
   font-size: 0.9rem;
   opacity: 0.8;
 }
+
 
 .nav a.active {
   color: var(--orange);
@@ -463,6 +464,7 @@ animation: campAlive 1.2s ease-in-out;
   .nav a {
     font-size: 1.6rem;
     margin: 0;
+    gap: 14px; 
   }
 
   .lang {
@@ -601,6 +603,7 @@ body.night .mobile-controls button {
   margin-left: auto;
   display: flex;
   align-items: center;
+  gap: 14px; 
 }
 
 .menu-controls {
@@ -986,6 +989,7 @@ body.night .developer-section .developer-text {
 /* Wrapper */
 .nav-dropdown {
   position: relative;
+  gap: 14px; 
 }
 
 /* Button = normal nav link */
