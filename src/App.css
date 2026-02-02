@@ -2093,3 +2093,11 @@ body.night .target-card {
   margin-bottom: 30px;
   width: 100%; /* Ensures it takes full width to center correctly */
 }
+
+.youth-projects-section .section-title {
+    text-align: center; /* Changed from left to center */
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  width: 100%; /* Ensures it takes full width to center correctly */
+}
