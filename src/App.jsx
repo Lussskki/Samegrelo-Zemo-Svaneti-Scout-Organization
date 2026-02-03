@@ -253,9 +253,10 @@ export default function App() {
                   onClick={() => {
                     setMenuOpen(false);
                     setContactOpen(false);
+                    setLang('EN');
                   }}
                 >
-                  რეგისტრაცია
+                  {langContent.register}
                 </a>
 
                 <a
