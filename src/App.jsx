@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
+// Gallery
+const galleryPhotos = [
+{ id: 1, src: '/assets/photos/chveni-fotoebi/1.jpg', alt: 'Scouts Camp' },
+{ id: 2, src: '/assets/photos/chveni-fotoebi/2.jpg', alt: 'Workspace of anaklia' },
+{ id: 3, src: '/assets/photos/chveni-fotoebi/3.jpg', alt: 'Event' },
+{ id: 4, src: '/assets/photos/chveni-fotoebi/4.jpg', alt: 'The Avatar camp' },
+{ id: 5, src: '/assets/photos/chveni-fotoebi/5.jpg', alt: 'Samegrelo Nature' },
+{ id: 6, src: '/assets/photos/chveni-fotoebi/6.jpg', alt: 'The Avatar camp' },
+];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState('ქარ'); // ქარ / ENG
@@ -15,6 +24,7 @@ export default function App() {
   useEffect(() => {
     document.body.className = theme === 'day' ? 'day' : 'night';
   }, [theme]);
+
   
 
   // Language content
@@ -76,9 +86,13 @@ export default function App() {
       location: 'ადგილმდებარობა',
       partner: 'პარტნიორი',
       contact: 'კონტაქტი',
-      donation: 'დონაცია',
       register: 'რეგისტრაცია',
-      registerSubtitle: 'შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი'
+      registerSubtitle: 'შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი',
+      bankTransfer: 'საბანკო გადარიცხვა',
+      accountNumber: 'გიორგი ჭეჟიას ანგარიშის ნომერი (IBAN): GE00TB0000000000000000',
+      recipient: 'მიმღები: სამეგრელოს სკაუტური ორგანიზაცია',
+      donation: 'დონაცია',
+      accountNum: 'საბანკო ანგარიში (IBAN): GE00TB0000000000000000',
     },
     'ENG': {
       title: 'Samegrelo Organization Scouts',
@@ -137,9 +151,11 @@ export default function App() {
       location: 'Location',
       partner: 'Partner',
       contact: 'Contact',
-      donation: 'Donation',
       register: 'Register',
-      registerSubtitle: 'Join us and become part of the Scout movement.'
+      registerSubtitle: 'Join us and become part of the Scout movement.',
+      recipient: 'Recipient: Samegrelo Scout Organization',
+      donation: 'Donation',
+      accountNum: 'Bank Account (IBAN): GE00TB0000000000000000',
     }
   };
 
@@ -422,9 +438,39 @@ export default function App() {
                 </a>
               </div>
             </section>
+            {/* Gallery - გალერეა */}
+            <section id="gallery" className="gallery-section">
+            <h2 className="section-title">{langContent.sponsors}</h2>
+            <div className="masonry-wrapper">
+              <div className="masonry-grid">
+                {galleryPhotos.map((photo) => (
+                  <div key={photo.id} className="masonry-item">
+                    <img src={photo.src} alt={photo.alt} loading="lazy" />
+                    <div className="masonry-overlay">
+                      <span>{photo.alt}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-
-
+              {/* Donation */}
+          <section id="donation" className="donation-simple">
+            <h2 className="section-title">{langContent.donation}</h2>
+            <div className="account-container">
+              <p className="iban-text">{langContent.accountNum}</p>
+              <button 
+                className="copy-btn-simple" 
+                onClick={() => {
+                  navigator.clipboard.writeText('GE00TB0000000000000000');
+                  alert('Copied!');
+                }}
+              >
+                Copy IBAN
+              </button>
+            </div>
+          </section>              
 
 
       {/* FOOTER - ფუტერი */}
