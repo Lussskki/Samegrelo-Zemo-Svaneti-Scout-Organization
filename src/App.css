@@ -2220,3 +2220,46 @@ body.night .target-card {
     padding: 0;
   }
 }
+
+/* Section Container */
+.register-section {
+  background-color: #1a0b2e; /* Your exact Dark Purple */
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title */
+.section-title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.section-subtitle {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* The Button - Using the Violet color from your image */
+.register-btn {
+  display: inline-block;
+  background-color: #6a67ce; /* That specific Violet/Purple collor */
+  color: #ffffff;
+  padding: 14px 40px;
+  text-decoration: none;
+  border-radius: 50px; /* Pill shape */
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.register-btn:hover {
+  opacity: 0.8;
+}

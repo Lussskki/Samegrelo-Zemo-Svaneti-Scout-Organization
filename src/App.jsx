@@ -142,6 +142,8 @@ export default function App() {
   const langContent = content[lang];
   const [aboutOpen, setAboutOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
+
 
 
   return (
@@ -206,7 +208,66 @@ export default function App() {
             {/* გალერეა - დონაცია - კონტაქტი */}
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{langContent.sponsors}</a>
           <a href="#donation" onClick={() => setMenuOpen(false)}>{langContent.donation}</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>{langContent.contact}</a>
+            {/* CONTACT DROPDOWN - კონტაქტები */}
+          <div className={`nav-dropdown ${contactOpen ? 'open' : ''}`}>
+            <button
+              type="button"
+              className="nav-link"
+              onClick={(e) => {
+                e.stopPropagation();
+                setContactOpen(prev => !prev);
+              }}
+            >
+              {langContent.contact}
+              <span className={`dropdown-arrow ${contactOpen ? 'rotate' : ''}`}>▾</span>
+            </button>
+
+            {contactOpen && (
+              <div className="dropdown-panel">
+                <a
+                  href="#contact"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setContactOpen(false);
+                  }}
+                >
+                  {langContent.socialMedia}
+                </a>
+
+                <a
+                  href="#location"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setContactOpen(false);
+                  }}
+                >
+                  {langContent.location}
+                </a>
+
+                <a
+                  href="#register"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setContactOpen(false);
+                  }}
+                >
+                  რეგისტრაცია
+                </a>
+
+                <a
+                  href="#partner"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setContactOpen(false);
+                  }}
+                >
+                  {langContent.partner}
+                </a>
+              </div>
+            )}
+          </div>
+
+
 
 
           <div className="menu-controls">
@@ -230,7 +291,7 @@ export default function App() {
       </section>
 
       {/* EDUCATIONAL PROJECTS - საგანმანათლებლო პროექტები*/}
-      <section id="services" className="edu-projects-section">
+      <section id="education" className="edu-projects-section">
         <h2 className="section-title">{langContent.eduTitle}</h2>
         <p className="section-subtitle">{langContent.eduSubtitle}</p>
         <div className="edu-projects-grid">
@@ -313,28 +374,50 @@ export default function App() {
       </section>
 
       {/* YOUTH PROJECTS - ახალგაზრდული პროექტები */}
-      <section id="target" className="youth-projects-section">
-        <h2 className="section-title">{langContent.youthTitle}</h2>
-        <p className="section-subtitle">{langContent.youthSubtitle}</p>
-        <div className="youth-projects-grid">
-          <div className="youth-card">
-            <h3>{langContent.youthCard1T}</h3>
-            <p>{langContent.youthCard1D}</p>
-          </div>
-          <div className="youth-card">
-            <h3>{langContent.youthCard2T}</h3>
-            <p>{langContent.youthCard2D}</p>
-          </div>
-          <div className="youth-card">
-            <h3>{langContent.youthCard3T}</h3>
-            <p>{langContent.youthCard3D}</p>
-          </div>
-          <div className="youth-card">
-            <h3>{langContent.youthCard4T}</h3>
-            <p>{langContent.youthCard4D}</p>
-          </div>
+            <section id="target" className="youth-projects-section">
+              <h2 className="section-title">{langContent.youthTitle}</h2>
+              <p className="section-subtitle">{langContent.youthSubtitle}</p>
+              <div className="youth-projects-grid">
+                <div className="youth-card">
+                  <h3>{langContent.youthCard1T}</h3>
+                  <p>{langContent.youthCard1D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard2T}</h3>
+                  <p>{langContent.youthCard2D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard3T}</h3>
+                  <p>{langContent.youthCard3D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard4T}</h3>
+                  <p>{langContent.youthCard4D}</p>
+                </div>
+              </div>
+            </section>
+            {/* REGISTER SECTION */}
+      <section id="register" className="register-section">
+        <h2 className="section-title">
+          რეგისტრაცია
+        </h2>
+
+        <p className="section-subtitle">
+          შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი
+        </p>
+
+        <div className="register-content">
+          <a
+            href="https://forms.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="register-btn"
+          >
+            რეგისტრაცია
+          </a>
         </div>
       </section>
+
 
       {/* FOOTER - ფუტერი */}
       <footer className="footer">
@@ -362,7 +445,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="footer-col">
+        <div className="footer-col" id="partner">
           <h4>{langContent.partner}</h4>
           <div className="partner-logos">
             <img src="assets/deja-vu.jpg" alt="DEJA VU" className='dejavu'/>
