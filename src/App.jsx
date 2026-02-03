@@ -76,7 +76,9 @@ export default function App() {
       location: 'ადგილმდებარობა',
       partner: 'პარტნიორი',
       contact: 'კონტაქტი',
-      donation: 'დონაცია'
+      donation: 'დონაცია',
+      register: 'რეგისტრაცია',
+      registerSubtitle: 'შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი'
     },
     'ENG': {
       title: 'Samegrelo Organization Scouts',
@@ -135,7 +137,9 @@ export default function App() {
       location: 'Location',
       partner: 'Partner',
       contact: 'Contact',
-      donation: 'Donation'
+      donation: 'Donation',
+      register: 'Register',
+      registerSubtitle: 'Join us and become part of the Scout movement.'
     }
   };
 
@@ -397,26 +401,29 @@ export default function App() {
               </div>
             </section>
             {/* REGISTER SECTION */}
-      <section id="register" className="register-section">
-        <h2 className="section-title">
-          რეგისტრაცია
-        </h2>
+            <section id="register" className="register-section">
+              <h2 className="section-title">
+                {langContent.register}
+              </h2>
 
-        <p className="section-subtitle">
-          შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი
-        </p>
+              <p className="section-subtitle">
+                {langContent.registerSubtitle}
+              </p>
 
-        <div className="register-content">
-          <a
-            href="https://forms.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="register-btn"
-          >
-            რეგისტრაცია
-          </a>
-        </div>
-      </section>
+              <div className="register-content">
+                <a
+                  href="https://forms.google.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="register-btn"
+                >
+                  {langContent.register}
+                </a>
+              </div>
+            </section>
+
+
+
 
 
       {/* FOOTER - ფუტერი */}

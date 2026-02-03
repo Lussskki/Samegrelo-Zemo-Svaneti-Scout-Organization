@@ -2263,3 +2263,41 @@ body.night .target-card {
 .register-btn:hover {
   opacity: 0.8;
 }
+
+/* Ensure the section has the dark purple background */
+.register-section {
+  background-color: #1a0b2e; /* Your Dark Purple */
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff; /* This makes ALL text inside white by default */
+}
+
+/* Specifically target the h2 */
+.register-section .section-title {
+  color: #ffffff !important; 
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: block; /* Ensures it isn't hidden by a flex setting */
+}
+
+/* Specifically target the p */
+.register-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+}
+
+/* Modern Violet Button to match your image */
+.register-btn {
+  display: inline-block;
+  background-color: #6a67ce;
+  color: #ffffff;
+  padding: 15px 45px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.register-btn:hover {
+  transform: scale(1.05);
+}
