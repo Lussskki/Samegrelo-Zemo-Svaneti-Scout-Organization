@@ -14,6 +14,25 @@ export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [lang, setLang] = useState('ქარ'); // ქარ / ENG
   const [theme, setTheme] = useState('day'); // day / night
+  const [selectedImgIndex, setSelectedImgIndex] = useState(null);
+
+  // Carousel Logic
+  const nextPhoto = (e) => {
+    e.stopPropagation();
+    setSelectedImgIndex((prev) => (prev + 1) % galleryPhotos.length);
+  };
+
+  const prevPhoto = (e) => {
+    e.stopPropagation();
+    setSelectedImgIndex((prev) => (prev - 1 + galleryPhotos.length) % galleryPhotos.length);
+  };
+
+  // Close lightbox on Escape key
+  useEffect(() => {
+    const handleEsc = (e) => { if (e.key === 'Escape') setSelectedImgIndex(null); };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   // Lock scroll when menu is open
   useEffect(() => {
@@ -439,12 +458,16 @@ export default function App() {
               </div>
             </section>
             {/* Gallery - გალერეა */}
-            <section id="gallery" className="gallery-section">
+          <section id="gallery" className="gallery-section">
             <h2 className="section-title">{langContent.sponsors}</h2>
             <div className="masonry-wrapper">
               <div className="masonry-grid">
-                {galleryPhotos.map((photo) => (
-                  <div key={photo.id} className="masonry-item">
+                {galleryPhotos.map((photo, index) => (
+                  <div 
+                    key={photo.id} 
+                    className="masonry-item" 
+                    onClick={() => setSelectedImgIndex(index)} // Open lightbox
+                  >
                     <img src={photo.src} alt={photo.alt} loading="lazy" />
                     <div className="masonry-overlay">
                       <span>{photo.alt}</span>
@@ -454,6 +477,22 @@ export default function App() {
               </div>
             </div>
           </section>
+
+          {/* LIGHTBOX MODAL */}
+          {selectedImgIndex !== null && (
+            <div className="lightbox" onClick={() => setSelectedImgIndex(null)}>
+              <button className="close-btn">&times;</button>
+              
+              <button className="nav-btn prev" onClick={prevPhoto}>&#10094;</button>
+              
+              <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+                <img src={galleryPhotos[selectedImgIndex].src} alt="Selected" />
+                <p className="caption">{galleryPhotos[selectedImgIndex].alt}</p>
+              </div>
+
+              <button className="nav-btn next" onClick={nextPhoto}>&#10095;</button>
+            </div>
+          )}
 
               {/* Donation */}
           <section id="donation" className="donation-simple">
