@@ -242,7 +242,7 @@ export default function App() {
 
           {/* ახალგაზრდული პროექტები - საგანმანათლებლო პროექტები */}
           <a href="#target" onClick={() => setMenuOpen(false)}>{langContent.youthTitle}</a>
-          <a href="#services" onClick={() => setMenuOpen(false)}>{langContent.eduTitle}</a>  
+          <a href="#education" onClick={() => setMenuOpen(false)}>{langContent.eduTitle}</a>  
 
             {/* გალერეა - დონაცია - კონტაქტი */}
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{langContent.sponsors}</a>
