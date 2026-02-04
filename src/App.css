@@ -2598,3 +2598,106 @@ body.night .footer p {
   margin: 0 auto;
   padding: 20px;
 }
+.edu-projects-section {
+  padding: 60px 5%;
+  overflow: hidden; /* Keeps the section neat */
+}
+
+.edu-projects-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px; /* Space between cards */
+  padding: 20px 5px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+}
+
+/* Hides scrollbar for Chrome/Safari */
+.edu-projects-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.edu-card {
+  /* This formula ensures exactly 3 cards fit with the gaps included */
+  flex: 0 0 calc((100% / 3) - 16px); 
+  scroll-snap-align: start;
+  
+  background: rgba(255, 255, 255, 0.05); /* Modern dark transparency */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border-radius: 16px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff9800; /* Use your Scout brand color here */
+}
+
+/* Mobile Responsive: Show 1.2 cards so the user knows they can scroll */
+@media (max-width: 1024px) {
+  .edu-card {
+    flex: 0 0 calc((100% / 2) - 12px); /* 2 cards on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .edu-card {
+    flex: 0 0 85%; /* 1 full card + a peek of the next one on mobile */
+  }
+}
+
+/* Container for the cards */
+.edu-projects-grid {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  
+  /* Enables smooth "snapping" effect */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  
+  /* Hide scrollbar for a cleaner mobile look */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.edu-projects-grid::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Card Styling */
+.edu-card {
+  /* Mobile Default: Show 1 card */
+  flex: 0 0 100%; 
+  scroll-snap-align: center; /* Centers the card when scrolling stops */
+  
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 25px;
+  box-sizing: border-box; /* Ensures padding doesn't break the width */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop Version: Show 3 cards */
+@media (min-width: 1024px) {
+  .edu-card {
+    /* (Total Width / 3) minus a bit for the gaps */
+    flex: 0 0 calc((100% / 3) - 15px); 
+    scroll-snap-align: start;
+  }
+}
+
+/* Tablet Version (Optional): Show 2 cards */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .edu-card {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
