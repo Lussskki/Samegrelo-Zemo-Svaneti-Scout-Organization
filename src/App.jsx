@@ -132,8 +132,8 @@ export default function App() {
       about: 'About Ingiri Center',
       join: 'About Us',
       sponsors: 'Gallery',
-      heroTitle: 'Adventure, Nature, and Leadership in the Heart of Samegrelo.',
-      heroText: 'Welcome to Samegrelo Scout Center!',
+      heroTitle: 'Be ready! Become a scout! It`s good to be with the scouts!',
+      heroText: 'Samegrelo Organization of the Scout Movement of Georgia',
       eduTitle: 'Educational Projects',
       eduSubtitle: 'Scout educational programs that promote youth development through practical experience.',
       eduCard1T: 'Leadership Program',
@@ -335,7 +335,7 @@ export default function App() {
 
       {/* HERO */}
       <section id="hero" className="hero">
-        <img src="/assets/photos/first.jpg" alt="Scouts adventure" className="hero-img-tag" />
+        <img src="/assets/photos/first.jpg" alt="Scouts" className="hero-img-tag" />
         <div className="hero-content">
           <h1>{langContent.heroTitle}</h1>
           <p>{langContent.heroText}</p>

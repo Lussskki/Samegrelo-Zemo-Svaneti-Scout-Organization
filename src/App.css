@@ -510,10 +510,6 @@ body.day .footer {
   color: white;
 }
 
-body.day .hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-              url('https://picsum.photos/id/386/1600/900') center/cover;
-}
 
 body.day .activities-section { background-color: var(--green); }
 body.day .gallery { background-color: var(--orange); }
@@ -529,10 +525,6 @@ body.night .footer {
   color: #eee;
 }
 
-body.night .hero {
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-              url('https://picsum.photos/id/386/1600/900') center/cover;
-}
 
 body.night .activities-section { background-color: #333; }
 body.night .gallery { background-color: #444; }
