@@ -399,6 +399,47 @@ export default function App() {
         </div>
       </section>
 
+
+            {/* მიმდინარე პროექტები - Current project */}
+            <section id="target" className="youth-projects-section">
+              <h2 className="section-title">{langContent.youthTitle}</h2>
+              <p className="section-subtitle">{langContent.youthSubtitle}</p>
+              <div className="youth-projects-grid">
+                <div className="youth-card">
+                  <h3>{langContent.youthCard1T}</h3>
+                  <p>{langContent.youthCard1D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard2T}</h3>
+                  <p>{langContent.youthCard2D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard3T}</h3>
+                  <p>{langContent.youthCard3D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard4T}</h3>
+                  <p>{langContent.youthCard4D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard5T}</h3>
+                  <p>{langContent.youthCard5D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard6T}</h3>
+                  <p>{langContent.youthCard6D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard7T}</h3>
+                  <p>{langContent.youthCard7D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard8T}</h3>
+                  <p>{langContent.youthCard8D}</p>
+                </div>
+              </div>
+            </section>
+
       {/* SERVICES SECTION -სერვისების სექცია */}
       <section id="services" className="services-section">
         <h2 className="section-title">{langContent.services}</h2>
@@ -458,46 +499,8 @@ export default function App() {
         </div>
       </section>
 
-            {/* მიმდინარე პროექტები - Current project */}
-            <section id="target" className="youth-projects-section">
-              <h2 className="section-title">{langContent.youthTitle}</h2>
-              <p className="section-subtitle">{langContent.youthSubtitle}</p>
-              <div className="youth-projects-grid">
-                <div className="youth-card">
-                  <h3>{langContent.youthCard1T}</h3>
-                  <p>{langContent.youthCard1D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard2T}</h3>
-                  <p>{langContent.youthCard2D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard3T}</h3>
-                  <p>{langContent.youthCard3D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard4T}</h3>
-                  <p>{langContent.youthCard4D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard5T}</h3>
-                  <p>{langContent.youthCard5D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard6T}</h3>
-                  <p>{langContent.youthCard6D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard7T}</h3>
-                  <p>{langContent.youthCard7D}</p>
-                </div>
-                <div className="youth-card">
-                  <h3>{langContent.youthCard8T}</h3>
-                  <p>{langContent.youthCard8D}</p>
-                </div>
-              </div>
-            </section>
-            
+
+
           {/* REGISTER SECTION */}
           <section id="register" className="register-section">
             <h2 className="section-title">
