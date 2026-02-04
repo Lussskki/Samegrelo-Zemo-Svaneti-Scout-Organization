@@ -54,22 +54,27 @@ export default function App() {
       about: 'ჩვენი ცენტრი ინგირში',
       join: 'ჩვენს შესახებ',
       sponsors: 'გალერეა',
-      heroTitle: 'თავგადასავალი, ბუნება და ლიდერობა სამეგრელოს გულში.',
-      heroText: 'სამეგრელოს სკაუტური ცენტრი გელით!',
-      eduTitle: 'საგანმანათლებლო პროექტები',
+      heroTitle: 'იყავი მზად! გახდი სკაუტი! სკაუტებთან კარგია!',
+      heroText: 'საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაცია',
+      eduTitle: 'განხორციელებული პროექტები',
       eduSubtitle: 'სკაუტური საგანმანათლებლო პროგრამები, რომლებიც ხელს უწყობს ახალგაზრდების განვითარებას პრაქტიკული გამოცდილების გზით.',
-      eduCard1T: 'ლიდერობის პროგრამა',
+      eduCard1T: 'სკაუტები covid-19 ის წინააღმდეგ',
       eduCard1D: 'ახალგაზრდებში ლიდერული უნარების განვითარება გუნდური მუშაობისა და პრაქტიკული აქტივობების მეშვეობით.',
-      eduCard2T: 'გარემოსდაცვითი განათლება',
+      eduCard2T: 'სკაუტური ბანაკი ავატარი',
       eduCard2D: 'ბუნების დაცვა, ეკოლოგიური ცნობიერება და პასუხისმგებლობის აღზრდა.',
-      eduCard3T: 'ცხოვრების უნარები',
+      eduCard3T: 'მოვა 2022 შტლანდია',
       eduCard3D: 'თვითკმარობა, პრობლემების გადაჭრა და რეალურ ცხოვრებაში გამოსაყენებელი ცოდნა.',
-      eduCard4T: 'არაფორმალური განათლება',
+      eduCard4T: 'სკაუტი მასწავლებელი',
       eduCard4D: 'სწავლა გამოცდილებით, თამაშით და პრაქტიკული ჩართულობით.',
+      eduCard5T: 'ენერგოეფექტურობის შესახებ ცნობიერების ამაღლების კამპანია',
+      eduCard6T: 'Nexus- ევროპის სკაუტური რეგიონის საგანმანათლებლო პროგრამის აპრობირება საქართველოში',
+      eduCard7T: 'მსოფლიო სკაუტური ჯამბორი 2023',
+      eduCard8T: 'საქველმოქმედო ღონისძიებები',
+    
       services: 'სერვისები',
-      service1: 'სკაუტური სკოლა',
+      service1: '',
       service1D: 'ლიდერობის, გუნდურობისა და სკაუტური უნარების განვითარება.',
-      service2: 'ახალგაზრდული ბანაკები',
+      service2: 'მიმდინარე პროექტები',
       service2D: 'საბანაკე პროგრამები და პრაქტიკული სწავლება ბუნებაში.',
       service3: 'შეთავაზება სკოლებს',
       service3D: 'საგანმანათლებლო სკაუტური პროგრამები სკოლებისთვის.',
@@ -91,16 +96,24 @@ export default function App() {
       missText: 'ჩვენი მიზანია ლიდერული, პასუხისმგებელი და ბუნებაზე მზრუნველი თაობის აღზრდა.',
       howTitle: 'როგორ გავხდე სკაუტი',
       howText: 'სკაუტად გახდომა შესაძლებელია რეგისტრაციისა და აქტიურ პროგრამებში ჩართვის გზით.',
-      youthTitle: 'ახალგაზრდული პროექტები',
+      youthTitle: 'მიმდინარე პროექტები',
       youthSubtitle: 'პროექტები, რომლებიც აძლიერებს ახალგაზრდების ჩართულობას, ლიდერობასა და სოციალურ პასუხისმგებლობას.',
-      youthCard1T: 'ახალგაზრდული ლიდერობა',
+      youthCard1T: '',
       youthCard1D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
-      youthCard2T: 'სოციალური ინიციატივები',
+      youthCard2T: '',
       youthCard2D: 'მოხალისეობა, საზოგადოებრივი პროექტები და აქტიური მოქალაქეობის მხარდაჭერა.',
-      youthCard3T: 'კულტურული და სპორტული აქტივობები',
+      youthCard3T: '',
       youthCard3D: 'სპორტი, ლაშქრობები და კულტურული ღონისძიებები ჯანსაღი ცხოვრების სტილისთვის.',
-      youthCard4T: 'საერთაშორისო ჩართულობა',
+      youthCard4T: '',
       youthCard4D: 'გაცვლითი პროგრამები, საერთაშორისო ბანაკები და მეგობრობა საზღვრებს გარეთ.',
+      youthCard5T: 'ენერგოეფექტურობის შესახებ ცნობიერების ამაღლების კამპანია',
+      youthCard5D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
+      youthCard6T: 'Nexus- ევროპის სკაუტური რეგიონის საგანმანათლებლო პროგრამის აპრობირება საქართველოში',
+      youthCard6D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
+      youthCard7T: 'მსოფლიო სკაუტური ჯამბორი 2023',
+      youthCard7D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
+      youthCard8T: 'საქველმოქმედო ღონისძიებები',
+      youthCard8D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
       socialMedia: 'სოციალური მედია',
       location: 'ადგილმდებარობა',
       partner: 'პარტნიორი',
@@ -240,7 +253,7 @@ export default function App() {
           </div>
 
 
-          {/* ახალგაზრდული პროექტები - საგანმანათლებლო პროექტები */}
+          {/* მიმდინარე პროექტები 1 - განხორციელებული პროექტები 2 */}
           <a href="#target" onClick={() => setMenuOpen(false)}>{langContent.youthTitle}</a>
           <a href="#education" onClick={() => setMenuOpen(false)}>{langContent.eduTitle}</a>  
 
@@ -350,6 +363,22 @@ export default function App() {
             <h3>{langContent.eduCard4T}</h3>
             <p>{langContent.eduCard4D}</p>
           </div>
+          <div className="edu-card">
+            <h3>{langContent.eduCard5T}</h3>
+            <p>{langContent.eduCard5D}</p>
+          </div>
+          <div className="edu-card">
+            <h3>{langContent.eduCard6T}</h3>
+            <p>{langContent.eduCard6D}</p>
+          </div>
+          <div className="edu-card">
+            <h3>{langContent.eduCard7T}</h3>
+            <p>{langContent.eduCard7D}</p>
+          </div>
+          <div className="edu-card">
+            <h3>{langContent.eduCard8T}</h3>
+            <p>{langContent.eduCard8D}</p>
+          </div>                                        
         </div>
       </section>
 
@@ -412,7 +441,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* YOUTH PROJECTS - ახალგაზრდული პროექტები */}
+            {/* YOUTH PROJECTS - ახალგაზრდული პროექტები */}
             <section id="target" className="youth-projects-section">
               <h2 className="section-title">{langContent.youthTitle}</h2>
               <p className="section-subtitle">{langContent.youthSubtitle}</p>
@@ -433,9 +462,25 @@ export default function App() {
                   <h3>{langContent.youthCard4T}</h3>
                   <p>{langContent.youthCard4D}</p>
                 </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard5T}</h3>
+                  <p>{langContent.youthCard5D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard6T}</h3>
+                  <p>{langContent.youthCard6D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard7T}</h3>
+                  <p>{langContent.youthCard7D}</p>
+                </div>
+                <div className="youth-card">
+                  <h3>{langContent.youthCard8T}</h3>
+                  <p>{langContent.youthCard8D}</p>
+                </div>
               </div>
             </section>
-            {/* REGISTER SECTION - ID fixed here */}
+          {/* REGISTER SECTION */}
           <section id="register" className="register-section">
             <h2 className="section-title">
               {langContent.register}
@@ -456,7 +501,7 @@ export default function App() {
               </a>
             </div>
           </section>
-            {/* Gallery - გალერეა */}
+          {/* Gallery - გალერეა */}
           <section id="gallery" className="gallery-section">
             <h2 className="section-title">{langContent.sponsors}</h2>
             <div className="masonry-wrapper">

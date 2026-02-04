@@ -1571,13 +1571,6 @@ body.night .service-card p {
    SERVICES SECTION – MATCH ABOUT
 ========================= */
 
-.services-section {
-  padding: 120px 10%;
-  background-color: var(--dark-purple);
-  color: white;
-  text-align: center;
-}
-
 /* Title */
 .services-section .section-title {
   font-size: 3rem;
@@ -1592,16 +1585,6 @@ body.night .service-card p {
   gap: 32px;
 }
 
-/* Card – glass style like About */
-.service-card {
-  padding: 28px;
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-
-  transition: transform 0.25s ease, background 0.25s ease;
-}
 
 .service-card:hover {
   transform: translateY(-6px);
@@ -1659,58 +1642,7 @@ body.night .service-card:hover {
   scroll-margin-top: 200px;
 }
 
-.edu-projects-section {
-  padding: 80px 20px;
-  background: var(--section-bg, #f7f7f7);
-  text-align: center;
-}
 
-.edu-projects-grid {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
-}
-
-.edu-card {
-  background: #ffffff;
-  padding: 28px 22px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-.edu-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-}
-
-.edu-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-/* Scout Style */
-
-.edu-projects-section {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #f3f6f1, #e7efe5);
-  text-align: center;
-}
-
-.edu-projects-section .section-title {
-  color: #1f4d2b; /* forest green */
-}
-
-.edu-projects-section .section-subtitle {
-  color: #3e5f4a;
-}
 
 /* GRID */
 .edu-projects-grid {
@@ -1720,33 +1652,6 @@ body.night .service-card:hover {
   gap: 24px;
 }
 
-/* CARD */
-.edu-card {
-  background: #ffffff;
-  padding: 28px 22px;
-  border-radius: 16px;
-  border-left: 6px solid #2f6b3f; /* scout stripe */
-  box-shadow: 0 10px 28px rgba(31, 77, 43, 0.15);
-  transition: all 0.3s ease;
-}
-
-.edu-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(31, 77, 43, 0.25);
-}
-
-/* TEXT */
-.edu-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  color: #2f6b3f;
-}
-
-.edu-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4a5f52;
-}
 /* Dark mode education */
 
 /* NIGHT MODE */
@@ -1764,7 +1669,7 @@ body.night .service-card:hover {
 
 .night .edu-card {
   background: #162c22;
-  border-left: 6px solid #4caf73; /* scout green accent */
+
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -1782,11 +1687,11 @@ body.night .service-card:hover {
 }
 
 /* =========================
-   YOUTH PROJECTS – MATCH ABOUT
+   მიმდინარე პროექტები 
 ========================= */
 
 .youth-projects-section {
-  padding: 120px 10%;
+  padding:  10%;
   background-color: var(--dark-purple);
   color: white;
 }
@@ -2067,20 +1972,7 @@ body.night .about-box:hover {
   background: rgba(255, 255, 255, 0.12) !important;
 }
 
-/* ===== REMOVE WHITE BORDER FROM ABOUT (ჩვენს შესახებ) ===== */
 
-.about-block,
-.about-card,
-.about-box {
-  border: none !important;
-}
-
-/* ===== REMOVE GREEN BORDER FROM EDUCATION PROJECTS ===== */
-
-.edu-card {
-  border-left: none !important;
-  border: none !important;
-}
 
 /* ===== UNIFY ALL BOXES (ONE BORDER STYLE) ===== */
 
@@ -2223,7 +2115,7 @@ body.night .target-card {
 
 /* Section Container */
 .register-section {
-  background-color: #1a0b2e; /* Your exact Dark Purple */
+  background-color: #121212; 
   padding: 80px 20px;
   text-align: center;
   display: flex;
@@ -2266,7 +2158,7 @@ body.night .target-card {
 
 /* Ensure the section has the dark purple background */
 .register-section {
-  background-color: #1a0b2e; /* Your Dark Purple */
+  background-color: #121212; 
   padding: 80px 20px;
   text-align: center;
   color: #ffffff; /* This makes ALL text inside white by default */
@@ -2545,122 +2437,8 @@ body.night .card-top {
   background-color: rgba(0,0,0,0.3) !important;
 }
 
-body.night .target-section .target-card.green-bg { background-color: #2a3a2a !important; }
-body.night .target-section .target-card.orange-bg { background-color: #b77b22 !important; }
-body.night .overlay-btn { color: #fff !important; opacity: 0.9 !important; }
 
-body.night .gallery { background-color: #444 !important; color: #eee !important; }
-body.night .photo-card { background-color: #555 !important; }
 
-body.night .services-section { background-color: #1c1c1c !important; color: #eee !important; }
-body.night .service-card { 
-  background: rgba(255,255,255,0.06) !important; 
-  color: #eaeaea !important;
-}
-body.night .service-card:hover { background: rgba(255,255,255,0.12) !important; }
-body.night .service-card h3 { color: #caa7ff !important; }
-body.night .service-card p { color: #d0d0d0 !important; }
-
-body.night .about-section { background-color: #1c1c1c !important; color: #eaeaea !important; }
-body.night .about-card { background-color: #2a2a32 !important; color: #eaeaea !important; }
-body.night .about-card h3 { color: #caa7ff !important; }
-body.night .about-card p { color: #d0d0d0 !important; }
-
-body.night .developer-section { background-color: #111 !important; color: #eaeaea !important; }
-body.night .developer-text { color: #eaeaea !important; }
-body.night .developer-card { background-color: #222 !important; }
-
-body.night .edu-projects-section { 
-  background: linear-gradient(180deg, #0f1c15, #14261c) !important; 
-  color: #cfe8d6 !important; 
-}
-body.night .edu-card {
-  background-color: #162c22 !important;
-  border-left: 6px solid #4caf73 !important;
-  color: #c1e3d0 !important;
-}
-body.night .edu-card h3 { color: #8ee6b1 !important; }
-body.night .edu-card p { color: #c1e3d0 !important; }
-
-body.night .youth-projects-section { background-color: #111 !important; color: #eee !important; }
-body.night .youth-card { 
-  background: rgba(255,255,255,0.06) !important; 
-  color: #eaeaea !important;
-}
-body.night .youth-card:hover { background: rgba(255,255,255,0.12) !important; }
-body.night .youth-card h3 { color: #caa7ff !important; }
-body.night .youth-card p { color: #d0d0d0 !important; }
-
-body.night .dropdown-panel { 
-  background: rgba(43,15,63,0.96) !important; 
-  color: #eaeaea !important;
-}
-body.night .dropdown-panel a { color: #eaeaea !important; }
-body.night .dropdown-panel a:hover { color: var(--orange) !important; }
-
-body.night .map-container iframe,
-body.night .map-container,
-body.night .dejavu {
-  background-color: #222 !important;
-}
-
-body.night .footer-col,
-body.night .contact-details p,
-body.night .contact-details a {
-  color: #eee !important;
-}
-
-body.night .social-icons img,
-body.night .header-social-icon {
-  filter: brightness(0.9) invert(0.8) !important;
-}
-
-body.night .mobile-controls button {
-  background-color: #555 !important;
-  color: #eee !important;
-}
-
-/* =========================
-   FULL NIGHT MODE - ADDITIONAL PAGES
-========================= */
-
-body.night {
-  background-color: #111 !important;
-  color: #eee !important;
-}
-
-/* FORMS (register, donation) */
-body.night form,
-body.night .form-container,
-body.night .register-form,
-body.night .donation-form {
-  background-color: #1c1c1c !important;
-  color: #eee !important;
-  border: 1px solid #333 !important;
-}
-
-body.night input,
-body.night select,
-body.night textarea {
-  background-color: #222 !important;
-  color: #eee !important;
-  border: 1px solid #444 !important;
-}
-
-body.night input::placeholder,
-body.night textarea::placeholder {
-  color: #bbb !important;
-}
-
-body.night button {
-  background-color: #555 !important;
-  color: #fff !important;
-  border: 1px solid #666 !important;
-}
-
-body.night button:hover {
-  background-color: #666 !important;
-}
 
 /* GALLERY PAGE */
 body.night .gallery,
@@ -2673,7 +2451,7 @@ body.night .photo-card {
 /* SPECIFIC SECTION BACKGROUNDS */
 body.night .register-section,
 body.night .donation-section {
-  background-color: #1c1c1c !important;
+  background-color: #121212 !important;
   color: #eee !important;
 }
 
@@ -2722,7 +2500,7 @@ body.night div {
 body.night .footer,
 body.night .footer a,
 body.night .footer p {
-  background-color: #222 !important;
+  background-color: #232323 !important;
   color: #eee !important;
 }
 
@@ -2816,4 +2594,15 @@ body.night .footer p {
     opacity: 1 !important; 
     visibility: visible !important;
   }
+}
+
+/* Specific Grid for Education Section */
+.edu-projects-grid {
+  display: grid;
+  /* This ensures 3 columns on desktop */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 15px; /* Tighter gap between boxes */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
