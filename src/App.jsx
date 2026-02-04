@@ -140,7 +140,7 @@ export default function App() {
       recipient: 'მიმღები: სამეგრელოს სკაუტური ორგანიზაცია',
       donation: 'დონაცია',
       accountNum: 'საბანკო ანგარიში (IBAN): GE00TB0000000000000000',
-      developerTitle: 'Full-Stack დეველოპერი',
+      developerTitle: 'საიტის დეველოპერი',
       developerName: 'ლუკა გულედანი',
       developerText: 'მე ვარ ამ პროექტის დეველოპერი და 2014 წლიდან სამეგრელოს სკაუტების წევრი. ჩემი გატაცება ტექნოლოგიები, თამაშების შექმნა და პროგრამირებაა. ეს ვებსაიტი ჩემი და ჩვენი ლიდერების ერთობლივი შრომის პირველი ვერსიაა, რომელიც სკაუტურ სულსა და თანამედროვე ტექნოლოგიებს აერთიანებს.'
     },
@@ -216,7 +216,7 @@ export default function App() {
       recipient: 'Recipient: Samegrelo Scout Organization',
       donation: 'Donation',
       accountNum: 'Bank Account (IBAN): GE00TB0000000000000000',
-      developerTitle: 'Full-Stack Developer',
+      developerTitle: 'Website Developer',
       developerName: 'Luka Guledani',
       developerText: 'I am the lead developer of this project and a member of Scouts Samegrelo since 2014. My passion lies in technology, game development, and programming. This website is the first version of a collaboration between myself and our leaders, merging the scouting spirit with modern tech.'
     }
@@ -638,10 +638,8 @@ export default function App() {
             </div>
           </section>
 
-
+                {/* Developer */}
         <section id="developer" className="developer-section">
-          
-          
           <div className="developer-card">
             <img 
               src="/assets/photos/developer.jpg" 
