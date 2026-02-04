@@ -928,21 +928,29 @@ body.night .services-section .section-title {
   color: #eaeaea; /* or whatever you already use */
 }
 
-/* DEVELOPER */
-
+/* DEVELOPER SECTION */
 .developer-section {
-  padding: 80px 20px;
+  padding: 80px 5%;
   text-align: center;
 }
 
 .developer-card {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 40px auto;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
   justify-content: center;
-  flex-wrap: wrap;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.developer-card:hover {
+  transform: translateY(-5px);
 }
 
 .developer-photo {
@@ -950,32 +958,52 @@ body.night .services-section .section-title {
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border: 4px solid #ff9800; /* Scout brand accent */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 .developer-text {
   max-width: 500px;
-  font-size: 1rem;
+  text-align: left; /* Text looks better left-aligned next to a photo */
+}
+
+.developer-text h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.developer-text p {
+  font-size: 1.1rem;
   line-height: 1.6;
 }
 
-/* DAY MODE → white text */
-body.day .developer-section .section-title  {
+/* --- THEME MODES --- */
+
+/* DAY MODE */
+body.day .developer-section .section-title,
+body.day .developer-section .developer-text p,
+body.day .developer-section .developer-text h3 {
   color: #ffffff;
 }
 
-body.day .developer-section .developer-text {
-  color: #ffffff;
-}
-
-body.day .developer-section .al
-/* NIGHT MODE → keep dark or custom */
-body.night .developer-section .section-title {
+/* NIGHT MODE */
+body.night .developer-section .section-title,
+body.night .developer-section .developer-text p {
   color: #eaeaea; 
 }
 
-body.night .developer-section .developer-text {
-  color: #eaeaea; 
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .developer-card {
+    flex-direction: column; /* Stack photo on top of text */
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .developer-text {
+    text-align: center;
+  }
 }
 
 /* Wrapper */

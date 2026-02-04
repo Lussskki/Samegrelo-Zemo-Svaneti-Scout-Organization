@@ -132,6 +132,9 @@ export default function App() {
       recipient: 'მიმღები: სამეგრელოს სკაუტური ორგანიზაცია',
       donation: 'დონაცია',
       accountNum: 'საბანკო ანგარიში (IBAN): GE00TB0000000000000000',
+      developerTitle: 'Full-Stack დეველოპერი',
+      developerName: 'ლუკა გულედანი',
+      developerText: 'პროგრამისტი ვარ კაროჩე'
     },
     'ENG': {
       title: 'Samegrelo Organization Scouts',
@@ -205,6 +208,9 @@ export default function App() {
       recipient: 'Recipient: Samegrelo Scout Organization',
       donation: 'Donation',
       accountNum: 'Bank Account (IBAN): GE00TB0000000000000000',
+      developerTitle: 'Full-Stack Developer',
+      developerName: 'Luka Guledani',
+      developerText: 'I`am programmer karocheee'
     }
   };
 
@@ -574,7 +580,25 @@ export default function App() {
                 Copy IBAN
               </button>
             </div>
-          </section>              
+          </section>
+
+
+        <section id="developer" className="developer-section">
+          <h2 className="section-title">{langContent.developerTitle}</h2>
+          
+          <div className="developer-card">
+            <img 
+              src="/path-to-your-photo.jpg" 
+              alt="Developer" 
+              className="developer-photo" 
+            />
+            
+            <div className="developer-text">
+              <h3>{langContent.developerName}</h3>
+               <p>{langContent.developerText}</p>   
+            </div>
+          </div>
+        </section>              
 
 
       {/* FOOTER - ფუტერი */}
