@@ -63,7 +63,7 @@ export default function App() {
       eduCard1D: 'წითელ ჯვართან სასიცოცხლოდ მნიშვნელოვანი პარტნიორობის ფარგლებში, ჩვენი გუნდი პანდემიის დროს წინა ხაზზე იდგა, რათა დახმარებოდა ყველაზე მეტად გაჭირვებულებს. ჩვენ მთელი ქვეყნის მასშტაბით ვიმოგზაურეთ აუცილებელი მარაგების გადასატანად, რათა გლობალური კრიზისის დროს დაუცველი ოჯახებისთვის მიეღოთ სიცოცხლის გადარჩენის მედიკამენტები, საკვები და ძირითადი საჭიროებები.',
       eduCard2T: 'სკაუტური ბანაკი ავატარი',
       eduCard2D: '2020 წლის მნიშვნელოვანი ეტაპი იყო „ავატარის ბანაკი“, რომელიც ჩვენი ორგანიზაციის პირველი ოფიციალური ბანაკი იყო. ეს იყო გრანდიოზული წარმატება, რომელმაც თავგადასავალი ლიდერობის ტრენინგთან გააერთიანა, ჩვენი ჯგუფისთვის საფუძველი ჩაუყარა და დაამტკიცა, რომ ჩვენს სკაუტებს შეუძლიათ ხედვა დაუვიწყარ გარე გამოცდილებად აქციონ.',
-      eduCard3T: 'MOVA-ს საერთაშორისო ჯამბორი',
+      eduCard3T: 'MOVA-ს საერთაშორისო ჯამბორი შვეიცარიაში',
       eduCard3D: 'ჩვენმა სკაუტებმა მსოფლიო მასშტაბით გაიცნეს თავი MOVA-ს მასშტაბურ ეროვნულ ჯამბორიში მონაწილეობით. 30 000 საერთაშორისო მონაწილესთან ერთად, ჩვენ ჩავერთეთ მსოფლიო დონის სკაუტურ გამოცდილებაში, რომელიც ორიენტირებული იყო კულტურულ გაცვლასა და მაღალი დონის გარე უნარებზე, რითაც წარმოვადგინეთ ჩვენი ორგანიზაცია მსოფლიო სკაუტური ხელოვნების უდიდეს სცენაზე.',
       eduCard4T: 'სკაუტი მასწავლებელი',
       eduCard4D: 'სკაუტური ძირითადი ფილოსოფიის - „სწავლა კეთებით“ - მიჰყვება, ეს პროგრამა ახალგაზრდებს თამაშისა და პრაქტიკული ჩართულობის გზით აძლიერებს. ის განათლებას აქტიურ გამოცდილებად აქცევს, რაც მონაწილეებს საშუალებას აძლევს, ახალი უნარები შეიძინონ პრაქტიკული ჩართულობით და არა მხოლოდ თეორიული ცდებით.',
@@ -151,7 +151,7 @@ export default function App() {
       eduCard1D: 'In a vital partnership with the Red Cross, our team took to the front lines during the pandemic to support those most in need. We traveled across the country to deliver essential supplies, ensuring that vulnerable families received life-saving medicine, food, and basic necessities during a time of global crisis.',
       eduCard2T: 'Scout Camp Avatar',
       eduCard2D: 'Marking a major milestone in 2020, Camp Avatar was our organization’s very first official camp. It was a landmark success that combined adventure with leadership training, creating a foundation for our group and proving that our Scouts could turn a vision into an unforgettable outdoor experience.',
-      eduCard3T: 'MOVA International Jamboree',
+      eduCard3T: 'MOVA International Jamboree in Swiss',
       eduCard3D: 'Our Scouts went global by participating in the massive MOVA National Jamboree. Joining 30,000 international participants, we immersed ourselves in a world-class scouting experience centered on cultural exchange and high-level outdoor skills, representing our organization on the grandest stage of world scouting.',
       eduCard4T: 'Scout teacher',
       eduCard4D: 'Following the core scouting philosophy of "learning by doing," this program empowers youth through play and practical engagement. It turns education into an active experience, allowing participants to gain new skills through hands-on involvement rather than just theory.',
@@ -584,16 +584,16 @@ export default function App() {
 
 
         <section id="developer" className="developer-section">
-          <h2 className="section-title">{langContent.developerTitle}</h2>
+          
           
           <div className="developer-card">
             <img 
               src="/path-to-your-photo.jpg" 
               alt="Developer" 
               className="developer-photo" 
-            />
-            
+            />           
             <div className="developer-text">
+              <h2 className="section-title">{langContent.developerTitle}</h2>
               <h3>{langContent.developerName}</h3>
                <p>{langContent.developerText}</p>   
             </div>
