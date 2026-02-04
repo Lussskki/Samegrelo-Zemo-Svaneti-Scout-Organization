@@ -373,6 +373,7 @@ export default function App() {
         </div>
       </section>
 
+
       {/* Completed projects - განხორციელებული პროექტები*/}
       <section id="education" className="edu-projects-section">
         <h2 className="section-title">{langContent.eduTitle}</h2>
@@ -437,6 +438,13 @@ export default function App() {
         </div>
       </section>
 
+      {/* PHOTO DIVIDER */}
+      <section className="section-photo">
+        <img 
+          src="/assets/photos/chveni-fotoebi/3.jpg" 
+          alt="Scouts activity" 
+        />
+      </section>
 
             {/* მიმდინარე პროექტები - Current project */}
             <section id="target" className="youth-projects-section">
@@ -513,6 +521,14 @@ export default function App() {
         </div>
       </section>
 
+      {/* PHOTO DIVIDER */}
+      <section className="section-photo">
+        <img 
+          src="/assets/photos/chveni-fotoebi/10.jpg" 
+          alt="Scouts activity" 
+        />
+      </section>        
+
       {/* ABOUT US - ჩვენს შესახებ*/}
       <section id="about" className="about-section">
         <h2 className="section-title">{langContent.aboutTitle}</h2>
@@ -536,6 +552,14 @@ export default function App() {
           </section>
         </div>
       </section>
+
+      {/* PHOTO DIVIDER */}
+      <section className="section-photo">
+        <img 
+          src="/assets/photos/chveni-fotoebi/6.jpg" 
+          alt="Scouts activity" 
+        />
+      </section>      
 
 
 

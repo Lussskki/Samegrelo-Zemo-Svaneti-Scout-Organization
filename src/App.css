@@ -2994,3 +2994,54 @@ body.dark .mova-icon {
   filter: brightness(1.2); 
   mix-blend-mode: lighten;
 }
+
+/* ================================
+   PURPLE PHOTO DIVIDER (GLOBAL)
+   ================================ */
+
+.section-photo,
+.photo-divider {
+  background: #2a123d;
+  padding: 60px 6vw;
+  position: relative;
+}
+
+/* Image styling */
+.section-photo img,
+.photo-divider img {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+
+  border-radius: 26px;
+  border: 1px solid rgba(180, 140, 255, 0.25);
+
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Purple overlay (clipped to radius) */
+.section-photo::after,
+.photo-divider::after {
+  content: "";
+  position: absolute;
+  inset: 60px 6vw;
+  border-radius: 26px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(20, 5, 35, 0.15),
+    rgba(40, 10, 70, 0.55)
+  );
+
+  pointer-events: none;
+}
+
+/* Night mode enhancement */
+body.night .section-photo img,
+body.night .photo-divider img {
+  box-shadow:
+    0 20px 60px rgba(120, 80, 255, 0.35),
+    inset 0 0 0 1px rgba(180, 140, 255, 0.12);
+}
+
