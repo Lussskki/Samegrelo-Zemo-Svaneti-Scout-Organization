@@ -352,6 +352,15 @@ export default function App() {
                 >
                   {langContent.register}
                 </a>
+                <a
+                  href="#donation"
+                  onClick={() => {
+                    setMenuOpen(false);
+                    setContactOpen(false);
+                  }}
+                >
+                  {langContent.donation}
+                </a>                
 
                 <a
                   href="#developer"
@@ -463,7 +472,7 @@ export default function App() {
               </div>
             </section>
 
-            
+
       {/* Completed projects - განხორციელებული პროექტები*/}
       <section id="education" className="edu-projects-section">
         <h2 className="section-title">{langContent.eduTitle}</h2>
