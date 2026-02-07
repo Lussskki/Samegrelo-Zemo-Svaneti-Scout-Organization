@@ -163,10 +163,10 @@ export default function App() {
       register: 'რეგისტრაცია',
       registerSubtitle: 'შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი',
       bankTransfer: 'საბანკო გადარიცხვა',
-      accountNumber: 'გიორგი ჭეჟიას ანგარიშის ნომერი (IBAN): GE00TB0000000000000000',
       recipient: 'მიმღები: სამეგრელოს სკაუტური ორგანიზაცია',
       donation: 'დონაცია',
-      accountNum: 'საბანკო ანგარიში (IBAN): GE00TB0000000000000000',
+      accountNum: 'საბანკო ანგარიში (IBAN): GE09BG0000000601167751',
+      donationText: ' გთხოვთ დანიშნულებაში მიუთითეთ: ,,შემოწირულობა” ',
       developer: 'დეველოპერი',
       developerTitle: 'საიტის დეველოპერი',
       developerName: 'ლუკა გულედანი',
@@ -256,7 +256,8 @@ export default function App() {
       registerSubtitle: 'Join us and become part of the Scout movement.',
       recipient: 'Recipient: Samegrelo Scout Organization',
       donation: 'Donation',
-      accountNum: 'Bank Account (IBAN): GE00TB0000000000000000',
+      donationText: 'Please indicate in the purpose/description: "Donation"',
+      accountNum: 'Bank Account (IBAN): GE09BG0000000601167751',
       developer: 'Developer',
       developerTitle: 'Website Developer',
       developerName: 'Luka Guledani',
@@ -386,6 +387,7 @@ export default function App() {
                   }}
                 >
                   {langContent.donation}
+                  {langContent.donationText}
                 </a>                
 
                 <a
@@ -751,6 +753,7 @@ export default function App() {
             <h2 className="section-title">{langContent.donation}</h2>
             <div className="account-container">
               <p className="iban-text">{langContent.accountNum}</p>
+              <p className="iban-text">{langContent.donationText} </p>
               <button 
                 className="copy-btn-simple" 
                 onClick={() => {
