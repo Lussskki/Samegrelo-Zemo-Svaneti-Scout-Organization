@@ -1507,6 +1507,7 @@ body.night .service-card p {
 
 .services-section {
   padding: 100px 10% 120px;
+  text-align: center;
   background-color: var(--green);
   text-align: center;
   scroll-margin-top: 90px; /* smooth anchor scroll */
@@ -3190,3 +3191,133 @@ body.night .photo-divider img {
   right: calc(50% - 60px);
 }
 
+/* Services mobile section */
+/* --- OVERRIDE: CENTERED SINGLE CARD SLIDER --- */
+
+.services-grid {
+  display: flex !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  gap: 20px !important; /* Space between cards */
+  padding: 20px 0 !important;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  justify-content: flex-start !important;
+}
+
+.services-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.service-card {
+  /* This gives the card its specific shape instead of stretching */
+  flex: 0 0 300px !important; 
+  margin: 0 auto !important;
+  scroll-snap-align: center !important;
+  
+  /* Visual styling to match your dark purple theme */
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 30px 20px !important;
+  box-sizing: border-box !important;
+  
+  /* Content alignment */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.service-card img {
+  width: 160px !important;
+  height: auto !important;
+  margin-bottom: 20px !important;
+}
+
+.service-card p {
+  color: #fff !important;
+  font-size: 1.1rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Add empty space on sides so first/last cards can center */
+.services-grid::before,
+.services-grid::after {
+  content: '';
+  flex: 0 0 calc(50% - 150px); /* Adjusts based on card width */
+}
+
+/* --- SERVICES SECTION FIX --- */
+
+/* 1. Reset the grid to be a flexible slider */
+.services-grid {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  scroll-snap-type: x mandatory !important;
+  gap: 20px !important;
+  padding: 40px 20px !important;
+  margin: 0 auto !important;
+  max-width: 1200px !important;
+  scrollbar-width: none; /* Hide scrollbar Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar IE/Edge */
+  align-items: stretch !important;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.services-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* 2. Mobile: Show 1 card centered */
+.service-card {
+  flex: 0 0 100% !important; /* Full width on mobile */
+  scroll-snap-align: center !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  padding: 30px 20px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* 3. Desktop: Show 3 cards evenly */
+@media (min-width: 1024px) {
+  .services-grid {
+    overflow-x: hidden !important; /* No scroll needed on desktop */
+    justify-content: center !important; /* Centers the 3 cards */
+    padding: 60px 0 !important;
+  }
+
+  .service-card {
+    /* (Total width / 3) minus the gaps */
+    flex: 0 0 calc(33.33% - 20px) !important;
+    max-width: 350px !important;
+  }
+}
+
+/* Image and Text alignment fixes */
+.service-card img {
+  width: 100% !important;
+  max-width: 150px !important;
+  height: auto !important;
+  margin-bottom: 20px !important;
+}
+
+.service-card h3 {
+  color: #ff9d00 !important; /* Orange title from your screen */
+  margin-bottom: 15px !important;
+  font-size: 1.2rem !important;
+}
+
+.service-card p {
+  color: #ffffff !important;
+  line-height: 1.6 !important;
+  font-size: 1rem !important;
+  margin: 0 !important;
+}
