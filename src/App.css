@@ -2903,20 +2903,30 @@ body.night .footer p {
 .services-grid {
   display: flex;
   overflow-x: auto;
-  /* Fixed gap for consistent math */
-  gap: 20px; 
-  /* Removing large side padding to prevent the 4th card from peeking */
+  gap: 20px;
   padding: 30px 0;
   margin: 0 auto;
-  
-  /* Snapping behavior */
+
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  
-  /* Hide Scrollbar */
+
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
 }
+
+.services-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.services-grid .service-card {
+  flex: 0 0 calc((100% - 40px) / 3); /* Show 3 cards at once, account for 2 gaps of 20px */
+  scroll-snap-align: start;
+  border-radius: 12px;
+  background-color: #2e1f4d;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
 
 .services-grid::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
