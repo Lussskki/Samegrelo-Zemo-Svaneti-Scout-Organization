@@ -271,14 +271,16 @@ export default function App() {
   const [contactOpen, setContactOpen] = useState(false);
 
 
-  function scrollCarousel(direction) {
-    const container = document.getElementById('youth-carousel');
-    const scrollAmount = 300; // Adjust how far it scrolls per click
-    if (direction === 'left') {
-      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+  const scrollCarousel = (direction, id) => {
+    const container = document.getElementById(id)
+    const scrollAmount = 300
+
+    if (!container) return
+
+    container.scrollBy({
+      left: direction === 'left' ? -scrollAmount : scrollAmount,
+      behavior: 'smooth'
+    })
   }
 
 
@@ -438,177 +440,193 @@ export default function App() {
         </nav>
       </header>
 
-      {/* HERO */}
-      <section id="hero" className="hero">
-        <img src="/assets/photos/first.jpg" alt="Scouts" className="hero-img-tag" />
-        <div className="hero-content">
-          <h1>{langContent.heroTitle}</h1>
-          <p>{langContent.heroText}</p>
-        </div>
-      </section>
-
-      {/* მიმდინარე პროექტები - Current project */}
-      <section id="target" className="youth-projects-section">
-        <h2 className="section-title">{langContent.youthTitle}</h2>
-        <p className="section-subtitle">{langContent.youthSubtitle}</p>
-
-        <div className="carousel-container">
-          <button className="carousel-btn left" onClick={() => scrollCarousel('left')}>
-            &#10094;
-          </button>
-
-          <div className="youth-projects-grid" id="youth-carousel">
-            {Array.from({ length: 8 }).map((_, i) => (
-              <div className="youth-card" key={i}>
-                <div className="icon-wrapper logo-crop">
-                  <img src={currentLogo} alt="Current project" className="mova-icon" />
-                </div>
-                <h3>{langContent[`youthCard${i + 1}T`]}</h3>
-                <p>{langContent[`youthCard${i + 1}D`]}</p>
+            {/* HERO */}
+            <section id="hero" className="hero">
+              <img src="/assets/photos/first.jpg" alt="Scouts" className="hero-img-tag" />
+              <div className="hero-content">
+                <h1>{langContent.heroTitle}</h1>
+                <p>{langContent.heroText}</p>
               </div>
-            ))}
-          </div>
+            </section>
 
-          <button className="carousel-btn right" onClick={() => scrollCarousel('right')}>
-            &#10095;
-          </button>
-        </div>
-      </section>
+            {/* მიმდინარე პროექტები - Current project */}
+            <section id="target" className="youth-projects-section">
+              <h2 className="section-title">{langContent.youthTitle}</h2>
+              <p className="section-subtitle">{langContent.youthSubtitle}</p>
 
+              <div className="carousel-container">
+                <button className="carousel-btn left" onClick={() => scrollCarousel('left')}>
+                  &#10094;
+                </button>
 
+                <div className="youth-projects-grid" id="youth-carousel">
+                  {Array.from({ length: 8 }).map((_, i) => (
+                    <div className="youth-card" key={i}>
+                      <div className="icon-wrapper logo-crop">
+                        <img src={currentLogo} alt="Current project" className="mova-icon" />
+                      </div>
+                      <h3>{langContent[`youthCard${i + 1}T`]}</h3>
+                      <p>{langContent[`youthCard${i + 1}D`]}</p>
+                    </div>
+                  ))}
+                </div>
 
+                <button className="carousel-btn right" onClick={() => scrollCarousel('right')}>
+                  &#10095;
+                </button>
+              </div>
+            </section>
       {/* Completed projects - განხორციელებული პროექტები*/}
       <section id="education" className="edu-projects-section">
         <h2 className="section-title">{langContent.eduTitle}</h2>
         <p className="section-subtitle">{langContent.eduSubtitle}</p>
-        <div className="edu-projects-grid">
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop"  >
-            <img src={redCrossLogo} alt="Red cross" className="mova-icon" />
+
+        <div className="carousel-container">
+          <button className="carousel-btn left" onClick={() => scrollCarousel('left', 'edu-carousel')}>
+            &#10094;
+          </button>
+
+          <div className="edu-projects-grid" id="edu-carousel">
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={redCrossLogo} alt="Red cross" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard1T}</h3>
+              <p>{langContent.eduCard1D}</p>
             </div>
-            <h3>{langContent.eduCard1T}</h3>
-            <p>{langContent.eduCard1D}</p>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={avatarLogo} alt="Scout camp 2020 avatar" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard2T}</h3>
+              <p>{langContent.eduCard2D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={movaLogo} alt="MOVA Switzerland Scouting" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard3T}</h3>
+              <p>{langContent.eduCard3D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={scoutLearnLogo} alt="Scout teacher" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard4T}</h3>
+              <p>{langContent.eduCard4D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={energyLogo} alt="Energy" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard5T}</h3>
+              <p>{langContent.eduCard5D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={nexusLogo} alt="Nexus" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard6T}</h3>
+              <p>{langContent.eduCard6D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={koreaLogo} alt="Korea" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard7T}</h3>
+              <p>{langContent.eduCard7D}</p>
+            </div>
+
+            <div className="edu-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={charityLogo} alt="Charity" className="mova-icon" />
+              </div>
+              <h3>{langContent.eduCard8T}</h3>
+              <p>{langContent.eduCard8D}</p>
+            </div>
           </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop"  >
-            <img src={avatarLogo} alt="Scout camp 2020 avatar" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard2T}</h3>
-            <p>{langContent.eduCard2D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={movaLogo} alt="MOVA Switzerland Scouting" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard3T}</h3>
-            <p>{langContent.eduCard3D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={scoutLearnLogo} alt="Scout teacher" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard4T}</h3>
-            <p>{langContent.eduCard4D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={energyLogo} alt="Energy" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard5T}</h3>
-            <p>{langContent.eduCard5D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={nexusLogo} alt="Nexus" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard6T}</h3>
-            <p>{langContent.eduCard6D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={koreaLogo} alt="Nexus" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard7T}</h3>
-            <p>{langContent.eduCard7D}</p>
-          </div>
-          <div className="edu-card">
-            <div className="icon-wrapper logo-crop">
-            <img src={charityLogo} alt="Charity" className="mova-icon" />
-            </div>
-            <h3>{langContent.eduCard8T}</h3>
-            <p>{langContent.eduCard8D}</p>
-          </div>                                        
+
+          <button className="carousel-btn right" onClick={() => scrollCarousel('right', 'edu-carousel')}>
+            &#10095;
+          </button>
         </div>
       </section>
-
-      {/* PHOTO DIVIDER */}
-      <section className="section-photo">
-        <img 
-          src="/assets/photos/chveni-fotoebi/3.jpg" 
-          alt="Scouts activity" 
-        />
-      </section>
-
-
-      {/* SERVICES SECTION -სერვისების სექცია */}
+      {/* SERVICES SECTION - სერვისების სექცია */}
       <section id="services" className="services-section">
         <h2 className="section-title">{langContent.services}</h2>
-        <div className="services-grid">
-          <div id="service-school" className="service-card">
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Current project" className="service-icon" />
-          </div>            
-            <h3>{langContent.service1}</h3>
-            <p>{langContent.service1D}</p>
-          </div>
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>          
-          <div id="service-camps" className="service-card">
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>
-            <h3>{langContent.service2}</h3>
-            <p>{langContent.service2D}</p>
-          </div>
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>          
-          <div id="service-schools" className="service-card">
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>
-            <h3>{langContent.service3}</h3>
-            <p>{langContent.service3D}</p>
-          </div>
-          <div id="service-eco" className="service-card">
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>
-            <h3>{langContent.service4}</h3>
-            <p>{langContent.service4D}</p>
-          </div>
-          <div id="service-venue" className="service-card">
-          <div className="icon-wrapper logo-crop">
-            <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>
-            <h3>{langContent.service5}</h3>
-            <p>{langContent.service5D}</p>
-          </div>
-          <div id="service-event" className="service-card">
-            <div className="icon-wrapper logo-crop">
-              <img src={servicesLogo} alt="Service" className="service-icon" />
+
+        <div className="carousel-container">
+          <button className="carousel-btn left" onClick={() => scrollCarousel('left', 'services-carousel')}>
+            &#10094;
+          </button>
+
+          <div className="services-grid" id="services-carousel">
+            <div id="service-school" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service1}</h3>
+              <p>{langContent.service1D}</p>
             </div>
-            <h3>{langContent.service6}</h3>
-            <p>{langContent.service6D}</p>
+
+            <div id="service-camps" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service2}</h3>
+              <p>{langContent.service2D}</p>
+            </div>
+
+            <div id="service-schools" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service3}</h3>
+              <p>{langContent.service3D}</p>
+            </div>
+
+            <div id="service-eco" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service4}</h3>
+              <p>{langContent.service4D}</p>
+            </div>
+
+            <div id="service-venue" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service5}</h3>
+              <p>{langContent.service5D}</p>
+            </div>
+
+            <div id="service-event" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service6}</h3>
+              <p>{langContent.service6D}</p>
+            </div>
+
+            <div id="service-international" className="service-card">
+              <div className="icon-wrapper logo-crop">
+                <img src={servicesLogo} alt="Service" className="service-icon" />
+              </div>
+              <h3>{langContent.service7}</h3>
+              <p>{langContent.service7D}</p>
+            </div>
           </div>
-          <div id="service-international" className="service-card">
-          <div className="icon-wrapper logo-crop">
-              <img src={servicesLogo} alt="Service" className="service-icon" />
-          </div>
-            <h3>{langContent.service7}</h3>
-            <p>{langContent.service7D}</p>
-          </div>
+
+          <button className="carousel-btn right" onClick={() => scrollCarousel('right', 'services-carousel')}>
+            &#10095;
+          </button>
         </div>
       </section>
 
@@ -620,39 +638,53 @@ export default function App() {
         />
       </section>        
 
-      {/* ABOUT US - ჩვენს შესახებ*/}
+      {/* ABOUT US - ჩვენს შესახებ */}
       <section id="about" className="about-section">
         <h2 className="section-title">{langContent.aboutTitle}</h2>
         <p className="section-subtitle">{langContent.aboutSubtitle}</p>
-        <div className="about-content">
-          <section id="who" className="about-block">
-          <div className="icon-wrapper logo-crop">
-            <img src={aboutUsLogo} alt="About us" className="service-icon" />
-          </div>            
-            <h3>{langContent.whoTitle}</h3>
-            <p>{langContent.whoText}</p>
-          </section>
-          <section id="history" className="about-block">
-          <div className="icon-wrapper logo-crop">
-            <img src={aboutUsLogo} alt="About us" className="service-icon" />
-          </div>            
-            <h3>{langContent.histTitle}</h3>
-            <p>{langContent.histText}</p>
-          </section>
-          <section id="mission" className="about-block">
-          <div className="icon-wrapper logo-crop">
-            <img src={aboutUsLogo} alt="About us" className="service-icon" />
-          </div>            
-            <h3>{langContent.missTitle}</h3>
-            <p>{langContent.missText}</p>
-          </section>
-          <section id="become" className="about-block">
-          <div className="icon-wrapper logo-crop">
-            <img src={aboutUsLogo} alt="About us" className="service-icon" />
-          </div>            
-            <h3>{langContent.howTitle}</h3>
-            <p>{langContent.howText}</p>
-          </section>
+
+        <div className="carousel-container">
+          <button className="carousel-btn left" onClick={() => scrollCarousel('left', 'about-carousel')}>
+            &#10094;
+          </button>
+
+          <div className="about-content" id="about-carousel">
+            <section id="who" className="about-block">
+              <div className="icon-wrapper logo-crop">
+                <img src={aboutUsLogo} alt="About us" className="service-icon" />
+              </div>
+              <h3>{langContent.whoTitle}</h3>
+              <p>{langContent.whoText}</p>
+            </section>
+
+            <section id="history" className="about-block">
+              <div className="icon-wrapper logo-crop">
+                <img src={aboutUsLogo} alt="About us" className="service-icon" />
+              </div>
+              <h3>{langContent.histTitle}</h3>
+              <p>{langContent.histText}</p>
+            </section>
+
+            <section id="mission" className="about-block">
+              <div className="icon-wrapper logo-crop">
+                <img src={aboutUsLogo} alt="About us" className="service-icon" />
+              </div>
+              <h3>{langContent.missTitle}</h3>
+              <p>{langContent.missText}</p>
+            </section>
+
+            <section id="become" className="about-block">
+              <div className="icon-wrapper logo-crop">
+                <img src={aboutUsLogo} alt="About us" className="service-icon" />
+              </div>
+              <h3>{langContent.howTitle}</h3>
+              <p>{langContent.howText}</p>
+            </section>
+          </div>
+
+          <button className="carousel-btn right" onClick={() => scrollCarousel('right', 'about-carousel')}>
+            &#10095;
+          </button>
         </div>
       </section>
 
