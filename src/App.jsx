@@ -121,12 +121,7 @@ export default function App() {
                 სამეგრელოში სკაუტური ორგანიზაცია 2014 წელს ჩამოყალიბდა.  
                 `,
       histTitle: 'სკაუტინგის ისტორია',
-      histText: `შეგიძლია წარმოიდგინო მსოფლიო სკაუტინგის გარეშე?
-                განათლება მრავალფეროვან საზოგადოებაში - ეს სკაუტინგია ! 
-                რამ განაპირობა ის, რომ 60 მილიონი ადამინი ერთი იდეის გარშემო გაერთიანდა? 
-                ყველაფერი 1907 წელს ინგლისში, უკაცრიელ კუნძულ ბრაუნსზე დაიწყო. სკაუტური მოძრაობის დამფუძნებელი რობერტ ბადენ-პაუელი (1857–1941) — ბრიტანული არმიის გენერალ-ლეიტენატი იყო, რომელმაც პულის ყურეში, დორსეტში მდებარე ბრაუნსის კუნძულზე ბანაკი მოაწყო, რათა საკუთარი იდეები პრაქტიკაში გამოეცადა. ბრიტანელი ლორდი ახალგაზრდებს დამოუკიდებლად ცხოვრებისთვის საჭირო უნარებს ასწავლიდა : საველე კულინარია, საზღვაო კვანძები, პირველადი დახმარება, თავშესაფრის შენება და სხვა..ბანაკის წარმატებამ მას სტიმული მისცა დაეწყო ის საქმე, რომელიც მე-20 საუკუნისა და შემდგომი ეპოქების კლასიკად იქცა.
-                წიგნი „Scouting for Boys“ 1908 წელს გამოიცა და თავიდანვე დიდი პოპულარობით სარგებლობდა. დაინტერესებულმა ბიჭებმა მალევე ჩამოაყალიბეს სკაუტური პატრულები, მალევე ნათელი გახდა, რომ ყველა ასაკისა და ყველა ქვეყნის ახალგაზრდას სურდა ამ მოძრაობაში ჩართვა. 1920 წელი პირველი მსოფლიო სკაუტური ჯემბორი ჩატარდა, სადაც მსოფლიოს სხვადასხვა ქვეყნიდან ჩამოსული სკაუტები შეიკრიბნენ, თავიანთი ეროვნული ფასეულობების წარმოსაჩენად. 
-                ამ წლების განმავლობაში სკაუტურ თავგადასავლებში უამრავი ადამიანი ერთვებოდა მათ შორის : ელისაბედ დედოფალი, ჯონ კენედი, ნელსონ მანდელა, ნილ არმსტრონფი, უოლტ დისნეი...`,
+      histText: `შეგიძლია წარმოიდგინო მსოფლიო სკაუტინგის გარეშე? ეს მოძრაობა 1907 წელს ინგლისში, რობერტ ბადენ-პაუელმა დააფუძნა. ის, რაც ბრაუნსის კუნძულზე ერთი პატარა ბანაკით დაიწყო, დღეს 60 მილიონი ადამიანის საერთო იდეად იქცა. სკაუტინგი მრავალფეროვან გარემოში დამოუკიდებლად ცხოვრების უნარებსა და ლიდერობას ასწავლის. ამ თავგადასავლის ნაწილი იყვნენ ისეთი პიროვნებები, როგორებიც არიან: ელისაბედ დედოფალი, ნელსონ მანდელა, ჯონ კენედი და ნილ არმსტრონგი. ეს არის საუკუნოვანი ტრადიცია, რომელიც დღემდე აერთიანებს ახალგაზრდებს მთელი მსოფლიოდან`,
       missTitle: 'მიზანი • მისია • ხედვა',
       missText: (
         <>
@@ -226,9 +221,9 @@ export default function App() {
       whoText: `The World Organization of the Scout Movement (WOSM) is an independent, global, non-commercial, and non-political organization that serves the Scouting movement. The movement unites 176 countries and 60 million members worldwide. WOSM is divided into five regions: Africa, Arab, Asia-Pacific, Europe, and Inter-America.
                 The Scout Movement of Georgia is a member of the European region. The movement in Georgia was founded in 1993 and unites six regional organizations: Tbilisi, Imereti, Samegrelo, Adjara, Kvemo Kartli, and Shida Kartli. The Scout organization in Samegrelo was established in 2014.`,
       histTitle: 'Scouting History',
-      histText: `Can you imagine a world without Scouting? Education in a diverse society — that is Scouting! What caused 60 million people to unite around a single idea? It all started in 1907 on Brownsea Island, England. The founder of the Scouting movement, Robert Baden-Powell (1857–1941), was a Lieutenant-General in the British Army, who organized a camp on Brownsea Island in Poole, Dorset, to test his ideas in practice. The British lord taught young people the skills they needed for independent living: field cooking, maritime knots, first aid, shelter building, and more.
-                The success of the camp motivated him to start the work that would become a classic of the 20th century and beyond. His book Scouting for Boys was published in 1908 and was popular from the very beginning. Interested boys soon formed Scout patrols, and it quickly became clear that young people of all ages and from all countries wanted to join the movement.
-                In 1920, the first World Scout Jamboree was held, bringing together Scouts from different countries to showcase their national values. Over the years, countless people participated in Scouting adventures, including Queen Elizabeth, John F. Kennedy, Nelson Mandela, Neil Armstrong, and Walt Disney…`,
+      histText: `Can you imagine a world without Scouting? What started in 1907 as a single camp on Brownsea Island has evolved into a global force of 60 million members united by a single vision.
+                Founded by Lord Robert Baden-Powell, Scouting redefined education by bringing it into the great outdoors. By teaching self-reliance, leadership, and community service, the movement quickly transcended borders. From the first World Scout Jamboree in 1920 to the present day, it has shaped the lives of iconic world leaders, including Queen Elizabeth II, Nelson Mandela, John F. Kennedy, and Neil Armstrong.
+                Scouting is more than a tradition; it is a global commitment to developing the leaders of tomorrow.`,
       missTitle: 'Goal • Mission • Vision',
       missText: (
         <>
