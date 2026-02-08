@@ -3213,3 +3213,32 @@ body.night .photo-divider img {
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+
+  .services-grid {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    padding: 0 !important;
+  }
+
+  .service-card {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+
+    height: auto !important;
+    min-height: unset !important;
+
+    scroll-snap-align: center !important;
+  }
+
+  .services-grid {
+    grid-template-columns: unset !important;
+  }
+
+  .services-grid::-webkit-scrollbar {
+    display: none !important;
+  }
+}
