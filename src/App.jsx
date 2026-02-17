@@ -74,6 +74,7 @@ export default function App() {
       sponsors: 'გალერეა',
       heroTitle: 'იყავი მზად! გახდი სკაუტი! სკაუტებთან კარგია!',
       heroText: 'საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაცია',
+      heroButton: 'გახდი სკაუტი',
       // განხორციელებული პროექტები -  Completed projects
       eduTitle: 'განხორციელებული პროექტები',
       eduSubtitle: 'საზოგადოების მსახურებიდან გარემოს დაცვამდე, ეს ის ინიციატივებია, რომლებიც ჩვენ განვახორციელეთ. გაეცანით ჩვენს ლიდერობის, გუნდური მუშაობისა და ადგილობრივი გავლენის გზას.',
@@ -177,6 +178,7 @@ export default function App() {
       sponsors: 'Gallery',
       heroTitle: 'Be ready! Become a scout! It`s good to be with the scouts!',
       heroText: 'Samegrelo Organization of the Scout Movement of Georgia',
+      heroButton: 'Become Scout',
       // Completed projects - განხორციელებული პროექტები
       eduTitle: 'Completed Projects',
       eduSubtitle: 'From community service to environmental conservation, these are the initiatives we`ve brought to life. Explore our journey of leadership, teamwork, and local impact.',
