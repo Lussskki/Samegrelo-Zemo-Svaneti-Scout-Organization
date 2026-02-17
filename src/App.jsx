@@ -137,11 +137,11 @@ export default function App() {
       // მიმდინარე პროექტები - Current project
       youthTitle: 'მიმდინარე პროექტები',
       youthSubtitle: 'ჩვენი მოგზაურობა გრძელდება! ეს განყოფილება მოიცავს ამჟამად შემუშავების პროცესში მყოფ პროექტებს. ეს ინიციატივები საშუალებას აძლევს ჩვენს ახალგაზრდა წევრებს, ისწავლონ პრაქტიკით, უმკლავდებიან რეალურ გამოწვევებს და უჭერენ მხარს ჩვენს ადგილობრივ საზოგადოებას პრაქტიკული მსახურებით.',
-      youthCard1T: '',
-      youthCard1D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
-      youthCard2T: '',
+      youthCard1T: 'სკაუტური სკოლა',
+      youthCard1D: 'გარე განათლების საკვირაო სკოლა 6 წლიდან 18 წლამდე ასაკის მოზარდებისთვის.',
+      youthCard2T: 'დღის ბანაკები',
       youthCard2D: 'მოხალისეობა, საზოგადოებრივი პროექტები და აქტიური მოქალაქეობის მხარდაჭერა.',
-      youthCard3T: '',
+      youthCard3T: 'მეგზური',
       youthCard3D: 'სპორტი, ლაშქრობები და კულტურული ღონისძიებები ჯანსაღი ცხოვრების სტილისთვის.',
       youthCard4T: '',
       youthCard4D: 'გაცვლითი პროგრამები, საერთაშორისო ბანაკები და მეგობრობა საზღვრებს გარეთ.',
@@ -463,7 +463,7 @@ export default function App() {
                 &#10094;
               </button>
                 <div className="youth-projects-grid" id="youth-carousel">
-                  {Array.from({ length: 8 }).map((_, i) => (
+                  {Array.from({ length: 3 }).map((_, i) => (
                     <div className="youth-card" key={i}>
                       <div className="icon-wrapper logo-crop">
                         <img src={currentLogo} alt="Current project" className="mova-icon" />
