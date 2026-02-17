@@ -730,7 +730,7 @@ export default function App() {
 
             <div className="register-content">
               <a
-                href="https://forms.google.com"
+                href="https://forms.gle/7NJ5KFZpbnMAD4Wy7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="register-btn"
