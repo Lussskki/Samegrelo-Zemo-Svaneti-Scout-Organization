@@ -3260,3 +3260,67 @@ body.night .photo-divider img {
     display: none !important;
   }
 }
+
+/* HEADER UI FIX - Add to the end of App.css */
+
+.header {
+    padding: 10px 5% !important; /* Reducing header height */
+    gap: 20px !important;
+}
+
+.nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important; /* Minimum spacing between texts */
+    justify-content: flex-end !important;
+    flex: 1 !important;
+}
+
+.nav a, 
+.nav-dropdown .nav-link {
+    margin: 0 !important;
+    padding: 5px 8px !important; /* Small space around the text */
+    white-space: nowrap !important; /* Prevents text from breaking into new lines */
+    font-size: 0.85rem !important; /* Slightly smaller font for better fit */
+}
+
+/* Further reducing spacing specifically between projects */
+.nav a[href="#target"], 
+.nav a[href="#education"] {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+/* Adjusting logo sizes */
+.logo-group img {
+    max-height: 45px !important; /* Prevents header from expanding too much */
+    width: auto !important;
+}
+
+.logo-sec-img {
+    height: 45px !important; 
+    width: auto !important;
+    margin-left: 5px !important;
+}
+
+/* Management buttons (Language/Theme) */
+.menu-controls {
+    display: flex !important;
+    gap: 5px !important;
+    margin-left: 10px !important;
+}
+
+.control-btn {
+    padding: 4px 8px !important;
+    font-size: 0.8rem !important;
+}
+
+/* Ensuring layout doesn't break on mobile due to !important tags */
+@media (max-width: 1024px) {
+    .nav {
+        gap: 5px !important;
+    }
+    .nav a {
+        font-size: 0.75rem !important;
+    }
+}

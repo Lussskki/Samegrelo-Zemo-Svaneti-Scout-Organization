@@ -125,10 +125,10 @@ export default function App() {
       missTitle: 'მიზანი • მისია • ხედვა',
       missText: (
         <>
-          <div>• სკაუტინგი ახალგაზრდების პროგრესული თვით-განვითარების მოძრაობაა.</div>
-          <div>• ჩვენ ვფიქრობთ, რომ თითოეული ადამიანი იბადება უნიკალური პოტენციალით, რომელიც კონსტრუქციული მიმართულებით შეიძლება განვითარდეს. </div>
-          <div>• ამ პოტენციალის რეალობად გადაქცევისთვის საჭიროა ადამიანის ყველა ასპექტის განვითარება - ფიზიკური, ინტელექტუალური, ემოციური, სოციალური და სულიერი.</div>
-          <div>• ეს ხორციელდება ორგანიზებული სასწავლო გარემოს უზრუნველყოფით, რომელიც ახდენს თითოეული ახალგაზრდის სტიმულირებას მისი განვითარების პერიოდში. </div>
+          <p>• სკაუტინგი ახალგაზრდების პროგრესული თვით-განვითარების მოძრაობაა.</p>
+          <p>• ჩვენ ვფიქრობთ, რომ თითოეული ადამიანი იბადება უნიკალური პოტენციალით, რომელიც კონსტრუქციული მიმართულებით შეიძლება განვითარდეს. </p>
+          <p>• ამ პოტენციალის რეალობად გადაქცევისთვის საჭიროა ადამიანის ყველა ასპექტის განვითარება - ფიზიკური, ინტელექტუალური, ემოციური, სოციალური და სულიერი.</p>
+          <p>• ეს ხორციელდება ორგანიზებული სასწავლო გარემოს უზრუნველყოფით, რომელიც ახდენს თითოეული ახალგაზრდის სტიმულირებას მისი განვითარების პერიოდში. </p>
         </>
       ),
       howTitle: 'როგორ გავხდე სკაუტი',
@@ -227,10 +227,10 @@ export default function App() {
       missTitle: 'Goal • Mission • Vision',
       missText: (
         <>
-          <div>• Scouting is a progressive self-development movement for young people.</div>
-          <div>• We believe that every person is born with a unique potential that can be developed constructively.</div>
-          <div>• To turn this potential into reality, it is necessary to develop all aspects of a person – physical, intellectual, emotional, social, and spiritual.</div>
-          <div>• This is achieved by providing an organized learning environment that stimulates each young person during their period of development.</div>
+          <p>• Scouting is a progressive self-development movement for young people.</p>
+          <p>• We believe that every person is born with a unique potential that can be developed constructively.</p>
+          <p>• To turn this potential into reality, it is necessary to develop all aspects of a person – physical, intellectual, emotional, social, and spiritual.</p>
+          <p>• This is achieved by providing an organized learning environment that stimulates each young person during their period of development.</p>
         </>
       ),
       howTitle: 'How to Become a Scout',
