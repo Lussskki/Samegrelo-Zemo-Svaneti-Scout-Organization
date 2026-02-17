@@ -444,8 +444,8 @@ export default function App() {
             <section id="hero" className="hero">
               <img src="/assets/photos/first.jpg" alt="Scouts" className="hero-img-tag" />
               <div className="hero-content">
-                <h1>{langContent.heroTitle}</h1>
                 <p>{langContent.heroText}</p>
+                <h1>{langContent.heroTitle}</h1>
                 <a href="#register" className="hero-btn">
                   {langContent.heroButton}
                 </a>

@@ -181,17 +181,17 @@ animation: campAlive 1.2s ease-in-out;
 }
 
 .hero-content h1 {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  opacity: 0.95;
+  color: #f0f0f0;
+}
+
+.hero-content p {
   font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive size: gets smaller on phones */
   font-weight: 800;
   margin-bottom: 15px;
   line-height: 1.2;
   color: white;
-}
-
-.hero-content p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  opacity: 0.95;
-  color: #f0f0f0;
 }
 
 /* HERO BUTTON STYLE */
