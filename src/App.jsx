@@ -21,12 +21,21 @@ import './App.css'
 
 // Gallery
 const galleryPhotos = [
-{ id: 1, src: '/assets/photos/chveni-fotoebi/1.jpg', alt: 'Scouts Camp' },
-{ id: 2, src: '/assets/photos/chveni-fotoebi/2.jpg', alt: 'Workspace of anaklia' },
+{ id: 1, src: '/assets/photos/chveni-fotoebi/1.jpeg', alt: 'Scouts Camp' },
+{ id: 2, src: '/assets/photos/chveni-fotoebi/2.jpeg', alt: 'Workspace of anaklia' },
 { id: 3, src: '/assets/photos/chveni-fotoebi/3.jpg', alt: 'Event' },
-// { id: 4, src: '/assets/photos/chveni-fotoebi/4.jpg', alt: 'The Avatar camp' },
-{ id: 5, src: '/assets/photos/chveni-fotoebi/5.jpg', alt: 'Samegrelo Nature' },
+{ id: 4, src: '/assets/photos/chveni-fotoebi/4.jpeg', alt: 'The Avatar camp' },
+{ id: 5, src: '/assets/photos/chveni-fotoebi/5.jpeg', alt: 'Samegrelo Nature' },
 { id: 6, src: '/assets/photos/chveni-fotoebi/6.jpg', alt: 'The Avatar camp' },
+{ id: 7, src: '/assets/photos/chveni-fotoebi/8.jpeg', alt: 'The Avatar camp' },
+{ id: 8, src: '/assets/photos/chveni-fotoebi/9.jpeg', alt: 'The Avatar camp' },
+{ id: 9, src: '/assets/photos/chveni-fotoebi/10.jpg', alt: 'The Avatar camp' },
+{ id: 10, src: '/assets/photos/chveni-fotoebi/11.jpeg', alt: 'The Avatar camp' },
+{ id: 11, src: '/assets/photos/chveni-fotoebi/12.jpeg', alt: 'The Avatar camp' },
+{ id: 12, src: '/assets/photos/chveni-fotoebi/13.jpeg', alt: 'The Avatar camp' },
+{ id: 13, src: '/assets/photos/chveni-fotoebi/14.jpeg', alt: 'The Avatar camp' },
+{ id: 14, src: '/assets/photos/chveni-fotoebi/15.jpeg', alt: 'The Avatar camp' },
+{ id: 15, src: '/assets/photos/chveni-fotoebi/7.jpeg', alt: 'The Avatar camp' },
 ];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
