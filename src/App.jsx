@@ -11,6 +11,7 @@ import koreaLogo from '/assets/KOREA.png'
 import charityLogo from '/assets/CHARITY.png'
 // მიმდინარე პროექტები
 import currentLogo from '/assets/CURRENT.png'
+import interCampLogo from '/assets/Intercamp.png'
 // ჩვენს შესახებ
 import aboutUsLogo from '/assets/ABOUTUS.png'
 // სერვისები
@@ -146,14 +147,15 @@ export default function App() {
       // მიმდინარე პროექტები - Current project
       youthTitle: 'მიმდინარე პროექტები',
       youthSubtitle: 'ჩვენი მოგზაურობა გრძელდება! ეს განყოფილება მოიცავს ამჟამად შემუშავების პროცესში მყოფ პროექტებს. ეს ინიციატივები საშუალებას აძლევს ჩვენს ახალგაზრდა წევრებს, ისწავლონ პრაქტიკით, უმკლავდებიან რეალურ გამოწვევებს და უჭერენ მხარს ჩვენს ადგილობრივ საზოგადოებას პრაქტიკული მსახურებით.',
-      youthCard1T: 'სკაუტური სკოლა',
-      youthCard1D: 'გარე განათლების საკვირაო სკოლა 6 წლიდან 18 წლამდე ასაკის მოზარდებისთვის.',
+      youthCard1T: 'Intercamp 2026',
+      youthCard1D: ` „ინტერკემპი 2026“ საერთაშორისო სკაუტური ბანაკია, რომელიც სხვადასხვა ქვეყნის ახალგაზრდებს აერთიანებს.
+                    საქართველოს სკაუტები აღფრთოვანებულნი არიან ამ ბანაკში მონაწილეობით, ახალი მეგობრების შეძენით, თავიანთი კულტურის გაზიარებით და გუნდურ მუშაობასა და გარე აქტივობებში ახალი გამოცდილების მიღებით.(<a href="https://intercamp.info/upcoming-camp/" style="color: yellow ; font-weight: bold; text-decoration: underline;">ვებსაიტი და დამატებითი ინფორმაცია</a>)`,
       youthCard2T: 'დღის ბანაკები',
       youthCard2D: 'მოხალისეობა, საზოგადოებრივი პროექტები და აქტიური მოქალაქეობის მხარდაჭერა.',
       youthCard3T: 'მეგზური',
       youthCard3D: 'სპორტი, ლაშქრობები და კულტურული ღონისძიებები ჯანსაღი ცხოვრების სტილისთვის.',
-      youthCard4T: '',
-      youthCard4D: 'გაცვლითი პროგრამები, საერთაშორისო ბანაკები და მეგობრობა საზღვრებს გარეთ.',
+      youthCard4T: 'სკაუტური სკოლა',
+      youthCard4D: 'გარე განათლების საკვირაო სკოლა 6 წლიდან 18 წლამდე ასაკის მოზარდებისთვის.',
       youthCard5T: 'ენერგოეფექტურობის შესახებ ცნობიერების ამაღლების კამპანია',
       youthCard5D: 'ლიდერული უნარების განვითარება პრაქტიკული აქტივობებით და გუნდურ გარემოში.',
       youthCard6T: 'Nexus- ევროპის სკაუტური რეგიონის საგანმანათლებლო პროგრამის აპრობირება საქართველოში',
@@ -249,14 +251,15 @@ export default function App() {
       // Current project
       youthTitle: 'Current projects',
       youthSubtitle: 'Our journey continues! This section features the projects currently in development. These initiatives allow our youth members to learn by doing, as they tackle real-world challenges and support our local community through hands-on service.',
-      youthCard1T: 'Youth Leadership',
-      youthCard1D: 'Leadership skill development through practical activities and team settings.',
+      youthCard1T: 'Intercamp 2026',
+      youthCard1D: `Intercamp 2026 is an international Scout camp that brings together young people from many countries.
+                    Georgian Scouts are excited to join this camp, meet new friends, share their culture, and gain new experiences in teamwork and outdoor activities.`,
       youthCard2T: 'Social Initiatives',
       youthCard2D: 'Volunteering, community projects, and support for active citizenship.',
       youthCard3T: 'Cultural & Sports Activities',
       youthCard3D: 'Sports, hiking, and cultural events for a healthy lifestyle.',
-      youthCard4T: 'International Engagement',
-      youthCard4D: 'Exchange programs, international camps, and friendship across borders.',
+      youthCard4T: 'Youth Leadership',
+      youthCard4D: 'Leadership skill development through practical activities and team settings.',
       // Footer
       socialMedia: 'Social Media',
       location: 'Location',
@@ -461,34 +464,47 @@ export default function App() {
               </div>
             </section>
 
-            {/* მიმდინარე პროექტები - Current project */}
-            <section id="target" className="youth-projects-section">
-              <h2 className="section-title">{langContent.youthTitle}</h2>
-              <p className="section-subtitle">{langContent.youthSubtitle}</p>
+{/* მიმდინარე პროექტები - Current project */}
+<section id="target" className="youth-projects-section">
+  <h2 className="section-title">{langContent.youthTitle}</h2>
+  <p className="section-subtitle">{langContent.youthSubtitle}</p>
 
-              <div className="carousel-container">
-              {/* <button className="carousel-btn left"
-                onClick={() => scrollCarousel('left', 'youth-carousel')}> */}
-                {/* &#10094; */}
-              {/* </button> */}
-                <div className="youth-projects-grid" id="youth-carousel">
-                  {Array.from({ length: 3 }).map((_, i) => (
-                    <div className="youth-card" key={i}>
-                      <div className="icon-wrapper logo-crop">
-                        <img src={currentLogo} alt="Current project" className="mova-icon" />
-                      </div>
-                      <h3>{langContent[`youthCard${i + 1}T`]}</h3>
-                      <p>{langContent[`youthCard${i + 1}D`]}</p>
-                    </div>
-                  ))}
-                </div>
+  <div className="carousel-container">
+    <button
+      className="carousel-btn left"
+      onClick={() => scrollCarousel('left', 'youth-carousel')}
+    >
+      &#10094;
+    </button>
 
-              {/* <button className="carousel-btn right"
-                onClick={() => scrollCarousel('right', 'youth-carousel')}> */}
-                {/* &#10095; */}
-              {/* </button> */}
-              </div>
-            </section>
+    <div className="youth-projects-grid" id="youth-carousel">
+      {Array.from({ length: 4 }).map((_, i) => (
+        <div className="youth-card" key={i}>
+          <div className="icon-wrapper logo-crop">
+            <img
+              src={i === 0 ? interCampLogo : currentLogo} // first card uses currentLogo
+              alt={`Project ${i + 1}`}
+              className="mova-icon"
+            />
+          </div>
+          <h3>{langContent[`youthCard${i + 1}T`]}</h3>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: langContent[`youthCard${i + 1}D`]
+            }}
+          ></p>
+        </div>
+      ))}
+    </div>
+
+    <button
+      className="carousel-btn right"
+      onClick={() => scrollCarousel('right', 'youth-carousel')}
+    >
+      &#10095;
+    </button>
+  </div>
+</section>
       {/* PHOTO DIVIDER */}
       <section className="section-photo">
         <img 
