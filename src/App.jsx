@@ -166,7 +166,7 @@ export default function App() {
       // ფუტერი
       socialMedia: 'სოციალური მედია',
       location: 'ადგილმდებარობა',
-      partner: 'პარტნიორი',
+      partner: 'პარტნიორები',
       contact: 'კონტაქტი',
       register: 'რეგისტრაცია',
       registerSubtitle: 'შემოგვიერთდი და გახდი სკაუტური მოძრაობის ნაწილი',
@@ -261,7 +261,7 @@ export default function App() {
       // Footer
       socialMedia: 'Social Media',
       location: 'Location',
-      partner: 'Partner',
+      partner: 'Partners',
       contact: 'Contact',
       register: 'Register',
       registerSubtitle: 'Join us and become part of the Scout movement.',
@@ -506,7 +506,7 @@ export default function App() {
       {/* PHOTO DIVIDER */}
       <section className="section-photo">
         <img 
-          src="/assets/photos/chveni-fotoebi/3.jpg" 
+          src="/assets/photos/chveni-fotoebi/ch.jpeg" 
           alt="Scouts activity" 
         />
       </section> 
@@ -676,7 +676,7 @@ export default function App() {
       {/* PHOTO DIVIDER */}
       <section className="section-photo">
         <img 
-          src="/assets/photos/chveni-fotoebi/10.jpg" 
+          src="/assets/photos/chveni-fotoebi/ch2.jpeg" 
           alt="Scouts activity" 
         />
       </section>        
@@ -850,7 +850,7 @@ export default function App() {
             </a>
           </div>
           <div className="contact-details">
-            <p><a href="tel:+9955334557890"><img src="assets/phone.png" alt="Phone" className="contact-icon-small" /> + 995 533 455 7890</a></p>
+            <p><a href="tel:+ 995 557 28 88 95"><img src="assets/phone.png" alt="Phone" className="contact-icon-small" /> + 995 557 28 88 95</a></p>
             <p><a href="mailto:scoutsofsamegrelo@gmail.com"><img src="assets/mail.png" alt="Email" className="contact-icon-small" /> scoutsofsamegrelo@gmail.com</a></p>
             <p><a href="https://scoutsofsamegrelo.com" target="_blank" rel="noreferrer"><img src="assets/web.png" alt="Web" className="contact-icon-small" /> scoutsofsamegrelo.com</a></p>
           </div>
@@ -858,8 +858,8 @@ export default function App() {
 
         <div className="footer-col" id="location">
           <h4>{langContent.location}</h4>
-          <div className="map-container" style={{ marginTop: '20px' }}>
-            <iframe title="Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.140492091809!2d41.8297427!3d42.4977788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c2506c0f5b005%3A0xe6ae831db81149c0!2z4YOV4YOU4YOi4YOU4YO_4YOY4YOc4YOQ4YO_4YOYIC8gVmV0ZXJpbmFyaWFu!5e0!3m2!1sen!2sge!4v1705312345678" width="100%" height="450" style={{ border: 0, borderRadius: '12px' }} allowFullScreen="" loading="lazy"></iframe>
+          <div className="map-container" >
+            <iframe title="Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.140492091809!2d41.8297427!3d42.4977788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c2506c0f5b005%3A0xe6ae831db81149c0!2z4YOV4YOU4YOi4YOU4YO_4YOY4YOc4YOQ4YO_4YOYIC8gVmV0ZXJpbmFyaWFu!5e0!3m2!1sen!2sge!4v1705312345678" width="100%" height="300" style={{ border: 0, borderRadius: '12px' }} allowFullScreen="" loading="lazy"></iframe>
           </div>
         </div>
 

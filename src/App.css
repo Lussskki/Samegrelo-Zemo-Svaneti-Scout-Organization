@@ -885,14 +885,6 @@ body.night .mobile-controls button {
   }
 }
 
-/* Custom small size for the location map */
-.map-container iframe, 
-.map-container {
-  width: 300px !important;  /* Set the width you want (e.g., 300px) */
-  height: 200px !important; /* Set the height you want (e.g., 200px) */
-  margin: 0 auto;           /* Centers it if needed */
-  border-radius: 8px;       /* Optional: keeps edges rounded */
-}
 
 /* Ensures it doesn't break on mobile */
 @media (max-width: 768px) {
@@ -919,9 +911,10 @@ body.night .mobile-controls button {
 }
 
 .dejavu {
-  width: 300px !important;  
-  height: 200px !important;
-  margin:  auto;           
+  width: 300px;
+  height: auto;      
+  margin: auto;
+  display: block;
   border-radius: 8px;
 }
 
