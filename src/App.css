@@ -986,19 +986,110 @@ body.night .services-section .section-title {
   text-align: center;
 }
 
+/* Main Card Container */
 .developer-card {
   max-width: 900px;
   margin: 40px auto;
   display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: center;
+  flex-direction: column; /* Stack top content and bottom contact bar */
+  gap: 30px;
   padding: 40px;
-  background: rgba(255, 255, 255, 0.03); /* Subtle glass effect */
+  background: rgba(255, 255, 255, 0.03); 
   backdrop-filter: blur(10px);
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: transform 0.3s ease;
+  color: white;
+}
+
+/* Top Section: Photo and Bio */
+.developer-header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.developer-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #ff9100; /* Orange glow from the image */
+  object-fit: cover;
+}
+
+.developer-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.developer-text h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.developer-text p {
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Bottom Section: Contact Bar */
+.developer-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links span {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icons a {
+  color: white;
+  font-size: 1.3rem;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #ff9100; /* Matching the photo border on hover */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .developer-header, .developer-contact {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .developer-contact {
+    gap: 20px;
+  }
 }
 
 .developer-card:hover {

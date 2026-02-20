@@ -178,7 +178,8 @@ export default function App() {
       developer: 'დეველოპერი',
       developerTitle: 'საიტის დეველოპერი',
       developerName: 'ლუკა გულედანი',
-      developerText: 'მე ვარ ამ პროექტის დეველოპერი და 2014 წლიდან სამეგრელოს სკაუტების წევრი. ჩემი გატაცება ტექნოლოგიები, თამაშების შექმნა და პროგრამირებაა. ეს ვებსაიტი ჩემი და ჩვენი ლიდერების ერთობლივი შრომის პირველი ვერსიაა, რომელიც სკაუტურ სულსა და თანამედროვე ტექნოლოგიებს აერთიანებს.'
+      developerText: 'მე ვარ ამ პროექტის დეველოპერი და 2014 წლიდან სამეგრელოს სკაუტების წევრი. ჩემი გატაცება ტექნოლოგიები, თამაშების შექმნა და პროგრამირებაა. ეს ვებსაიტი ჩემი და ჩვენი ლიდერების ერთობლივი შრომის პირველი ვერსიაა, რომელიც სკაუტურ სულსა და თანამედროვე ტექნოლოგიებს აერთიანებს.',
+      developerContact: 'დამიკავშირდი'
     },
     'ENG': {
       title: 'Samegrelo Organization Scouts',
@@ -272,7 +273,8 @@ export default function App() {
       developer: 'Developer',
       developerTitle: 'Website Developer',
       developerName: 'Luka Guledani',
-      developerText: 'I am the lead developer of this project and a member of Scouts Samegrelo since 2014. My passion lies in technology, game development, and programming. This website is the first version of a collaboration between myself and our leaders, merging the scouting spirit with modern tech.'
+      developerText: 'I am the lead developer of this project and a member of Scouts Samegrelo since 2014. My passion lies in technology, game development, and programming. This website is the first version of a collaboration between myself and our leaders, merging the scouting spirit with modern tech.',
+      developerContact: 'Contact with me'
     }
   };
 
@@ -816,22 +818,40 @@ export default function App() {
               </button>
             </div>
           </section>
+          {/* Developer */}
+          <section id="developer" className="developer-section">
+            <div className="developer-card">
+              <div className="developer-header">
+                <img 
+                  src="/assets/photos/developer.jpg" 
+                  alt="Developer" 
+                  className="developer-photo" 
+                />           
+                <div className="developer-text">
+                  <h2 className="section-title">{langContent.developerTitle}</h2>
+                  <h3>{langContent.developerName}</h3>
+                  <p>{langContent.developerText}</p>   
+                </div>
+              </div>
 
-                {/* Developer */}
-        <section id="developer" className="developer-section">
-          <div className="developer-card">
-            <img 
-              src="/assets/photos/developer.jpg" 
-              alt="Developer" 
-              className="developer-photo" 
-            />           
-            <div className="developer-text">
-              <h2 className="section-title">{langContent.developerTitle}</h2>
-              <h3>{langContent.developerName}</h3>
-               <p>{langContent.developerText}</p>   
+              {/* Contact and Socials Section */}
+              <div className="developer-contact">
+                <div className="phone-number">
+                  <i className="fas fa-phone-alt"></i> 
+                  <span>+995 557 463 444</span>
+                </div>
+                
+                <div className="social-links">
+                  <span>{langContent.developerContact}</span>
+                  <div className="icons">
+                    <a href="https://www.linkedin.com/in/lukaguledani/"><i className="fab fa-linkedin https://www.linkedin.com/in/lukaguledani/"></i></a>
+                    <a href="https://x.com/UnknownPass7"><i className="fab fa-twitter "></i></a>
+                    <a href="https://github.com/Lussskki "><i className="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>              
+          </section>      
 
 
       {/* FOOTER - ფუტერი */}
