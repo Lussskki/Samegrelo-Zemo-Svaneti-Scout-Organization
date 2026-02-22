@@ -97,18 +97,18 @@ export default function App() {
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
-        // {
-        //   id: 2,
-        //   title: 'გზამკვლევი   პროფორიენტაცია',
-        //   cover: '/assets/books/2.png',
-        //   link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
-        // },
-        // {
-        //   id: 3,
-        //   title: 'ახალგაზრდობის ლიდერობის სახელმძღვანელო',
-        //   cover: '/assets/books/1.png',
-        //   link: '/assets/books/youth-leadership.pdf'
-        // }
+        {
+          id: 2,
+          title: 'სამაგისტრო ნაშრომი  ილიას სახელმწიფო უნივერსიტეტი 30.06.2025',
+          cover: '/assets/books/3.jpg',
+          link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
+        },
+        {
+          id: 3,
+          title: 'გზამკვლევი პროფორიენტაცია',
+          cover: '/assets/books/4.png',
+          link: '/assets/books/გზამკვლევი.პროფორიენტაცია2.pdf'
+        }
       ],
 
       // განხორციელებული პროექტები -  Completed projects
@@ -222,22 +222,22 @@ export default function App() {
       books: [
         {
           id: 1,
-          title: ' იყავი მზად სკაუტური ცხოვრებისთვის',
+          title: ' Be prepeared for scout life',
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
-        // {
-        //   id: 2,
-        //   title: 'Practical camp guide',
-        //   cover: '/assets/books/1.png',
-        //   link: '/assets/books/camp-handbook.pdf'
-        // },
-        // {
-        //   id: 3,
-        //   title: 'Youth Leadership Handbook',
-        //   cover: '/assets/books/1.png',
-        //   link: '/assets/books/youth-leadership.pdf'
-        // }
+        {
+          id: 2,
+          title: 'Master`s thesis Ilia State University 30.06.2025',
+          cover: '/assets/books/3.jpg',
+          link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
+        },
+        {
+          id: 3,
+          title: 'Career Guidance Guide',
+          cover: '/assets/books/4.png',
+          link: '/assets/books/გზამკვლევი.პროფორიენტაცია2.pdf'
+        }
       ],      
       // Completed projects - განხორციელებული პროექტები
       eduTitle: 'Completed Projects',
