@@ -87,6 +87,30 @@ export default function App() {
       heroTitle: 'იყავი მზად! გახდი სკაუტი! სკაუტებთან კარგია!',
       heroText: 'საქართველოს სკაუტური მოძრაობის სამეგრელოს ორგანიზაცია',
       heroButton: 'გახდი სკაუტი',
+      // ელექტრონული წიგნები - Books
+      bookTitle: 'ელექტრონული ბიბლიოთეკა',
+      bookSubTitle: 'აქ არის ჩამონათვალი სკაუტური წიგნების ჩამონათვალი, რომელიც შეგიძლიათ ჩამოტვირთოთ და გაეცნოთ',
+      books: [
+        {
+          id: 1,
+          title: 'სკაუტების გზამკვლევი',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/cv_Luka_Guledani.pdf' // optional if you want PDF later
+        },
+        {
+          id: 2,
+          title: 'ბანაკის პრაქტიკული სახელმძღვანელო',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/camp-handbook.pdf'
+        },
+        {
+          id: 3,
+          title: 'ახალგაზრდობის ლიდერობის სახელმძღვანელო',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/youth-leadership.pdf'
+        }
+      ],
+
       // განხორციელებული პროექტები -  Completed projects
       eduTitle: 'განხორციელებული პროექტები',
       eduSubtitle: 'საზოგადოების მსახურებიდან გარემოს დაცვამდე, ეს ის ინიციატივებია, რომლებიც ჩვენ განვახორციელეთ. გაეცანით ჩვენს ლიდერობის, გუნდური მუშაობისა და ადგილობრივი გავლენის გზას.',
@@ -192,6 +216,29 @@ export default function App() {
       heroTitle: 'Be ready! Become a scout! It`s good to be with the scouts!',
       heroText: 'Samegrelo Organization of the Scout Movement of Georgia',
       heroButton: 'Become Scout',
+      // El.Books 
+      bookTitle: 'E-Library',
+      bookSubTitle: 'Here is a list of Scouting books that you can download and read.',
+      books: [
+        {
+          id: 1,
+          title: 'Scout Guide',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/scouts-guide.pdf' // optional if you want PDF later
+        },
+        {
+          id: 2,
+          title: 'Practical camp guide',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/camp-handbook.pdf'
+        },
+        {
+          id: 3,
+          title: 'Youth Leadership Handbook',
+          cover: '/assets/books/1.png',
+          link: '/assets/books/youth-leadership.pdf'
+        }
+      ],      
       // Completed projects - განხორციელებული პროექტები
       eduTitle: 'Completed Projects',
       eduSubtitle: 'From community service to environmental conservation, these are the initiatives we`ve brought to life. Explore our journey of leadership, teamwork, and local impact.',
@@ -331,6 +378,7 @@ export default function App() {
                 <a href="#history" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>{langContent.histTitle}</a>
                 <a href="#mission" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>{langContent.missTitle}</a>
                 <a href="#become" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>{langContent.howTitle}</a>
+                <a href="#books" onClick={() => { setMenuOpen(false); setAboutOpen(false); }}>{langContent.bookTitle}</a>
               </div>
             )}
           </div>
@@ -764,6 +812,30 @@ export default function App() {
               >
                 {langContent.register}
               </a>
+            </div>
+          </section>
+          {/* El.Books - ელექტრონული წიგნები */}
+          <section id="books" className="books-section">
+            <h1 className="section-title">{langContent.bookTitle}</h1>
+            <h2>{langContent.bookSubTitle}</h2>
+            <div className="books-container">
+              {langContent.books.map((book) => (
+                <div 
+                  key={book.id} 
+                  className="book-card" 
+                  onClick={() => window.open(book.link, '_blank')}
+                >
+                  <div className="cover-wrapper">
+                    <img
+                      src={book.cover}
+                      alt={book.title}
+                      className="book-cover"
+                      onError={(e) => { e.target.src = 'fallback-image-path.png'; }} // Add a placeholder if image fails
+                    />
+                  </div>
+                  <p className="book-title">{book.title}</p>
+                </div>
+              ))}
             </div>
           </section>
           {/* Gallery - გალერეა */}
