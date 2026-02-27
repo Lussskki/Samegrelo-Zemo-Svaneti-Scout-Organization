@@ -39,6 +39,9 @@ const galleryPhotos = [
 { id: 15, src: '/assets/photos/chveni-fotoebi/7.jpeg', alt: 'The Avatar camp' },
 { id: 16, src: '/assets/photos/chveni-fotoebi/16.jpeg', alt: 'Tent City' },
 { id: 17, src: '/assets/photos/chveni-fotoebi/17.jpeg', alt: 'The Avatar camp' },
+{ id: 18, src: '/assets/photos/dgis-banaki.jpg', alt: 'Camp of day' },
+{ id: 19, src: '/assets/photos/firework.jpg', alt: 'Firework' },
+{ id: 20, src: '/assets/photos/megzuri.jpg', alt: 'Megzuri (Guide)' },
 ];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -184,21 +187,20 @@ export default function App() {
                   ✅ ბაღებსა და სკოლებს<br/>
                   ✅ უნივერსიტეტებს<br/>
                   ✅ სამეგობრო და ოჯახურ წრეებს<br/>
-                  ✅ კომპანიებს`,
+                  ✅ კომპანიებს
+                  <br/><br/>
+                  <a href="#" class="open-dgis-banaki-photo"
+                    style="color: yellow; font-weight: bold; text-decoration: underline;">
+                    იხილე ფოტო
+                  </a>`,
       youthCard3T: 'მეგზური',
-      youthCard3D: `⚜️ სამეგრელოს სკაუტური მოძრაობის ორგანიზაცია Action Against Hunger South Caucasus-სა და ზუგდიდის LAG-თან თანამშრომლობით მასშტაბური პროექტის განხორციელებას იწყებს!<br/><br/>
-      🥾 „მეგზური“ სკაუტების ინიციატივაა, რომელიც მიზნად ზუგდიდის მუნიციპალიტეტში არსებული ტურისტული შესაძლებლობების გამოვლენასა და გაძლიერებას ისახავს 🌲<br/><br/>
-      📊 სამუშაო პრაქტიკიდან გამომდინარე გამოვყავით ორი პრიორიტეტული და სტრატეგიულად მნიშვნელოვანი მიმართულება:<br/>
-      👩‍🌾 სოფლის ტურიზმი<br/>
-      🏕️ ეკო ტურიზმი<br/><br/>
-      🧑‍💻 პროექტის ფარგლებში დაგეგმილია 6 ინტერვენცია, რაც ხელს შეუწყობს ტურიზმის აღნიშნული სახეობების სტიმულირებას მუნიციპალურ დონეზე:<br/><br/>
-      1️⃣ გზამკვლევის შექმნა - „როგორ ჩავერთო სოფლის ტურიზმში?“<br/>
-      2️⃣ სამუშაო შეხვედრები სოფლის ტურიზმში ჩართულ და პოტენციურ ბენეფიციარებთან.<br/>
-      3️⃣ ტრენინგები სოფლის ტურიზმის კონცეფცით დაინტერესებული პირებისთვის.<br/>
-      4️⃣ ონლაინ პლათფორმის შექმნა - „მეგზური - ზუგდიდის მუნიციპალიტეტის ტურისტული მარშრუტი“<br/>
-      5️⃣ 4 დღიანი ეკო ბანაკი ახალგაზრდებისთვის<br/>
-      6️⃣ მეგზურთა კლუბი<br/><br/>
-      🇬🇪🇦🇹 ინიციატივა მხარდაჭერილია პროექტ „FORWARD“-ის ფარგლებში, ავსტრიის განვითარების სააგენტოს მიერ, ავსტრიის საერთაშორისო პარტნიორობის ფინანსური მხარდაჭერით.`,
+      youthCard3D: `⚜️სამეგრელოს სკაუტური მოძრაობის ორგანიზაცია Action Against Hunger South Caucasus-და ზუგდიდის LAG-თან თანამშრომლობით მასშტაბური პროქტის განხორციელებას იწყებს!
+🥾,,მეგზური” სკაუტების ინიციატივაა, რომელიც მიზნად ზუგდიდის მუნიციპალიტეტში არსებული ტურისტული შესაძლებლობების გამოვლენასა და გაძლიერებას ისახავს🌲
+🇬🇪🇦🇹ინიციატივა მხარდაჭერილია პროექ ,,FORWARD” ის ფარგლებში, ავსტრიის განვითარების სააგენტოს მიერ, ავსტრიის საერთაშორისო პარტნიორობის ფინანსური მხარდაჭერით.      <br/><br/>
+      <a href="#" class="open-megzuri-photo"
+        style="color: yellow; font-weight: bold; text-decoration: underline;">
+        იხილე ფოტო
+      </a>`,
       youthCard4T: 'სკაუტური სკოლა',
       youthCard4D: 'გარე განათლების საკვირაო სკოლა 6 წლიდან 18 წლამდე ასაკის მოზარდებისთვის.',
       // youthCard5T: 'ენერგოეფექტურობის შესახებ ცნობიერების ამაღლების კამპანია',
@@ -332,19 +334,18 @@ export default function App() {
                     ✅ Friend and Family groups<br/>
                     ✅ Companies`,
       youthCard3T: 'Megzuri (Guide)',
-      youthCard3D: `⚜️ The Scout Movement Organization of Samegrelo, in cooperation with Action Against Hunger South Caucasus and Zugdidi LAG, is launching a large-scale project!<br/><br/>
-                    🥾 "Megzuri" is a scout initiative aimed at identifying and strengthening tourism opportunities in the Zugdidi municipality. 🌲<br/><br/>
-                    📊 Based on working practice, we have identified two priority and strategically important directions:<br/>
-                    👩‍🌾 Rural Tourism<br/>
-                    🏕️ Eco Tourism<br/><br/>
-                    🧑‍💻 Within the framework of the project, 6 interventions are planned to stimulate these types of tourism at the municipal level:<br/><br/>
-                    1️⃣ Creating a guide – "How to get involved in rural tourism?"<br/>
-                    2️⃣ Working meetings with active and potential beneficiaries in rural tourism.<br/>
-                    3️⃣ Trainings for individuals interested in the concept of rural tourism.<br/>
-                    4️⃣ Creating an online platform – "Megzuri - Tourist Route of Zugdidi Municipality"<br/>
-                    5️⃣ 4-day eco-camp for youth<br/>
-                    6️⃣ Guides' Club<br/><br/>
-                    🇬🇪🇦🇹 The initiative is supported within the framework of the "FORWARD" project by the Austrian Development Agency, with the financial support of the Austrian International Partnership.`,
+      youthCard3D: `⚜️The Samegrelo Scout Movement Organization, in cooperation with Action Against Hunger South Caucasus and Zugdidi LAG, is launching the implementation of a large-scale project!
+
+                  🥾“Megzuri” is an initiative of the Scouts aimed at identifying and strengthening the existing tourism opportunities in the Zugdidi Municipality 🌲
+
+                  🇬🇪🇦🇹 The initiative is supported within the framework of the project “FORWARD” by the Austrian Development Agency, with financial support from Austrian Development Cooperation.  
+
+                  <br/><br/>
+
+                  <a href="#" class="open-megzuri-photo"
+                    style="color: yellow; font-weight: bold; text-decoration: underline;">
+                    View Photo
+                  </a>`,     
       youthCard4T: 'Scout School',
       youthCard4D: 'Outdoor Education Sunday School for children and teenagers from 6 to 18 years old.',
       // Footer
@@ -579,12 +580,27 @@ export default function App() {
                           />
                         </div>
                         <h3>{langContent[`youthCard${i + 1}T`]}</h3>
-                        <p
-                          style={{ whiteSpace: 'normal', textAlign: 'left' }}
-                          dangerouslySetInnerHTML={{
-                            __html: typeof cardData === 'string' ? cardData : "მონაცემები მუშავდება..."
-                          }}
-                        ></p>
+                          <p
+                            style={{ whiteSpace: 'normal', textAlign: 'left' }}
+                            dangerouslySetInnerHTML={{
+                              __html: typeof cardData === 'string'
+                                ? cardData
+                                : "მონაცემები მუშავდება..."
+                            }}
+                            onClick={(e) => {
+                              // megzuri.jpg
+                              if (e.target.classList.contains("open-megzuri-photo")) {
+                                e.preventDefault();
+                                setSelectedImgIndex(19); 
+                              }
+
+                              // dgis-banaki.jpg 
+                              if (e.target.classList.contains("open-dgis-banaki-photo")) {
+                                e.preventDefault();
+                                setSelectedImgIndex(17); 
+                              }
+                            }}
+                          ></p>
                       </div>
                     );
                   })}
