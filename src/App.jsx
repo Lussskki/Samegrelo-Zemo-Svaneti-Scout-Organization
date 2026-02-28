@@ -603,13 +603,13 @@ export default function App() {
                               // megzuri.jpg
                               if (e.target.classList.contains("open-megzuri-photo")) {
                                 e.preventDefault();
-                                setSelectedImgIndex(19); 
+                                setSelectedImgIndex(20); 
                               }
 
                               // dgis-banaki.jpg 
                               if (e.target.classList.contains("open-dgis-banaki-photo")) {
                                 e.preventDefault();
-                                setSelectedImgIndex(17); 
+                                setSelectedImgIndex(21); 
                               }
                             }}
                           ></p>
