@@ -44,6 +44,8 @@ const galleryPhotos = [
 { id: 18, src: '/assets/photos/dgis-banaki.jpg', alt: 'Camp of day' },
 { id: 19, src: '/assets/photos/firework.jpg', alt: 'Firework' },
 { id: 20, src: '/assets/photos/megzuri.jpg', alt: 'Megzuri (Guide)' },
+{ id: 21, src: '/assets/photos/megzuri-logo.jfif', alt: 'Megzuri (Guide)' },
+{ id: 22, src: '/assets/photos/dgis-banaki2.jfif', alt: 'The day of camp' },
 ];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
