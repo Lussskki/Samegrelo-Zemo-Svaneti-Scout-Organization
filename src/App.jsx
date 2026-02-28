@@ -861,7 +861,7 @@ export default function App() {
       {/* PHOTO DIVIDER */}
       <section className="section-photo">
         <img 
-          src="/assets/photos/chveni-fotoebi/6.jpg" 
+          src="/assets/photos/chveni-fotoebi/tent-city.jfif" 
           alt="Scouts activity" 
         />
       </section>      
