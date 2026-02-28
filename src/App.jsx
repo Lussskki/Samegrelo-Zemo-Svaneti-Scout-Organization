@@ -12,6 +12,7 @@ import charityLogo from '/assets/CHARITY.png'
 // მიმდინარე პროექტები
 import currentLogo from '/assets/CURRENT.png'
 import interCampLogo from '/assets/Intercamp.png'
+import campOfToday from '/assets/photos/dgis-banaki-logo.jfif'
 // ჩვენს შესახებ
 import aboutUsLogo from '/assets/ABOUTUS.png'
 // სერვისები
@@ -574,7 +575,13 @@ export default function App() {
                       <div className="youth-card" key={i}>
                         <div className="icon-wrapper logo-crop">
                           <img
-                            src={i === 0 ? interCampLogo : currentLogo}
+                            src={
+                              i === 0
+                                ? interCampLogo
+                                : i === 1
+                                ? campOfToday
+                                : currentLogo
+                            }
                             alt={`Project ${i + 1}`}
                             className="mova-icon"
                           />
@@ -601,7 +608,11 @@ export default function App() {
                               }
                             }}
                           ></p>
+
+                          
                       </div>
+                      
+                      
                     );
                   })}
                 </div>
