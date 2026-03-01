@@ -357,12 +357,23 @@ export default function App() {
       aboutTitle: 'About Us',
       aboutSubtitle: 'Samegrelo Scout Center is a youth space uniting education, nature, and leadership.',
       whoTitle: 'Who We Are',
-      whoText: `The World Organization of the Scout Movement (WOSM) is an independent, global, non-commercial, and non-political organization that serves the Scouting movement. The movement unites 176 countries and 60 million members worldwide. WOSM is divided into five regions: Africa, Arab, Asia-Pacific, Europe, and Inter-America.
-                The Scout Movement of Georgia is a member of the European region. The movement in Georgia was founded in 1993 and unites six regional organizations: Tbilisi, Imereti, Samegrelo, Adjara, Kvemo Kartli, and Shida Kartli. The Scout organization in Samegrelo was established in 2014.`,
+      whoText:<p>
+              The World Organization of the Scout Movement (WOSM) is an independent, worldwide, non-profit and non-political organization that serves the Scout Movement.
+              <br /><br />
+              The Movement brings together 176 countries and 60 million members worldwide. WOSM is divided into five regions: Africa, Arab, Asia-Pacific, Europe, and Interamerica.
+              <br /><br />
+              The Scout Movement of Georgia is a member of the European Region. The movement was founded in Georgia in 1993 and unites six regional organizations: Tbilisi, Imereti, Samegrelo, Adjara, Kvemo Kartli, and Shida Kartli.
+              <br /><br />
+              The Scout organization in Samegrelo was established in 2014.
+            </p>,      
       histTitle: 'Scouting History',
-      histText: `Can you imagine a world without Scouting? What started in 1907 as a single camp on Brownsea Island has evolved into a global force of 60 million members united by a single vision.
-                Founded by Lord Robert Baden-Powell, Scouting redefined education by bringing it into the great outdoors. By teaching self-reliance, leadership, and community service, the movement quickly transcended borders. From the first World Scout Jamboree in 1920 to the present day, it has shaped the lives of iconic world leaders, including Queen Elizabeth II, Nelson Mandela, John F. Kennedy, and Neil Armstrong.
-                Scouting is more than a tradition; it is a global commitment to developing the leaders of tomorrow.`,
+      histText: <p>
+                  Can you imagine a world without Scouting? What started in 1907 as a single camp on Brownsea Island has evolved into a global force of 60 million members united by a single vision.
+                  <br /><br />
+                  Founded by Lord Robert Baden-Powell, Scouting redefined education by bringing it into the great outdoors. By teaching self-reliance, leadership, and community service, the movement quickly transcended borders. From the first World Scout Jamboree in 1920 to the present day, it has shaped the lives of iconic world leaders, including Queen Elizabeth II, Nelson Mandela, John F. Kennedy, and Neil Armstrong.
+                  <br /><br />
+                  Scouting is more than a tradition; it is a global commitment to developing the leaders of tomorrow.
+                </p>, 
       missTitle: 'Goal • Mission • Vision',
       missText: (
         <>
