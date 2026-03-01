@@ -46,6 +46,7 @@ const galleryPhotos = [
 { id: 20, src: '/assets/photos/megzuri.jpg', alt: 'Megzuri (Guide)' },
 { id: 21, src: '/assets/photos/megzuri-logo.jfif', alt: 'Megzuri (Guide)' },
 { id: 22, src: '/assets/photos/dgis-banaki2.jfif', alt: 'The day of camp' },
+{ id: 23, src: '/assets/photos/scouts.jfif', alt: 'Disintegration' }
 ];
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -163,9 +164,21 @@ export default function App() {
                   პროექტის მიზანი საზოგადოებაში ენერგოეფექტურობის პრინციპებზე ცნობიერების ამაღლება და ენერგიის დაზოგვის პრაქტიკული ჩვევების დაუფლება იყო.
                 </p>, 
       eduCard6T: 'Nexus- ევროპის სკაუტური რეგიონის საგანმანათლებლო პროგრამის აპრობირება საქართველოში',
-      eduCard6D: 'ჩვენ ვამაყობთ, რომ ევროპის სკაუტური რეგიონის საგანმანათლებლო პროგრამის სატესტო პლატფორმას წარმოვადგენდით საქართველოში. ამ პროექტმა ადგილობრივ ახალგაზრდობასა და საერთაშორისო სტანდარტებს შორის დამაკავშირებელი ხიდის როლი შეასრულა და თანამედროვე საგანმანათლებლო ინსტრუმენტები დანერგა სოციალური ინოვატორების მომავალი თაობის განვითარების მიზნით.',
+      eduCard6D: <p>
+                  საქართველოს სკაუტური მოძრაობის ორგანიზაცია 1997 წლიდან მსოფლიო სკაუტური ორგანიზაციის ევრაზიის რეგიონის წევრი იყო.
+                  <br /><br />
+                  ქართველი სკაუტების ძალისხმევის შედეგად 2023 წელს ევროპის რეგიონში გავწევრიანდით.
+                  <br /><br />
+                  Nexus ევროპის სკაუტური რეგიონის ახალი ახალგაზრდული პროგრამის საქართველოში აპრობირების პირველი ეტაპი იყო.
+                  <br /><br />
+                  რომლის ფარგლებში ორგანიზაციის ათეულობით მონაწილემ და ლიდერმა ევროპის წამყვან ქვეყნებში გაიარეს გადამზადება.
+                </p>,
       eduCard7T: 'მსოფლიო სკაუტური ჯამბორი 2023',
-      eduCard7D: 'ჩვენი ქვეყნის წარმომადგენლად მსოფლიო ასპარეზზე, ჩვენი სკაუტები დაესწრნენ მსოფლიო სკაუტურ ჯამბორის. ამ მასშტაბურმა შეკრებამ ჩვენს წევრებს საშუალება მისცა, გაუზიარონ ერთმანეთს კულტურა და იდეები მსოფლიოს ყველა კუთხიდან ჩამოსულ სკაუტებთან, რამაც გააძლიერა ჩვენი კავშირი მსოფლიო სკაუტურ მოძრაობასთან.',
+      eduCard7D: <p>
+                  ჯემბორი საერთაშორისო ბანაკია, რომელიც ტრადიციას 1920 წლიდან იღებს და 4 წელიწადში ერთხელ მსოფლიოს სხვადასხვა კონტინენტზე ტარდება.
+                  <br /><br />
+                  ქართველი სკაუტები ტრადიციას არ ღალატობენ და გამონაკლისი არც 25-ე სკაუტური ჯამბორი იყო, რომელიც 2023 წელს კორეაში ჩატარდა.
+                </p>,
       eduCard8T: 'საქველმოქმედო ღონისძიებები',
       eduCard8D: 'ჩვენი მასშტაბური ბანაკების გარდა, ჩვენ კვლავ ერთგულები ვრჩებით საზოგადოების მუდმივი სამსახურის. სხვადასხვა ადგილობრივი საქველმოქმედო ღონისძიებების მეშვეობით, ჩვენი სკაუტები ავლენენ თანაგრძნობას და ლიდერობას, ორგანიზებით აწყობენ საქველმოქმედო აქციებს და მხარს უჭერენ ჩვენს სამეზობლოში მცხოვრებ გაჭირვებულებს.',
       // სერვისები
@@ -356,15 +369,19 @@ export default function App() {
                 </p>,
       eduCard6T: 'Nexus - Testing the European Scout Region Educational Program in Georgia',
       eduCard6D: <p>
-                  We are proud to have served as the testing ground for the European Scout Region’s Educational Program in Georgia.
+                  The Scout Movement of Georgia had been a member of the Eurasia Region of the World Organization of the Scout Movement since 1997.
                   <br /><br />
-                  This project acted as a bridge between local youth and international standards, implementing modern educational tools to develop the next generation of social innovators.
-                </p>,
+                  As a result of the efforts of Georgian scouts, we joined the European Region in 2023.
+                  <br /><br />
+                  Nexus was the first phase of piloting the new youth program of the European Scout Region in Georgia.
+                  <br /><br />
+                  Within its framework, dozens of participants and leaders from the organization received training in leading European countries.
+                </p>,      
       eduCard7T: 'World Scout Jamboree 2023',
       eduCard7D: <p>
-                  Representing our country on the ultimate global stage, our scouts attended the World Scout Jamboree.
+                  The Jamboree is an international camp with a tradition dating back to 1920, held every four years on different continents around the world.
                   <br /><br />
-                  This massive gathering allowed our members to exchange culture and ideas with scouts from every corner of the globe, strengthening our connection to the worldwide scouting movement.
+                  Georgian scouts proudly uphold this tradition, and the 25th Scout Jamboree, held in Korea in 2023, was no exception.
                 </p>,
       eduCard8T: 'Charity events',
       eduCard8D: <p>
