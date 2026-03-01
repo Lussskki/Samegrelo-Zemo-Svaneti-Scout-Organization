@@ -325,39 +325,71 @@ export default function App() {
       eduTitle: 'Completed Projects',
       eduSubtitle: 'From community service to environmental conservation, these are the initiatives we`ve brought to life. Explore our journey of leadership, teamwork, and local impact.',
       eduCard1T: 'Scouts against Covid-19',
-      eduCard1D: 'In a vital partnership with the Red Cross, our team took to the front lines during the pandemic to support those most in need. We traveled across the country to deliver essential supplies, ensuring that vulnerable families received life-saving medicine, food, and basic necessities during a time of global crisis.',
+      eduCard1D: <p>
+                  In a vital partnership with the Red Cross, our team took to the front lines during the pandemic to support those most in need.
+                  <br /><br />
+                  We traveled across the country to deliver essential supplies, ensuring that vulnerable families received life-saving medicine, food, and basic necessities during a time of global crisis.
+                </p>,
       eduCard2T: 'Scout Camp Avatar',
-      eduCard2D: 'Marking a major milestone in 2020, Camp Avatar was our organization’s very first official camp. It was a landmark success that combined adventure with leadership training, creating a foundation for our group and proving that our Scouts could turn a vision into an unforgettable outdoor experience.',
+      eduCard2D: <p>
+                  Marking a major milestone in 2020, Camp Avatar was our organization’s very first official camp.
+                  <br /><br />
+                  It was a landmark success that combined adventure with leadership training, creating a foundation for our group and proving that our Scouts could turn a vision into an unforgettable outdoor experience.
+                </p>,
       eduCard3T: 'MOVA International Jamboree in Swiss',
-      eduCard3D: 'Our Scouts went global by participating in the massive MOVA National Jamboree. Joining 30,000 international participants, we immersed ourselves in a world-class scouting experience centered on cultural exchange and high-level outdoor skills, representing our organization on the grandest stage of world scouting.',
+      eduCard3D: <p>
+                  Our Scouts went global by participating in the massive MOVA National Jamboree.
+                  <br /><br />
+                  Joining 30,000 international participants, we immersed ourselves in a world-class scouting experience centered on cultural exchange and high-level outdoor skills, representing our organization on the grandest stage of world scouting.
+                </p>,
       eduCard4T: 'Scout teacher',
-      eduCard4D: 'Following the core scouting philosophy of "learning by doing," this program empowers youth through play and practical engagement. It turns education into an active experience, allowing participants to gain new skills through hands-on involvement rather than just theory.',
+      eduCard4D: <p>
+                  Following the core scouting philosophy of "learning by doing," this program empowers youth through play and practical engagement.
+                  <br /><br />
+                  It turns education into an active experience, allowing participants to gain new skills through hands-on involvement rather than just theory.
+                </p>,
       eduCard5T: 'Energy Efficiency Awareness Campaign',
-      eduCard5D: 'Leading the charge for a greener future, this campaign focused on the power of sustainability. We educated our community on the importance of energy conservation, teaching practical ways to reduce our carbon footprint and manage resources effectively for the planet.',
+      eduCard5D: <p>
+                  Leading the charge for a greener future, this campaign focused on the power of sustainability.
+                  <br /><br />
+                  We educated our community on the importance of energy conservation, teaching practical ways to reduce our carbon footprint and manage resources effectively for the planet.
+                </p>,
       eduCard6T: 'Nexus - Testing the European Scout Region Educational Program in Georgia',
-      eduCard6D: 'We are proud to have served as the testing ground for the European Scout Region’s Educational Program in Georgia. This project acted as a bridge between local youth and international standards, implementing modern educational tools to develop the next generation of social innovators.',
+      eduCard6D: <p>
+                  We are proud to have served as the testing ground for the European Scout Region’s Educational Program in Georgia.
+                  <br /><br />
+                  This project acted as a bridge between local youth and international standards, implementing modern educational tools to develop the next generation of social innovators.
+                </p>,
       eduCard7T: 'World Scout Jamboree 2023',
-      eduCard7D: 'Representing our country on the ultimate global stage, our scouts attended the World Scout Jamboree. This massive gathering allowed our members to exchange culture and ideas with scouts from every corner of the globe, strengthening our connection to the worldwide scouting movement.',
+      eduCard7D: <p>
+                  Representing our country on the ultimate global stage, our scouts attended the World Scout Jamboree.
+                  <br /><br />
+                  This massive gathering allowed our members to exchange culture and ideas with scouts from every corner of the globe, strengthening our connection to the worldwide scouting movement.
+                </p>,
       eduCard8T: 'Charity events',
-      eduCard8D: 'Beyond our large-scale camps, we remain dedicated to consistent community service. Through various local charity events, our scouts practice empathy and leadership by organizing fundraisers and support drives for those in need within our own neighborhoods.',
+      eduCard8D: <p>
+                  Beyond our large-scale camps, we remain dedicated to consistent community service.
+                  <br /><br />
+                  Through various local charity events, our scouts practice empathy and leadership by organizing fundraisers and support drives for those in need within our own neighborhoods.
+                </p>,
       // Services
       services: 'Services',
       service1: 'Scout School',
-      service1D: 'Sunday school is open to youth ages 6 to 18. The course duration is 3 months (12 lessons). Membership fee is 60 GEL. <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
+      service1D: '<p>Sunday school is open to youth ages 6 to 18.<p/> <p>The course duration is 3 months (12 lessons). <p/> <p>Membership fee is 60 GEL.</p> <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
       service2: 'Youth Camps',
-      service2D: 'Regional and national camps are held twice a year. In addition to large camps, we also hold thematic camps at different times of the year (fishing camp, professional orientation camp, construction, agro, eco camps...). <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
+      service2D: '<p>Regional and national camps are held twice a year.</p> <p>In addition to large camps, we also hold thematic camps at different times of the year (fishing camp, professional orientation camp, construction, agro, eco camps...).</p> <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
       service3: 'Offer for Schools',
-      service3D: 'We offer innovative educational and school tourism packages to schools: visits to a scout village, workshops at the school, planning and organizing school excursions, mini-camps. <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
+      service3D: '<p>We offer innovative educational and school tourism packages to schools: visits to a scout village, workshops at the school, planning and organizing school excursions, mini-camps.</p> <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
       service4: 'Eco-tours & Hiking',
-      service4D: 'Travel with the Scouts! is one of our successful projects, within the framework of which we organize tours throughout Georgia, this service can be used by everyone. <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
+      service4D: '<p>Travel with the Scouts! is one of our successful projects, within the framework of which we organize tours throughout Georgia. This service can be used by everyone.</p> <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
       service5: 'Event Venue',
-      service5D: 'DÉJÀ VU hostel & camping sector is a favorite place for people of all ages. The house is located on the banks of the Enguri River, here you will find everything you need to have a pleasant time with friends.',
+      service5D: '<p>DÉJÀ VU hostel & camping sector is a favorite place for people of all ages.</p> <p>The house is located on the banks of the Enguri River; here you will find everything you need to have a pleasant time with friends.</p>',
       service6: 'Scout Hostel',
-      service6D: 'DÉJÀ VU HOSTEL is a budget hotel on the banks of the Enguri River. It is a wooden house where antiquity and modernity are skillfully combined. The hostel can accommodate 10-12 people.',
+      service6D: '<p>DÉJÀ VU HOSTEL is a budget hotel on the banks of the Enguri River.</p> <p>It is a wooden house where antiquity and modernity are skillfully combined.</p> <p>The hostel can accommodate 10-12 people.</p>',
       service7: 'Event Management',
       service7D: 'If you want to diversify your event, the Scout team offers themed workshops and team games. Each game and activity is considered a means to achieve your organizational goals.',
       service8: 'International activities',
-      service8D: 'World Scout Jamboree, European Jamboree, INTERCAMP and many other international opportunities await you! <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
+      service8D: '<p>World Scout Jamboree, European Jamboree, INTERCAMP and many other international opportunities await you!</p> <a href="https://forms.google.com" style="color: yellow ; font-weight: bold; text-decoration: underline;">Registration and additional information</a>',
       // About us
       aboutTitle: 'About Us',
       aboutSubtitle: 'Samegrelo Scout Center is a youth space uniting education, nature, and leadership.',
