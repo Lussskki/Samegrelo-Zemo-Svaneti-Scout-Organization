@@ -180,7 +180,11 @@ export default function App() {
                   ქართველი სკაუტები ტრადიციას არ ღალატობენ და გამონაკლისი არც 25-ე სკაუტური ჯამბორი იყო, რომელიც 2023 წელს კორეაში ჩატარდა.
                 </p>,
       eduCard8T: 'საქველმოქმედო ღონისძიებები',
-      eduCard8D: 'ჩვენი მასშტაბური ბანაკების გარდა, ჩვენ კვლავ ერთგულები ვრჩებით საზოგადოების მუდმივი სამსახურის. სხვადასხვა ადგილობრივი საქველმოქმედო ღონისძიებების მეშვეობით, ჩვენი სკაუტები ავლენენ თანაგრძნობას და ლიდერობას, ორგანიზებით აწყობენ საქველმოქმედო აქციებს და მხარს უჭერენ ჩვენს სამეზობლოში მცხოვრებ გაჭირვებულებს.',
+      eduCard8D: <p>
+                  ჩვენი მასშტაბური ბანაკების გარდა, ჩვენ კვლავ ერთგულები ვრჩებით საზოგადოების მუდმივ სამსახურს.
+                  <br /><br />
+                  სხვადასხვა ადგილობრივი საქველმოქმედო ღონისძიებების მეშვეობით, ჩვენი სკაუტები ავლენენ თანაგრძნობასა და ლიდერობას, ორგანიზებენ საქველმოქმედო აქციებს და მხარს უჭერენ ჩვენს სამეზობლოში მცხოვრებ გაჭირვებულებს.
+                </p>,
       // სერვისები
       services: 'სერვისები',
       service1: 'სკაუტური სკოლა',
@@ -339,33 +343,43 @@ export default function App() {
       eduSubtitle: 'From community service to environmental conservation, these are the initiatives we`ve brought to life. Explore our journey of leadership, teamwork, and local impact.',
       eduCard1T: 'Scouts against Covid-19',
       eduCard1D: <p>
-                  In a vital partnership with the Red Cross, our team took to the front lines during the pandemic to support those most in need.
+                  In partnership with the Red Cross, our team stood on the front lines during the pandemic to support the most vulnerable groups.
                   <br /><br />
-                  We traveled across the country to deliver essential supplies, ensuring that vulnerable families received life-saving medicine, food, and basic necessities during a time of global crisis.
+                  We launched awareness-raising and charitable campaigns.
+                  <br /><br />
+                  Scouts were present in the most critical areas during the early stages of the crisis.
+                  <br /><br />
+                  A scout’s duty is to be useful and to help others!
                 </p>,
       eduCard2T: 'Scout Camp Avatar',
       eduCard2D: <p>
-                  Marking a major milestone in 2020, Camp Avatar was our organization’s very first official camp.
+                  Camp “Avatar” is a signature event of the Samegrelo Scouts, held twice a year since 2020 — in summer and winter.
                   <br /><br />
-                  It was a landmark success that combined adventure with leadership training, creating a foundation for our group and proving that our Scouts could turn a vision into an unforgettable outdoor experience.
+                  The camp is filled with adventurous and educational activities.
+                  <br /><br />
+                  At the end of the event, a traditional Scout investiture ceremony is held, where new scouts receive their first neckerchiefs.
                 </p>,
       eduCard3T: 'MOVA International Jamboree in Swiss',
       eduCard3D: <p>
-                  Our Scouts went global by participating in the massive MOVA National Jamboree.
+                  In 2022, the National Jamboree was held in Switzerland, bringing together 33,000 European scouts.
                   <br /><br />
-                  Joining 30,000 international participants, we immersed ourselves in a world-class scouting experience centered on cultural exchange and high-level outdoor skills, representing our organization on the grandest stage of world scouting.
+                  For 15 days, our leaders worked tirelessly to ensure the camp was conducted safely and at the highest quality.
+                  <br /><br />
+                  This event is held once every 14 years in Switzerland. It is one of the most beloved camps among scouts worldwide!
                 </p>,
       eduCard4T: 'Scout teacher',
       eduCard4D: <p>
-                  Following the core scouting philosophy of "learning by doing," this program empowers youth through play and practical engagement.
-                  <br /><br />
-                  It turns education into an active experience, allowing participants to gain new skills through hands-on involvement rather than just theory.
-                </p>,
+                    A Teacher for a Better World!
+                    <br /><br />
+                    Within the framework of the project, we trained 40 teachers in activities based on non-formal education methods.
+                    <br /><br />
+                    The teachers also participated in the winter scout camp.
+                  </p>,
       eduCard5T: 'Energy Efficiency Awareness Campaign',
       eduCard5D: <p>
-                  Leading the charge for a greener future, this campaign focused on the power of sustainability.
+                  Become an Energy Efficiency Specialist – a successful project of the Samegrelo Scout Movement Organization! ⚡🌱
                   <br /><br />
-                  We educated our community on the importance of energy conservation, teaching practical ways to reduce our carbon footprint and manage resources effectively for the planet.
+                  The project aimed to raise awareness in society about the principles of energy efficiency and to develop practical habits for saving energy.
                 </p>,
       eduCard6T: 'Nexus - Testing the European Scout Region Educational Program in Georgia',
       eduCard6D: <p>
