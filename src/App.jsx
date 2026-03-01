@@ -398,7 +398,12 @@ export default function App() {
                     ✅ Kindergartens and Schools<br/>
                     ✅ Universities<br/>
                     ✅ Friend and Family groups<br/>
-                    ✅ Companies`,
+                    ✅ Companies
+                    <br><br>
+                    <a href="#" class="open-dgis-banaki-photo"
+                    style="color: yellow; font-weight: bold; text-decoration: underline;">
+                    View Photo
+                  </a>`,
       youthCard3T: 'Megzuri (Guide)',
       youthCard3D: `⚜️The Samegrelo Scout Movement Organization, in cooperation with Action Against Hunger South Caucasus and Zugdidi LAG, is launching the implementation of a large-scale project!
 
