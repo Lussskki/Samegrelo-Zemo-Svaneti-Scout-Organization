@@ -101,19 +101,19 @@ export default function App() {
       books: [
         {
           id: 1,
-          title: ' მოსწავლეთა პროფესიული ორიენტაციის ხელშეწყობა',
+          title: '  იყავი მზად სკაუტური ცხოვრებისთვის ',
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
         {
           id: 2,
-          title: 'პროფორიენტაციის გზამკლევი მასწავლებლებისთვის',
+          title: ' მოსწავლეთა პროფესიული ორიენტაცის ხელშეწყობა ',
           cover: '/assets/books/3.jpg',
           link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
         },
         {
           id: 3,
-          title: 'გზამკვლევი პროფორიენტაცია',
+          title: 'პროფორიენტაციის გზამკლევი მასწავლებლისთვის',
           cover: '/assets/books/4.png',
           link: '/assets/books/გზამკვლევი.პროფორიენტაცია2.pdf'
         }
@@ -341,19 +341,19 @@ export default function App() {
       books: [
         {
           id: 1,
-          title: ' Promoting professional orientation of students',
+          title: ' Be ready for the scout life.',
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
         {
           id: 2,
-          title: 'Career Guidance Guide for Teachers',
+          title: 'Promoting professional orientation of students',
           cover: '/assets/books/3.jpg',
           link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
         },
         {
           id: 3,
-          title: 'Career Guidance Guide',
+          title: 'Career Guidance Guide for Teachers',
           cover: '/assets/books/4.png',
           link: '/assets/books/გზამკვლევი.პროფორიენტაცია2.pdf'
         }
