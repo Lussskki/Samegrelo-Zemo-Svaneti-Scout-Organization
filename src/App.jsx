@@ -30,7 +30,7 @@ const galleryPhotos = [
 { id: 4, src: '/assets/photos/chveni-fotoebi/4.jpeg', alt: 'Swiss - MOVA Camp' },
 { id: 5, src: '/assets/photos/chveni-fotoebi/5.jpeg', alt: 'The Avatar Camp - Polar Express' },
 { id: 6, src: '/assets/photos/chveni-fotoebi/6.jpg', alt: 'The Avatar Camp 2020' },
-{ id: 7, src: '/assets/photos/chveni-fotoebi/8.jpeg', alt: 'Colchis National Park - The Avatar Camp 2020' },
+{ id: 7, src: '/assets/photos/chveni-fotoebi/8.jpeg', alt: 'Kolkheti National Park - The Avatar Camp 2020' },
 { id: 8, src: '/assets/photos/chveni-fotoebi/9.jpeg', alt: 'The Avatar Camp 2020' },
 { id: 9, src: '/assets/photos/chveni-fotoebi/10.jpg', alt: 'Temple of the Wise Thief, Dzhama Valley' },
 { id: 10, src: '/assets/photos/chveni-fotoebi/11.jpeg', alt: 'Tobavarchkhili hiking' },
@@ -40,7 +40,7 @@ const galleryPhotos = [
 { id: 14, src: '/assets/photos/chveni-fotoebi/15.jpeg', alt: 'Bateti Lake, Dzama Gorge' },
 { id: 15, src: '/assets/photos/chveni-fotoebi/7.jpeg', alt: 'The Avatar camp' },
 { id: 16, src: '/assets/photos/chveni-fotoebi/16.jpeg', alt: 'Tent City - Deja Vu' },
-{ id: 17, src: '/assets/photos/chveni-fotoebi/17.jpeg', alt: 'The Avatar camp' },
+{ id: 17, src: '/assets/photos/chveni-fotoebi/17.jpeg', alt: 'Cub scouts camp' },
 { id: 18, src: '/assets/photos/dgis-banaki.jpg', alt: 'Camp of day' },
 { id: 19, src: '/assets/photos/firework.jpg', alt: 'Firework - The Avatar Camp 2020' },
 { id: 20, src: '/assets/photos/megzuri.jpg', alt: 'Megzuri (Guide)' },
@@ -101,13 +101,13 @@ export default function App() {
       books: [
         {
           id: 1,
-          title: ' იყავი მზად სკაუტური ცხოვრებისთვის',
+          title: ' მოსწავლეთა პროფესიული ორიენტაციის ხელშეწყობა',
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
         {
           id: 2,
-          title: 'სამაგისტრო ნაშრომი  ილიას სახელმწიფო უნივერსიტეტი 30.06.2025',
+          title: 'პროფორიენტაციის გზამკლევი მასწავლებლებისთვის',
           cover: '/assets/books/3.jpg',
           link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
         },
@@ -234,7 +234,7 @@ export default function App() {
                   <br /><br />
                   ეს არის საუკუნოვანი ტრადიცია, რომელიც დღემდე აერთიანებს ახალგაზრდებს მთელი მსოფლიოდან.
                 </p>,
-      missTitle: 'მიზანი • მისია • ხედვა',
+      missTitle: 'სკაუტები და ახალგზარდული პროგრამა',
       missText: (
         <>
           <p>• სკაუტინგი ახალგაზრდების პროგრესული თვით-განვითარების მოძრაობაა.</p>
@@ -244,7 +244,23 @@ export default function App() {
         </>
       ),
       howTitle: 'როგორ გავხდე სკაუტი',
-      howText: 'დარეგისტრირდით. ჩაერთეთ. იხელმძღვანელეთ. თქვენი სკაუტად გახდომის გზა იწყება იმ მომენტიდან, როდესაც შეწყვეტთ ყურებას და დაიწყებთ მოქმედებას.',
+      howText: <p>
+                 მოზარდი თაობის განვითარება მათი ფიზიკური, ინტელექტუალური, ემოციური, სოციალური და სულიერი პოტენციალის სრულად გამოვლენის გზით;
+                <br /><br />
+                ახალგაზრდების, როგორც პასუხისმგებელი მოქალაქეებისა და ადგილობრივი, ნაციონალური და საერთაშორისო საზოგადოების სრულფასოვან წევრებად ჩამოყალიბება;
+                <br /><br />
+                ახალგაზრდების პიროვნებად ჩამოყალიბება ეროვნულ და მსოფლიო კულტურულ ფასეულობათა საფუძველზე;
+                <br /><br />
+                ქვეყანაში სამოქალაქო კულტურის ამაღლება და სოციალურ-ეკონომიკური განვითარების ხელშეწყობა;
+                <br /><br />
+                ადგილობრივი თემის განვითარება და გაძლიერება;
+                <br /><br />
+                მოზარდი თაობის თვითგამოხატვისა და საკუთარი თავის დამკვიდრებისთვის შესაბამისი პირობების შექმნა;
+                <br /><br />
+                პროფესიული ინტერესების ჩამოყალიბება და პრაქტიკული ჩვევების დაუფლება;
+                <br /><br />
+                ლიდერების ჩამოყალიბება საუკეთესო აღმზრდელობითი პროგრამების გამოყენებით მსოფლიო დონეზე.
+              </p>,
       // მიმდინარე პროექტები - Current project
       youthTitle: 'მიმდინარე პროექტები',
       // youthSubtitle: 'ჩვენი მოგზაურობა გრძელდება! ეს განყოფილება მოიცავს ამჟამად შემუშავების პროცესში მყოფ პროექტებს. ეს ინიციატივები საშუალებას აძლევს ჩვენს ახალგაზრდა წევრებს, ისწავლონ პრაქტიკით, უმკლავდებიან რეალურ გამოწვევებს და უჭერენ მხარს ჩვენს ადგილობრივ საზოგადოებას პრაქტიკული მსახურებით.',
@@ -321,13 +337,13 @@ export default function App() {
       books: [
         {
           id: 1,
-          title: ' Be prepeared for scout life',
+          title: ' Promoting professional orientation of students',
           cover: '/assets/books/2.png',
           link: '/assets/books/იყავი მზად სკაუტური ცხოვრებისთვის.წიგნი.pdf' 
         },
         {
           id: 2,
-          title: 'Master`s thesis Ilia State University 30.06.2025',
+          title: 'Career Guidance Guide for Teachers',
           cover: '/assets/books/3.jpg',
           link: '/assets/books/სამაგისტრო-ნაშრომი-საბოლოო-ვერსია-30.06.2025.pdf'
         },
@@ -442,7 +458,7 @@ export default function App() {
                   <br /><br />
                   Scouting is more than a tradition; it is a global commitment to developing the leaders of tomorrow.
                 </p>, 
-      missTitle: 'Goal • Mission • Vision',
+      missTitle: 'Scouts and Youth Program',
       missText: (
         <>
           <p>• Scouting is a progressive self-development movement for young people.</p>
