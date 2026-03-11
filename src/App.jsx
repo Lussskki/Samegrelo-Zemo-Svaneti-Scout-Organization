@@ -637,7 +637,12 @@ export default function App() {
     })
   }
 
-
+  // Close all dropdowns helper
+  const closeAllDropdowns = () => {
+    setAboutOpen(false);
+    setServicesOpen(false);
+    setContactOpen(false);
+  };
 
   return (
     <div className="container">
@@ -659,8 +664,12 @@ export default function App() {
             {langContent.home}
           </a>
           {/* ABOUT US DROPDOWN - ჩვენს შესახებ სქროლი */}
-          <div className={`nav-dropdown ${aboutOpen ? 'open' : ''}`}>
-            <button className="nav-link" onClick={() => setAboutOpen(!aboutOpen)}>
+          <div 
+            className={`nav-dropdown ${aboutOpen ? 'open' : ''}`}
+            onMouseEnter={() => { closeAllDropdowns(); setAboutOpen(true); }}
+            onMouseLeave={() => setAboutOpen(false)}
+          >
+            <button className="nav-link">
               {langContent.join}
               <span className={`dropdown-arrow ${aboutOpen ? 'rotate' : ''}`}>▾</span>
             </button>
@@ -676,8 +685,12 @@ export default function App() {
           </div>
 
           {/* SERVICES DROPDOWN - სერვისების სქროლი*/}
-          <div className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}>
-            <button type="button" className="nav-link" onClick={(e) => { e.stopPropagation(); setServicesOpen(prev => !prev); }}>
+          <div 
+            className={`nav-dropdown ${servicesOpen ? 'open' : ''}`}
+            onMouseEnter={() => { closeAllDropdowns(); setServicesOpen(true); }}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button type="button" className="nav-link">
               {langContent.services}
               <span className={`dropdown-arrow ${servicesOpen ? 'rotate' : ''}`}>▾</span>
             </button>
@@ -703,15 +716,12 @@ export default function App() {
           <a href="#gallery" onClick={() => setMenuOpen(false)}>{langContent.sponsors}</a>
           <a href="#donation" onClick={() => setMenuOpen(false)}>{langContent.donation}</a>
             {/* CONTACT DROPDOWN - კონტაქტები */}
-          <div className={`nav-dropdown ${contactOpen ? 'open' : ''}`}>
-            <button
-              type="button"
-              className="nav-link"
-              onClick={(e) => {
-                e.stopPropagation();
-                setContactOpen(prev => !prev);
-              }}
-            >
+          <div 
+            className={`nav-dropdown ${contactOpen ? 'open' : ''}`}
+            onMouseEnter={() => { closeAllDropdowns(); setContactOpen(true); }}
+            onMouseLeave={() => setContactOpen(false)}
+          >
+            <button type="button" className="nav-link">
               {langContent.contact}
               <span className={`dropdown-arrow ${contactOpen ? 'rotate' : ''}`}>▾</span>
             </button>
@@ -1276,7 +1286,7 @@ export default function App() {
         <div className="footer-col" id="location">
           <h4>{langContent.location}</h4>
           <div className="map-container" >
-            <iframe title="Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.140492091809!2d41.8297427!3d42.4977788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c2506c0f5b005%3A0xe6ae831db81149c0!2z4YOV4YOU4YOi4YOU4YO_4YOY4YOc4YOQ4YO_4YOYIC8gVmV0ZXJpbmFyaWFu!5e0!3m2!1sen!2sge!4v1705312345678" width="100%" height="300" style={{ border: 0, borderRadius: '12px' }} allowFullScreen="" loading="lazy"></iframe>
+            <iframe title="Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.140492091809!2d41.8297427!3d42.4977788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x405c2506c0f5b005%3A0xe6ae831db81149c0!2z4YOV4YOU4YOi4YOU4YO_4YOY4YOc4YOQ4YO_4YWYIC8gVmV0ZXJpbmFyaWFu!5e0!3m2!1sen!2sge!4v1705312345678" width="100%" height="300" style={{ border: 0, borderRadius: '12px' }} allowFullScreen="" loading="lazy"></iframe>
           </div>
         </div>
 
